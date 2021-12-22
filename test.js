@@ -1,1 +1,1 @@
-console.log('wojciech palacz');
+console.log('wojciech palacz2');
