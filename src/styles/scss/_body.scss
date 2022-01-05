@@ -1,0 +1,12 @@
+@import "./variables";
+
+body {
+  margin: 0 auto;
+  background-color: $white;
+  overflow-x: hidden;
+}
+
+.content {
+  margin: 0 auto;
+  width: 1400px;
+}

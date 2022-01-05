@@ -1,0 +1,53 @@
+@import "./variables";
+
+.login-page {
+  background-color: rgba($light-grey, 0.9);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  .panel {
+    background-color: $white;
+    width: 1400px;
+    height: 90vh;
+    border-radius: 50px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    * {
+      display: block;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .item-1 {
+      top: 10%;
+    }
+    .item-2 {
+      top: 30%;
+      * {
+        position: relative;
+        margin: 0;
+      }
+    }
+    .item-3 {
+      top: 50%;
+    }
+    .item-4 {
+      top: 60%;
+      background-image: linear-gradient(to right, $yellow, $orange);
+      width: 100px;
+    }
+
+    .close {
+      top: 35px;
+      left: 96.5%;
+      img {
+        width: 25px;
+      }
+    }
+  }
+}
