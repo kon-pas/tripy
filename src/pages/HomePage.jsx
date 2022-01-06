@@ -2,6 +2,8 @@ import InputForm from "../components/InputForm";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 
+import * as states from '../scripts/states';
+
 const HomePage = () => {
   return ( 
     <div className="home-page">

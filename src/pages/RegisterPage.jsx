@@ -1,7 +1,9 @@
 import { Component } from "react/cjs/react.production.min";
 import { Link } from "react-router-dom";
 
-class LoginPage extends Component {
+import * as states from '../scripts/states';
+
+class RegisterPage extends Component {
   constructor(props) {
     super(props);
     this.state = { 
@@ -25,7 +27,7 @@ class LoginPage extends Component {
     event.preventDefault();
   }
 
-  render() { 
+  render() {
     return ( 
       <div className="login-page">
         <div className="panel">
@@ -48,5 +50,7 @@ class LoginPage extends Component {
      );
   }
 }
+
+
  
-export default LoginPage;
+export default RegisterPage;
