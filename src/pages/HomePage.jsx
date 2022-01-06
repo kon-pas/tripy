@@ -1,15 +1,14 @@
 import InputForm from "../components/InputForm";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
-
-import * as states from '../scripts/states';
+import CardList from "../components/CardList";
 
 const HomePage = () => {
   return ( 
     <div className="home-page">
-      <Header />
+      <Header top={100}/>
       <section className="input-section">
-        <InputForm />
+        <InputForm type="home-page"/>
       </section>
       <section className="register-section">
         <Link to={'/register'} style={{ textDecoration: 'none' }}>
@@ -18,6 +17,7 @@ const HomePage = () => {
       </section>
       <section className="promotional-section">
         Polecamy
+        <CardList />
       </section>
     </div>
    );

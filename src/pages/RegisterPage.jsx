@@ -1,8 +1,6 @@
 import { Component } from "react/cjs/react.production.min";
 import { Link } from "react-router-dom";
 
-import * as states from '../scripts/states';
-
 class RegisterPage extends Component {
   constructor(props) {
     super(props);

@@ -6,10 +6,9 @@
   grid-template-columns: repeat(7, 200px);
   height: 50px;
   border-radius: 15px;
-  position: fixed;
+  position: sticky !important;
   top: 0;
   left: 50%;
-  transform: translateX(-50%);
   align-items: center;
   background-color: $dark-blue;
   background-image: $noise;

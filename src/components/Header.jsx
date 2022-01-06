@@ -1,7 +1,7 @@
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = (props) => {
   return ( 
     <div className="header">
       <Link to={'/'}>
@@ -14,9 +14,11 @@ const Header = () => {
           <img src={require('../assets/icons/user.png')}/>
         </div>
       </Link>
-      <Navbar top={100} />
+      <Navbar top={props.top} />
     </div>
    );
 }
+
+Header.defaultProps = {top: 100};
  
 export default Header;

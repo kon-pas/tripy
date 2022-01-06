@@ -1,8 +1,6 @@
 import { Component } from "react/cjs/react.production.min";
 import { Link } from "react-router-dom";
 
-import * as states from '../scripts/states';
-
 class LoginPage extends Component {
   constructor(props) {
     super(props);
@@ -39,7 +37,6 @@ class LoginPage extends Component {
           </div>
           <span className="item-3">Nie masz konta?</span>
           <Link className="item-4" to={'/register'}><div className="item-4">Zarejestruj sie</div></Link>
-
           <Link className="close" to={'/'}> <img src={require('../assets/icons/close.png')} /> </Link>
         </div>
       </div>

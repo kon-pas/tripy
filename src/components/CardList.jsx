@@ -1,7 +1,16 @@
+import Card from "../components/Card";
+
 const CardList = () => {
   return ( 
     <div className="card-list">
-      card list
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
+      <Card />
     </div>
    );
 }

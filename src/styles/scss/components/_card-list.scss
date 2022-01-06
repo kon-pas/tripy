@@ -1,0 +1,18 @@
+@import "../variables";
+
+.card-list {
+  background-color: $light;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 15px 0;
+  border-radius: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+  .card {
+    width: 375px;
+    height: 250px;
+    background-color: $white;
+    border-radius: 25px;
+  }
+}

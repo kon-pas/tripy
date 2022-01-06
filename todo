@@ -1,0 +1,3 @@
+-position: sticky nie działa w navbarze z jakiegoś powodu, overflow musiał się gdzieś w którymś rodzicu wkraść
+-"baza" tymczasowa jest teraz taka, nie tykać
+-powrót z login i register krzyzykiem w odpowiednia strone (closePath zrobic)

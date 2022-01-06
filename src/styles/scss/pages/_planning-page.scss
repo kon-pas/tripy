@@ -1,0 +1,48 @@
+@import "../variables";
+
+.planning-page {
+  .content {
+    margin-top: 20px;
+    width: $content-width;
+    .input-form {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      width: $content-width;
+      input {
+        height: 30px;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background-color: $light;
+        color: $black;
+      }
+      .submit-button {
+        background-image: linear-gradient(to right, $yellow, $orange);
+      }
+    }
+    .content-bottom {
+      display: grid;
+      grid-template-columns: 1200px 200px;
+      .content-bottom-left {
+        .planning-navbar {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          height: 50px;
+          background-color: $dark-blue;
+          background-image: $noise;
+          .planning-navbar-button {
+            display: flex;
+            align-self: center;
+            justify-self: center;
+          }
+        }
+      }
+      .content-bottom-right {
+        background-color: $dark-blue;
+        background-image: $noise;
+        display: grid;
+        grid-template-rows: auto repeat(2, 30px);
+      }
+    }
+  }
+}
