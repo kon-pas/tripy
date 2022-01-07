@@ -19,6 +19,6 @@ const Header = (props) => {
    );
 }
 
-Header.defaultProps = {top: 100};
+Header.defaultProps = {top: 0};
  
 export default Header;

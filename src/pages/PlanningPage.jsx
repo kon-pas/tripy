@@ -12,7 +12,7 @@ class PlanningPage extends Component {
   render() { 
     return ( 
       <div className="planning-page">
-        <Navbar />
+        <Navbar top={0}/>
         <div className="content">
           <InputForm type="planning-page" />
           <div className="content-bottom">

@@ -8,7 +8,7 @@ const Navbar = (props) => {
   return (
     <div>
       {block()}
-      <div className="navbar" style={{top: 100}}>
+      <div className="navbar">
         <Link to={'/'} style={{ textDecoration: 'none' }}><div className="navbar-item"><span>tripy</span></div></Link>
         <div className="navbar-item"><span>Lecimy!</span></div>
         <div className="navbar-item"><span>Wyszukaj</span></div>
@@ -21,6 +21,6 @@ const Navbar = (props) => {
    );
 }
 
-Navbar.defaultProps = {top: 100};
+Navbar.defaultProps = {top: 0};
  
 export default Navbar;

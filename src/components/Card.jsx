@@ -6,4 +6,6 @@ const Card = () => {
   )
 }
 
+Card.defaultProps = { display: "vanilla" };
+
 export default Card;
