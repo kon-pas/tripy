@@ -18,10 +18,10 @@ class PlanningPage extends Component {
           <div className="content-bottom">
             <div className="content-bottom-left">
               <div className="planning-navbar">
-                <div className="planning-navbar-button">Hotel</div>
-                <div className="planning-navbar-button">Lot</div>
-                <div className="planning-navbar-button">Atrakcje</div>
-                <div className="planning-navbar-button">Sfinalizuj</div>
+                <div className="planning-navbar-button"><span>Hotel</span></div>
+                <div className="planning-navbar-button"><span>Lot</span></div>
+                <div className="planning-navbar-button"><span>Atrakcje</span></div>
+                <div className="planning-navbar-button"><span>Sfinalizuj</span></div>
               </div>
               <CardListPlanning />
             </div>
