@@ -42,7 +42,7 @@ class InputForm extends Component {
     if (this.props.type === "planning-page") {
       return ( 
         <div>
-          <form onSubmit={this.handleSearch} className="input-form">
+          <form onSubmit={this.handleSearch} className="input-form-planning">
             <input
               className="wylot"
               type="text"
@@ -97,7 +97,7 @@ class InputForm extends Component {
     else if (this.props.type === "home-page") {
       return ( 
         <div>
-          <form onSubmit={this.handleSubmit} className="input-form">
+          <form onSubmit={this.handleSubmit} className="input-form-home">
             <input
               className="wylot"
               type="text"

@@ -1,0 +1,20 @@
+@import "../variables";
+
+.home-page {
+  section.input-section {
+    height: 800px;
+    position: relative;
+    .input-form-home {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  section.register-section {
+    height: 800px;
+  }
+  section.promotional-section {
+    margin-bottom: 100px;
+  }
+}

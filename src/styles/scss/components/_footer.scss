@@ -1,0 +1,18 @@
+@import "../variables";
+
+.footer {
+  background-color: $dark;
+  background-image: $noise;
+  width: $content-width;
+  height: 400px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  color: $white;
+  position: relative;
+  .footer-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -2,6 +2,7 @@ import InputForm from "../components/InputForm";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import CardListHome from "../components/CardListHome";
+import Footer from "../components/Footer";
 
 const HomePage = () => {
   return ( 
@@ -21,6 +22,8 @@ const HomePage = () => {
       <section className="promotional-section">
         <CardListHome />
       </section>
+
+      <Footer />
     </div>
    );
 }
