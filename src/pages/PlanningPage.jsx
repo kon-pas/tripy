@@ -1,7 +1,7 @@
 import { Component } from "react/cjs/react.production.min";
 import Navbar from "../components/Navbar";
 import InputForm from "../components/InputForm";
-import CardList from "../components/CardList";
+import CardListPlanning from "../components/CardListPlanning";
 import PlanningCart from "../components/PlanningCart";
 
 class PlanningPage extends Component {
@@ -23,7 +23,7 @@ class PlanningPage extends Component {
                 <div className="planning-navbar-button">Atrakcje</div>
                 <div className="planning-navbar-button">Sfinalizuj</div>
               </div>
-              <CardList />
+              <CardListPlanning />
             </div>
             <div className="content-bottom-right">
               <PlanningCart />

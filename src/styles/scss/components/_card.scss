@@ -1,0 +1,36 @@
+.card {
+  width: 380px;
+  height: 340px;
+  background-color: $white;
+  border-radius: 5px;
+  box-shadow: 8px 8px 15px 0px $light-grey;
+  .image-wrapper {
+    width: 380px;
+    height: 270px;
+    img {
+      padding: 10px 10px 0 10px;
+    }
+  }
+  .info-wrapper {
+    height: 80px;
+    padding: 0 10px;
+    .title-wrapper {
+      font-size: 2rem;
+      height: 38px;
+    }
+    .subtitle-wrapper {
+      font-size: 1.5rem;
+      display: grid;
+      grid-template-columns: auto auto;
+      .price-wrapper {
+        display: flex;
+        margin-right: auto;
+      }
+      .rating-wrapper {
+        display: flex;
+        margin-left: auto;
+        font-weight: 600;
+      }
+    }
+  }
+}
