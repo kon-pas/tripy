@@ -4,6 +4,8 @@ import InputForm from "../components/InputForm";
 import CardListPlanning from "../components/CardListPlanning";
 import PlanningCart from "../components/PlanningCart";
 
+import * as carts from "../scripts/carts";
+
 class PlanningPage extends Component {
   constructor(props) {
     super(props);
@@ -18,7 +20,7 @@ class PlanningPage extends Component {
           <div className="content-bottom">
             <div className="content-bottom-left">
               <div className="planning-navbar">
-                <div className="planning-navbar-button"><span>Hotel</span></div>
+                <div className="planning-navbar-button active"><span>Hotel</span></div>
                 <div className="planning-navbar-button"><span>Lot</span></div>
                 <div className="planning-navbar-button"><span>Atrakcje</span></div>
                 <div className="planning-navbar-button"><span>Sfinalizuj</span></div>
@@ -29,6 +31,7 @@ class PlanningPage extends Component {
               <PlanningCart />
               <button>Dalej</button>
               <button>Powrót</button>
+              <button>Eh</button>
             </div>
           </div>
         </div>

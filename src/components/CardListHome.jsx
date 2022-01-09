@@ -1,11 +1,11 @@
 import Card from "../components/Card";
-import * as db from "../scripts/database";
+import * as cards from "../scripts/cards";
 
 
 const CardListHome = () => {
-  const atrakcje = [...db.cards.atrakcje];
-  const hotele = [...db.cards.hotele];
-  const loty = [...db.cards.loty];
+  const atrakcje = [...cards.cards.atrakcje];
+  const hotele = [...cards.cards.hotele];
+  const loty = [...cards.cards.loty];
 
   return ( 
     <div className="card-list card-list-home">
