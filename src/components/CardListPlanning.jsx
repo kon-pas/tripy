@@ -12,7 +12,7 @@ const CardListPlanning = ({currentPage}) => {
     return (
       <div className="card-list card-list-planning">
         <div className="container">
-          {loty.map( e => <Card display="planning" key={e.getKey()} name={e.getName()} /> )}
+          {loty.map( e => <Card display="planning" key={e.getKey()} pointer={e} /> )}
         </div>
       </div>
      );
@@ -21,7 +21,7 @@ const CardListPlanning = ({currentPage}) => {
     return (
       <div className="card-list card-list-planning">
         <div className="container">
-          {hotele.map( e => <Card display="planning" key={e.getKey()} name={e.getName()} /> )}
+          {hotele.map( e => <Card display="planning" key={e.getKey()} pointer={e} /> )}
         </div>
       </div>
      );
@@ -30,7 +30,7 @@ const CardListPlanning = ({currentPage}) => {
     return (
       <div className="card-list card-list-planning">
         <div className="container">
-          {atrakcje.map( e => <Card display="planning" key={e.getKey()} name={e.getName()} /> )}
+          {atrakcje.map( e => <Card display="planning" key={e.getKey()} pointer={e} /> )}
         </div>
       </div>
      );

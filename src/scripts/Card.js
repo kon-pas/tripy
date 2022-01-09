@@ -2,7 +2,7 @@ export class Card {
   constructor(
       type,
       name,
-      image=null,
+      image="https://plikimpi.krakow.pl/pliki/243693/4.jpg",
       desc="Opis",
       rating=5.0,
       link="www.x.com",

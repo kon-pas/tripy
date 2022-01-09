@@ -42,7 +42,6 @@ class PlanningPage extends Component {
               <div className="content-bottom-right">
                 <PlanningCart />
                 <button onClick={() => this.changePage('hotel')}>Dalej</button>
-                <button>Powrót</button>
               </div>
             </div>
           </div>
