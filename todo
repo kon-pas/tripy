@@ -1,4 +1,4 @@
-7
+8
 
 -position: sticky nie działa w navbarze z jakiegoś powodu, overflow musiał się gdzieś w którymś rodzicu wkraść
 -"baza" tymczasowa jest teraz taka, nie tykać

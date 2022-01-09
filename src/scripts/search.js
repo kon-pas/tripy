@@ -1,6 +1,4 @@
-const currentPage = "hotel";
-
-export const search = {
+export const currentSearch = {
   wylot: '',
   email: '',
   miejscowosc: '',

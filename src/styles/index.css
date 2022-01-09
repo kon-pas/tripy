@@ -366,7 +366,8 @@ body {
   height: 340px;
   background-color: #fff;
   border-radius: 5px;
-  box-shadow: 8px 8px 15px 0px #b2bec3; }
+  box-shadow: 8px 8px 15px 0px #b2bec3;
+  position: relative; }
 
 .card .image-wrapper {
   width: 380px;
@@ -396,6 +397,34 @@ body {
   display: flex;
   margin-left: auto;
   font-weight: 600; }
+
+.card .info-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.7rem;
+  font-weight: 600;
+  background-color: #fff;
+  border-radius: 40%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.card .add-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 2.5rem;
+  font-weight: 600;
+  background-color: #fff;
+  border-radius: 40%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 .home-page section.input-section {
   height: 800px;
