@@ -40,8 +40,12 @@ class PlanningPage extends Component {
                 <CardListPlanning currentPage={this.state.currentPage}/>
               </div>
               <div className="content-bottom-right">
-                <PlanningCart />
-                <button onClick={() => this.changePage('hotel')}>Dalej</button>
+                <PlanningCart currentCart={carts.currentCart} />
+                <button onClick={() => {
+                  carts.currentCart.setLoty(carts.getCurrentPlanningPageCards());
+                  carts.setCurrentPlanningPageCards([]);
+                  this.changePage('hotel');
+                }}>Dalej</button>
               </div>
             </div>
           </div>
@@ -65,8 +69,12 @@ class PlanningPage extends Component {
                 <CardListPlanning currentPage={this.state.currentPage}/>
               </div>
               <div className="content-bottom-right">
-                <PlanningCart />
-                <button onClick={() => this.changePage('atrakcje')}>Dalej</button>
+                <PlanningCart currentCart={carts.currentCart} />
+                <button onClick={() => {
+                  carts.currentCart.setHotele(carts.getCurrentPlanningPageCards());
+                  carts.setCurrentPlanningPageCards([]);
+                  this.changePage('atrakcje');
+                }}>Dalej</button>
                 <button onClick={() => this.changePage('lot')}>Powrót</button>
               </div>
             </div>
@@ -91,8 +99,11 @@ class PlanningPage extends Component {
                 <CardListPlanning currentPage={this.state.currentPage}/>
               </div>
               <div className="content-bottom-right">
-                <PlanningCart />
-                <button>Sfinalizuj</button>
+                <PlanningCart currentCart={carts.currentCart} />
+                <button onClick={ () => {
+                  carts.currentCart.setAtrakcje(carts.getCurrentPlanningPageCards());
+                  carts.setCurrentPlanningPageCards([]);
+                }}>Sfinalizuj</button>
                 <button onClick={() => this.changePage('hotel')}>Powrót</button>
               </div>
             </div>

@@ -1,12 +1,13 @@
 import * as carts from "../scripts/carts";
 
-const PlanningCart = () => {
-  const loty = carts.currentCart.getLoty();
-  const hotele = carts.currentCart.getHotele();
-  const atrakcje = carts.currentCart.getAtrakcje();
+const PlanningCart = ({currentCart}) => {
+  const loty = currentCart.getLoty();
+  const hotele = currentCart.getHotele();
+  const atrakcje = currentCart.getAtrakcje();
+  const size = loty.length + hotele.length + atrakcje.length;
 
   return ( 
-    <div className="planning-cart">
+    <div className="planning-cart" style={{height: 100 + 27 * size}}>
       <div className="title">Loty</div>
       {loty.map(e => 
         <span className="planning-cart-item" key={Math.random()}> {e.getName()} </span>
@@ -23,6 +24,10 @@ const PlanningCart = () => {
       )}
     </div>
    );
+}
+
+PlanningCart.defaultProps = {
+  currentCart: carts.currentCart
 }
  
 export default PlanningCart;

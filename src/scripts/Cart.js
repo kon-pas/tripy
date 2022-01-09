@@ -8,7 +8,11 @@ export class Cart {
   getHotele() { return this.hotele };
   getAtrakcje() { return this.atrakcje };
 
-  addLot(e) { this.loty.push(e) }; 
-  addHotel(e) { this.loty.push(e) }; 
-  addAtrakcja(e) { this.loty.push(e) }; 
+  setLoty(e) { this.loty = e };
+  setHotele(e) { this.hotele = e };
+  setAtrakcje(e) { this.atrakcje = e };
+
+  // addLot(e) { this.loty.push(e) }; 
+  // addHotel(e) { this.loty.push(e) }; 
+  // addAtrakcja(e) { this.loty.push(e) }; 
 }

@@ -63,3 +63,11 @@
     align-items: center;
   }
 }
+
+.highlighted {
+  background-image: linear-gradient(to top, $yellow, $orange) !important;
+}
+
+.orange {
+  background-color: $orange !important;
+}
