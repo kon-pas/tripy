@@ -1,4 +1,4 @@
-9
+10
 
 -position: sticky nie działa w navbarze z jakiegoś powodu, overflow musiał się gdzieś w którymś rodzicu wkraść
 -"baza" tymczasowa jest teraz taka, nie tykać
@@ -6,3 +6,5 @@
 -navbar zrobić funkcjonalność
 -zamienić interfejs dla zalogowanego użytkownika
 -footer scss
+-planning page klikalny navbar
+-planning page + home page  -> search + filter
