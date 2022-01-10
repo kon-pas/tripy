@@ -17,4 +17,5 @@ export const currentSearch = {
   getLiczbaOsob: function() { return this.liczbaOsob },
   getBudzetMinimalny: function() { return this.budzetMinimalny },
   getBudzetMaksymalny: function() { return this.budzetMaksymalny }
+
 };

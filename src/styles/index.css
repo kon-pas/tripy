@@ -308,7 +308,8 @@ body {
 
 .planning-page .content .content-bottom .content-bottom-right .planning-cart .planning-cart-item {
   display: block;
-  text-align: start; }
+  text-align: start;
+  margin-left: 10px; }
 
 .card-list-home {
   background-color: #dfe6e9;

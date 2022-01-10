@@ -13,7 +13,9 @@ const Card = ({display, pointer}) => {
         <div className="card-info">
           <div className="top-wrapper">
             <div className="title"> {pointer.name} </div>
-            <img className="close-icon" src={require('../assets/icons/close.png')} />
+            <img className="close-icon" src={require('../assets/icons/close.png')} onClick={ () => {
+              displayInfoToggle(false);
+            }}/>
           </div>
           <div className="mid-wrapper">
             <div className="left-wrapper">
