@@ -1,7 +1,7 @@
 export class Card {
   constructor(
-      type,
-      name,
+      type="placeholder",
+      name="placeholder",
       image="https://plikimpi.krakow.pl/pliki/243693/4.jpg",
       desc="Opis",
       rating=5.0,
@@ -22,6 +22,10 @@ export class Card {
       key: Math.random()
     };
   }
+
+  // get image() { return this.image };
+  // set image(e) { this.image = e};
+
   getName() { return this.name };
   getImage() { return this.image };
   getDesc() { return this.desc };

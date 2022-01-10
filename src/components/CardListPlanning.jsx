@@ -1,4 +1,5 @@
 import Card from "../components/Card";
+import componentDidMount from 'react';
 
 import * as cards from "../scripts/cards";
 import * as search from "../scripts/search";

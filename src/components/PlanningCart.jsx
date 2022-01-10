@@ -1,4 +1,5 @@
 import * as carts from "../scripts/carts";
+import * as cards from "../scripts/cards";
 
 const PlanningCart = ({currentCart}) => {
   const loty = currentCart.getLoty();
