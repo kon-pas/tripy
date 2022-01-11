@@ -6,7 +6,8 @@ import RegisterPage from './pages/RegisterPage';
 import PlanningPage from './pages/PlanningPage';
 import CartPage from './pages/CartPage';
 import ContractorPage from './pages/ContractorPage';
-import UserPage from './pages/UserPage'
+import UserPage from './pages/UserPage';
+import SearchPage from './pages/SearchPage';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/cart" element={<CartPage />} />
             <Route path="/contractor" element={<ContractorPage />} />
             <Route path="/user" element={<UserPage />} />
+            <Route path="/search" element={<SearchPage />} />
           </Routes>
         </div>
       </div>

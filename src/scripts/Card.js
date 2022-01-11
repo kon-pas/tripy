@@ -3,8 +3,8 @@ function randomIntFromInterval(min, max) { // min and max included
 }
 export class Card {
   constructor(
-      type,
-      name,
+      type="lot",
+      name="placeholder",
       image="https://plikimpi.krakow.pl/pliki/243693/4.jpg",
       desc="Opis",
       rating= randomIntFromInterval(0,5),

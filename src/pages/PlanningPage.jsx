@@ -11,9 +11,12 @@ import * as search from "../scripts/search";
 class PlanningPage extends Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      currentPage: "lot"
-    }
+    this.state = {
+      currentPage: "lot",
+      flights: [],
+      hotels: [],
+      attraction: []
+  }
     this.changePage = this.changePage.bind(this);
   }
 
@@ -21,6 +24,37 @@ class PlanningPage extends Component {
     this.setState({
       currentPage: pageName
     });
+  }
+
+  componentDidMount() {
+    let headers = new Headers();
+
+    headers.append('Content-Type', 'application/json');
+    headers.append('Accept', 'application/json');
+    headers.append('Origin', 'http://localhost:3000');
+
+    fetch(`http://51.83.185.162:4000/flights`, {
+        method: 'GET',
+        headers: headers
+    }).then(response => response.json())
+        .then(data => {
+            this.setState({flights: data})
+        })
+
+    fetch(`http://51.83.185.162:4000/hotels`, {
+        method: 'GET',
+        headers: headers
+    }).then(response => response.json())
+        .then(data => {
+            this.setState({hotels: data})
+        })
+    fetch(`http://51.83.185.162:4000/attraction/all`, {
+        method: 'GET',
+        headers: headers
+    }).then(response => response.json())
+        .then(data => {
+            this.setState({attraction: data})
+        })
   }
 
   render() {
@@ -38,7 +72,12 @@ class PlanningPage extends Component {
                   <div className="planning-navbar-button"><span>Atrakcje</span></div>
                   <div className="planning-navbar-button"><span>Sfinalizuj</span></div>
                 </div>
-                <CardListPlanning currentPage={this.state.currentPage}/>
+                <CardListPlanning
+                  currentPage={this.state.currentPage}
+                  attraction={this.state.attraction.map((value) => value)}
+                  hotels={this.state.hotels.map((value) => value)}
+                  flights={this.state.flights.map((value) => value)}
+                />
               </div>
               <div className="content-bottom-right">
                 <PlanningCart currentCart={carts.currentCart} />
@@ -67,7 +106,12 @@ class PlanningPage extends Component {
                   <div className="planning-navbar-button"><span>Atrakcje</span></div>
                   <div className="planning-navbar-button"><span>Sfinalizuj</span></div>
                 </div>
-                <CardListPlanning currentPage={this.state.currentPage}/>
+                <CardListPlanning
+                  currentPage={this.state.currentPage}
+                  attraction={this.state.attraction.map((value) => value)}
+                  hotels={this.state.hotels.map((value) => value)}
+                  flights={this.state.flights.map((value) => value)}
+                />
               </div>
               <div className="content-bottom-right">
                 <PlanningCart currentCart={carts.currentCart} />
@@ -97,7 +141,12 @@ class PlanningPage extends Component {
                   <div className="planning-navbar-button active"><span>Atrakcje</span></div>
                   <div className="planning-navbar-button"><span>Sfinalizuj</span></div>
                 </div>
-                <CardListPlanning currentPage={this.state.currentPage}/>
+                <CardListPlanning
+                  currentPage={this.state.currentPage}
+                  attraction={this.state.attraction.map((value) => value)}
+                  hotels={this.state.hotels.map((value) => value)}
+                  flights={this.state.flights.map((value) => value)}
+                />
               </div>
               <div className="content-bottom-right">
                 <PlanningCart currentCart={carts.currentCart} />
@@ -105,6 +154,35 @@ class PlanningPage extends Component {
                   carts.currentCart.setAtrakcje(carts.getCurrentPlanningPageCards());
                   carts.setCurrentPlanningPageCards([]);
                 }}>Sfinalizuj</button>
+                <button onClick={() => this.changePage('hotel')}>Powrót</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
+    }
+    else if(this.state.currentPage === "sfinalizuj") {
+      return ( 
+        <div className="planning-page">
+          <Navbar top={0}/>
+          <div className="content">
+            <InputForm type="planning-page" />
+            <div className="content-bottom">
+              <div className="content-bottom-left">
+                <div className="planning-navbar">
+                  <div className="planning-navbar-button active"><span>Lot</span></div>
+                  <div className="planning-navbar-button active"><span>Hotel</span></div>
+                  <div className="planning-navbar-button active"><span>Atrakcje</span></div>
+                  <div className="planning-navbar-button"><span>Sfinalizuj</span></div>
+                </div>
+                <CardListPlanning currentPage={this.state.currentPage}/>
+              </div>
+              <div className="content-bottom-right">
+                <PlanningCart currentCart={carts.currentCart} />
+                <button onClick={ () => {
+                  carts.currentCart.setAtrakcje(carts.getCurrentPlanningPageCards());
+                  carts.setCurrentPlanningPageCards([]);
+                }}>Gotowe!</button>
                 <button onClick={() => this.changePage('hotel')}>Powrót</button>
               </div>
             </div>
