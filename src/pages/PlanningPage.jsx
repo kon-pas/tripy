@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import InputForm from "../components/InputForm";
 import CardListPlanning from "../components/CardListPlanning";
 import PlanningCart from "../components/PlanningCart";
+import Cart from "../components/Cart";
 
 import * as carts from "../scripts/carts";
 import * as search from "../scripts/search";
