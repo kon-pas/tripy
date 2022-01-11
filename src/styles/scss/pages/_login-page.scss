@@ -7,6 +7,8 @@
   position: absolute;
   top: 0;
   left: 0;
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
   .panel {
     background-color: $white;
     width: 1400px;
@@ -27,19 +29,43 @@
       top: 10%;
     }
     .item-2 {
-      top: 30%;
+      top: 15%;
       * {
         position: relative;
-        margin: 0;
+        margin: 10px 0;
+        width: 300px;
+        padding: 0;
+      }
+      .login {
+        background-image: linear-gradient(to right, $yellow, $orange);
+        border: none;
+        font-family: 'Bebas Neue', cursive;
+        font-size: 1.5rem;
       }
     }
     .item-3 {
-      top: 50%;
+      top: 60%;
+      .block {
+        position: relative;
+        width: 10px;
+        height: 100px;
+      }
     }
     .item-4 {
-      top: 60%;
+      top: 66%;
       background-image: linear-gradient(to right, $yellow, $orange);
-      width: 100px;
+      width: 150px;
+      font-family: 'Bebas Neue', cursive;
+      font-size: 1.5rem;
+      display: flex;
+      justify-content: center;
+      color: $black;
+      padding: 5px 2px;
+      border: none;
+    }
+    input {
+      width: 250px;
+      height: 50px;
     }
 
     .close {

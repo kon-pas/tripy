@@ -156,7 +156,9 @@ body {
   height: 100vh;
   position: absolute;
   top: 0;
-  left: 0; }
+  left: 0;
+  font-family: 'Lobster', cursive;
+  font-size: 2rem; }
 
 .login-page .panel {
   background-color: #fff;
@@ -179,19 +181,43 @@ body {
   top: 10%; }
 
 .login-page .panel .item-2 {
-  top: 30%; }
+  top: 15%; }
 
 .login-page .panel .item-2 * {
   position: relative;
-  margin: 0; }
+  margin: 10px 0;
+  width: 300px;
+  padding: 0; }
+
+.login-page .panel .item-2 .login {
+  background-image: linear-gradient(to right, #f5df4d, #ffbe55);
+  border: none;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.5rem; }
 
 .login-page .panel .item-3 {
-  top: 50%; }
+  top: 60%; }
+
+.login-page .panel .item-3 .block {
+  position: relative;
+  width: 10px;
+  height: 100px; }
 
 .login-page .panel .item-4 {
-  top: 60%;
+  top: 66%;
   background-image: linear-gradient(to right, #f5df4d, #ffbe55);
-  width: 100px; }
+  width: 150px;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  color: #000;
+  padding: 5px 2px;
+  border: none; }
+
+.login-page .panel input {
+  width: 250px;
+  height: 50px; }
 
 .login-page .panel .close {
   top: 35px;

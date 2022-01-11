@@ -17,12 +17,12 @@ const Navbar = (props) => {
         {/* <div className="navbar-item"><span>Loty</span></div>
         <div className="navbar-item"><span>Hotele</span></div>
         <div className="navbar-item"><span>Atrakcje</span></div> */}
-        <Link to={'/login'} style={{ textDecoration: 'none' }}><div className="navbar-item"><span>Konto</span></div></Link>
+        <Link to={section.handleAccLogin()} style={{ textDecoration: 'none' }}><div className="navbar-item"><span>Konto</span></div></Link>
       </div>
     </div>
    );
 }
 
-Navbar.defaultProps = {top: 0};
+Navbar.defaultProps = {top: 0, closePath: '/'};
  
 export default Navbar;

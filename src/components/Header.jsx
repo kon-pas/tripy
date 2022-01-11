@@ -1,5 +1,6 @@
 import Navbar from './Navbar';
 import { Link } from 'react-router-dom';
+import * as section from "../scripts/section.js";
 
 const Header = (props) => {
   return ( 
@@ -9,12 +10,12 @@ const Header = (props) => {
           tripy
         </div>
       </Link>
-      <Link to={'/login'}>
+      <Link to={section.handleAccLogin()}>
         <div className="login">
           <img src={require('../assets/icons/user.png')}/>
         </div>
       </Link>
-      <Navbar top={props.top} />
+      <Navbar top={props.top} closePath="/"/>
     </div>
    );
 }

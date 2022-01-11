@@ -9,17 +9,12 @@ export class User {
       name,
       surname
   ){
-
       this.id = id;
       this.email = email;
       this.password = password;
       this.name = name;
       this.surname = surname;
 
-      this.meta = {
-          type: type,
-          key: Math.random()
-      };
   }
   getName() { return this.name };
   getSurname() {return this.surname};
@@ -27,9 +22,6 @@ export class User {
   getId() {return this.id}
   getDesc() { return this.desc };
   getContact() { return this.contact };
-
-  getType() {return this.meta.type};
-  getKey() {return this.meta.key};
 }
 
 // export class Card {
