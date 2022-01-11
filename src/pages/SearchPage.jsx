@@ -1,13 +1,6 @@
 import { Component } from "react/cjs/react.production.min";
 import CardListPlanning from "../components/CardListPlanning";
-
 import Navbar from "../components/Navbar";
-import InputForm from "../components/InputForm";
-import PlanningCart from "../components/PlanningCart";
-import Cart from "../components/Cart";
-
-import * as carts from "../scripts/carts";
-import * as search from "../scripts/search";
 
 class SearchPage extends Component {
   constructor(props) {
@@ -60,19 +53,22 @@ class SearchPage extends Component {
 
   render() { 
     return (
-      <div className="search-page">
-        <div className="planning-navbar">
-          <div className="planning-navbar-button active"><span>Lot</span></div>
-          <div className="planning-navbar-button"><span>Hotel</span></div>
-          <div className="planning-navbar-button"><span>Atrakcje</span></div>
-          <div className="planning-navbar-button"><span>Sfinalizuj</span></div>
+      <div>
+        <Navbar top={0}/>
+        <div className="search-page">
+          <div className="search-navbar">
+            <div className="search-navbar-button"><span>Lot</span></div>
+            <div className="search-navbar-button"><span>Hotel</span></div>
+            <div className="search-navbar-button"><span>Atrakcje</span></div>
+            <div className="search-navbar-button"><span>Sfinalizuj</span></div>
+          </div>
+          <CardListPlanning
+            currentPage={this.state.currentPage}
+            attraction={this.state.attraction.map((value) => value)}
+            hotels={this.state.hotels.map((value) => value)}
+            flights={this.state.flights.map((value) => value)}
+          />
         </div>
-      <CardListPlanning
-        currentPage={this.state.currentPage}
-        attraction={this.state.attraction.map((value) => value)}
-        hotels={this.state.hotels.map((value) => value)}
-        flights={this.state.flights.map((value) => value)}
-      />
       </div>
     );
   }
