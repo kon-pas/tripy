@@ -6,11 +6,11 @@ export class Card {
       type="lot",
       name="placeholder",
       image="https://plikimpi.krakow.pl/pliki/243693/4.jpg",
-      desc="Opis",
+      desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porta leo vel porttitor congue. Aliquam facilisis consectetur consectetur. Sed malesuada turpis vitae dictum blandit. Vestibulum et ullamcorper ligula. In vitae est eleifend, sagittis turpis quis, sollicitudin tellus. Quisque sed sapien malesuada velit laoreet scelerisque quis sit amet mi. Curabitur sed lacinia enim. In eget elementum purus. Nullam vel sem volutpat, aliquet nulla et, dictum nulla. Quisque semper est vitae arcu ultricies aliquet. Fusce dapibus quis quam eu facilisis. Pellentesque tristique lorem nunc. Nullam at sem ac lorem sodales semper et ornare massa. Aliquam et auctor ex.",
       rating= randomIntFromInterval(0,5),
       link="www.x.com",
       contact="example@gmail.com",
-      price=100){
+      price=randomIntFromInterval(100, 1500)){
 
     this.name = name;
     this.image = image;

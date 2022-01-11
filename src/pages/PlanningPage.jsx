@@ -4,6 +4,9 @@ import InputForm from "../components/InputForm";
 import CardListPlanning from "../components/CardListPlanning";
 import PlanningCart from "../components/PlanningCart";
 import Cart from "../components/Cart";
+import * as section from "../scripts/section.js";
+import { Link } from "react-router-dom";
+// import { Navigate } from "react-router-dom";
 
 import * as carts from "../scripts/carts";
 import * as search from "../scripts/search";
@@ -176,7 +179,8 @@ class PlanningPage extends Component {
                   <div className="planning-navbar-button active"><span>Atrakcje</span></div>
                   <div className="planning-navbar-button active"><span>Sfinalizuj</span></div>
                 </div>
-                <CardListPlanning
+                 Work in progress
+                {/* <CardListPlanning
                   currentPage={"lot"}
                   attraction={this.state.attraction.map((value) => value)}
                   hotels={this.state.hotels.map((value) => value)}
@@ -193,15 +197,11 @@ class PlanningPage extends Component {
                   attraction={this.state.attraction.map((value) => value)}
                   hotels={this.state.hotels.map((value) => value)}
                   flights={this.state.flights.map((value) => value)}
-                />
+                /> */}
               </div>
               <div className="content-bottom-right">
                 <PlanningCart currentCart={carts.currentCart} />
-                <button onClick={ () => {
-                  // carts.currentCart.setAtrakcje(carts.getCurrentPlanningPageCards());
-                  // carts.setCurrentPlanningPageCards([]);
-                  // this.changePage('sfinalizuj');
-                }}>Sfinalizuj</button>
+                <Link to={"/"} style={{ textDecoration: 'none' }}> <div className="button">Sfinalizuj</div> </Link>
                 <button onClick={() => this.changePage('hotel')}>Powrót</button>
               </div>
             </div>

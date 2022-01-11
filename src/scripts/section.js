@@ -6,3 +6,8 @@ export const handleAccLogin = () => {
   if(loggedAs === null) return "/login"
   else return "/user"
 }
+
+export const handleSfinalizuj = () => {
+  if(loggedAs === null) return "/"
+  else return "/user"
+}

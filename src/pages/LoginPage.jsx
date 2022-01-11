@@ -1,6 +1,7 @@
 import { Component } from "react/cjs/react.production.min";
 import { Link } from "react-router-dom";
 import {User} from "../scripts/User";
+import { Navigate } from "react-router-dom";
 
 class LoginPage extends Component {
   constructor(props) {
@@ -8,7 +9,9 @@ class LoginPage extends Component {
     this.state = {
       username: '',
       password: '',
-      success: []
+      success: [],
+      isLogged: false,
+      isLogged2: false
     }
     this.handleChange = this.handleChange.bind(this);
     // this.handleSubmit = this.handleSubmit.bind(this);
@@ -40,6 +43,7 @@ class LoginPage extends Component {
       }
       this.setState({
         success: data.data,
+        isLogged: true,
       });
       let user = new User(data.data.id,data.data.attributes.email,'default',data.data.attributes.name,data.data.attributes.surname)
 
@@ -54,15 +58,22 @@ class LoginPage extends Component {
   }
 
   render() {
-    return (
+    if (this.state.isLogged === true && this.state.isLogged2 === true) {
+      return <Navigate to="/"></Navigate>
+    }
+    else return (
         <div className="login-page">
           <div className="panel">
             <span className="item-1">Zaloguj się</span>
             <div className="item-2">
               <form onSubmit={this.getGIY}>
-                <input className="username" type="text" value={this.state.username} onChange={this.handleChange} name="username" placeholder="Nazwa użytkownika"/>
-                <input className="password" type="text" value={this.state.password} onChange={this.handleChange} name="password" placeholder="Hasło"/>
-                <input className="login" type="submit" value="Zaloguj się" />
+                <input className="username" type="text" value={this.state.username} onChange={this.handleChange} name="username" placeholder="E-mail (edward@gmail.com)"/>
+                <input className="password" type="text" value={this.state.password} onChange={this.handleChange} name="password" placeholder="Hasło (12345678)"/>
+                <input className="login" type="submit" value="Zaloguj się" onClick={ () => {
+                  this.setState({
+                    isLogged2: true,
+                  });
+                }}/>
               </form>
             </div>
             <span className="item-3">Nie masz konta?</span>

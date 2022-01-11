@@ -17,7 +17,8 @@ const Navbar = (props) => {
         {/* <div className="navbar-item"><span>Loty</span></div>
         <div className="navbar-item"><span>Hotele</span></div>
         <div className="navbar-item"><span>Atrakcje</span></div> */}
-        <Link to={section.handleAccLogin()} style={{ textDecoration: 'none' }}><div className="navbar-item"><span>Konto</span></div></Link>
+        <Link to={'/login'} style={{ textDecoration: 'none' }}><div className="navbar-item"><span>Zaloguj (W.I.P.)</span></div></Link>
+        <Link to={'/user'} style={{ textDecoration: 'none' }}><div className="navbar-item"><span>Konto (W.I.P.)</span></div></Link>
       </div>
     </div>
    );

@@ -261,7 +261,7 @@ body {
 .navbar {
   background-color: #2d3436;
   display: grid;
-  grid-template-columns: repeat(3, 467px);
+  grid-template-columns: repeat(4, 350px);
   height: 50px;
   border-radius: 15px;
   position: sticky !important;
@@ -343,7 +343,7 @@ body {
   display: inline-block;
   vertical-align: top; }
 
-.planning-page .content .content-bottom .content-bottom-right button {
+.planning-page .content .content-bottom .content-bottom-right button, .planning-page .content .content-bottom .content-bottom-right .button {
   display: block;
   width: 90%;
   height: 50px;
@@ -353,7 +353,8 @@ body {
   left: 50%;
   transform: translateX(-50%);
   margin: 10px 0;
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  color: #000; }
 
 .planning-page .content .content-bottom .content-bottom-right .planning-cart {
   text-align: center;
@@ -548,7 +549,8 @@ body {
   font-family: 'Oswald', sans-serif;
   letter-spacing: 0;
   font-size: 1.4rem;
-  line-height: 0.9; }
+  line-height: 0.9;
+  margin-top: 15px; }
 
 .card .card-info-wrapper .card-info .mid-wrapper .right-wrapper {
   text-align: justify;
@@ -702,7 +704,8 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+  font-family: 'Nanum Gothic Coding', monospace; }
 
 .cart-wrapper .cart {
   background-color: #fff;
@@ -716,14 +719,18 @@ body {
   border-radius: 3%; }
 
 .cart-wrapper .cart .cart-title {
-  font-size: 2.3rem;
+  font-size: 3rem;
   text-align: center;
-  padding-top: 5px; }
+  padding-top: 5px;
+  font-family: 'Bebas Neue', cursive; }
 
 .cart-wrapper .cart .cart-card-list-container .cart-label {
   text-align: center;
   font-size: 1.5rem;
-  margin: 10px 0; }
+  margin: 5px 0;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 0.05em;
+  font-size: 2rem; }
 
 .cart-wrapper .cart .cart-card-list-container .cart-card-list {
   background-color: #dfe6e9;
@@ -748,7 +755,7 @@ body {
 
 .cart-wrapper .cart .currency {
   position: absolute;
-  top: 70px;
+  top: 90px;
   right: 30px;
   font-size: 1.25rem; }
 
@@ -762,8 +769,7 @@ body {
 .cart-on-list {
   margin: 10px 0;
   font-size: 1.5rem;
-  font-family: 'Nanum Gothic Coding', monospace;
-  font-weight: 600; }
+  font-family: 'Fira Mono', monospace; }
 
 .user-page {
   margin-top: 20px;

@@ -51,35 +51,35 @@ class InputForm extends Component {
               value={this.state.wylot}
               onChange={this.handleChange}
               name="wylot"
-              placeholder="Wylot"
+              placeholder="Wylot (W.I.P)"
             />
             <input className="powrot"
               type="text"
               value={this.state.powrot}
               onChange={this.handleChange}
               name="powrot"
-              placeholder="Powrót"
+              placeholder="Powrót (W.I.P)"
             />
             <input className="miejscowosc"
               type="text"
               value={this.state.miejscowosc}
               onChange={this.handleChange}
               name="miejscowosc"
-              placeholder="Miejscowość"
+              placeholder="Miejscowość (W.I.P)"
             />
             <input className="liczba-osob"
               type="text"
               value={this.state.liczba_osob}
               onChange={this.handleChange}
               name="liczbaOsob"
-              placeholder="Liczba osób"
+              placeholder="Liczba osób (W.I.P)"
             />
             <input className="budzet-minimalny"
               type="text"
               value={this.state.budzet_minimalny}
               onChange={this.handleChange}
               name="budzetMinimalny"
-              placeholder="Budżet minimalny"
+              placeholder="Budżet minimalny (W.I.P)"
             />
             <input className="budzet-maksymalny"
               type="text"
@@ -107,42 +107,42 @@ class InputForm extends Component {
                 value={this.state.wylot}
                 onChange={this.handleChange}
                 name="wylot"
-                placeholder="Wylot"
+                placeholder="Wylot (W.I.P.)"
               />
               <input className="powrot"
                 type="text"
                 value={this.state.powrot}
                 onChange={this.handleChange}
                 name="powrot"
-                placeholder="Powrót"
+                placeholder="Powrót (W.I.P.)"
               />
               <input className="miejscowosc"
                 type="text"
                 value={this.state.miejscowosc}
                 onChange={this.handleChange}
                 name="miejscowosc"
-                placeholder="Miejscowość"
+                placeholder="Miejscowość (W.I.P.)"
               />
               <input className="liczba-osob"
                 type="text"
                 value={this.state.liczba_osob}
                 onChange={this.handleChange}
                 name="liczbaOsob"
-                placeholder="Liczba osób"
+                placeholder="Liczba osób (W.I.P.)"
               />
-              <input className="budzet-minimalny"
+              <input className="budzet-minimalny (W.I.P.)"
                 type="text"
                 value={this.state.budzet_minimalny}
                 onChange={this.handleChange}
                 name="budzetMinimalny"
-                placeholder="Budżet minimalny"
+                placeholder="Budżet minimalny (W.I.P.)"
               />
               <input className="budzet-maksymalny"
                 type="text"
                 value={this.state.budzet_maksymalny}
                 onChange={this.handleChange}
                 name="budzetMaksymalny"
-                placeholder="Budżet maksymalny"
+                placeholder="Budżet maksymalny (W.I.P.)"
               />
             </div>
             <input className="submit-button"

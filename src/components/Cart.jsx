@@ -59,10 +59,10 @@ const Cart = ({pointer, name}) => {
 Cart.defaultProps = {
   pointer:  new CartClass(
     [new CardClass("lot", "Lot 1"), new CardClass("lot", "Lot 2"), new CardClass("lot", "Lot 3")],
-    [new CardClass()],
-    [new CardClass()]
+    [new CardClass("hotel", "Hotel 1"), new CardClass("hotel", "Hotel 2"), new CardClass("hotel", "Hotel 3")],
+    [new CardClass("atrakcja", "Atrakcja 1"), new CardClass("atrakcja", "Atrakcja 2"), new CardClass("atrakcja", "Atrakcja 3")],
   ),
-  name: "Placeholder"
+  name: "Koszyk"
 };
  
 export default Cart;

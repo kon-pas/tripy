@@ -26,18 +26,21 @@ class RegisterPage extends Component {
 
       const response = await fetch(`http://51.83.185.162:4000/register`, {
         method: 'POST',
-        body:JSON.stringify({ email: this.state.username,firstName:'',lastName:'', password:this.state.password }),
+        body:JSON.stringify({ email: this.state.username,firstName:'test',lastName:'test', password:this.state.password }),
         headers: headers
       });
 
       const data = await response.json();
-      if(data.data === undefined){
-        alert('Nie poprawne dane')
+      console.log(data)
+      if(data.msg !== 'succ'){
+        console.log(data)
+        // alert('Niepoprawne dane')
       }
+
       this.setState({
         success: data.data,
       });
-      let user = new User(data.data.id,data.data.attributes.email,'default',data.data.attributes.name,data.data.attributes.surname)
+      let user = new User("ID",this.state.username,this.state.password ,'default','default')
 
       //Save to localStorage
       localStorage.setItem('user', JSON.stringify(user));
