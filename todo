@@ -12,11 +12,14 @@
 12
 
 -sfinalizuj
--filtry
+-footer
 -navbar
 -home page
--login
--koszyk
 -wyglad
--wyloguj/support
--footer
+-ikony
+
+-koszyk
+-wyloguj
+-login
+-filtry
+-search page

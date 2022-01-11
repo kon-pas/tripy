@@ -2,14 +2,23 @@ import Navbar from "../components/Navbar";
 import Cart from "../components/Cart";
 import { Card as CardClass } from "../scripts/Card";
 import { Cart as CartClass } from "../scripts/Cart"; 
+import { useState } from "react";
 
 const UserPage = () => {
-
   const Koszyk = new CartClass(
     [new CardClass(), new CardClass(), new CardClass()],
     [new CardClass(), new CardClass(), new CardClass()],
     [new CardClass(), new CardClass(), new CardClass()]
   )
+
+  const [contactVisible, toggleContact] = useState(false);
+
+  const displayContact = () => {
+    if (contactVisible) {
+      return <div className="contact">Skontaktuj się z nami poprzez<span className="bold"> kontakt@tripy.pl</span></div>;
+    }
+    return;
+  }
 
   return (
     <div>
@@ -22,7 +31,10 @@ const UserPage = () => {
           <div className="cart-list-item"><Cart /></div>
         </div>
         <div className="panel">
-          <div className="support">Potrzebujesz pomocy?</div>
+          {displayContact()}
+          <div className="support" onClick={ () => {
+            toggleContact(!contactVisible)
+          }}>Potrzebujesz pomocy?</div>
           <div className="logout">Wyloguj</div>
         </div>
       </div>
@@ -30,4 +42,4 @@ const UserPage = () => {
    );
 }
  
-export default UserPage;
+export default UserPage; 

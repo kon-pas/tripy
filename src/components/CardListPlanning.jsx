@@ -61,6 +61,15 @@ const CardListPlanning = ({currentPage,attraction,hotels,flights}) => {
       </div>
      );
   }
+  else if(currentPage === "sfinalizuj") {
+    return (
+      <div className="card-list card-list-planning">
+        <div className="container">
+          {atrakcje.map( e => <Card display="planning" key={e.getKey()} pointer={e} /> )}
+        </div>
+      </div>
+     );
+  }
 }
  
 export default CardListPlanning;

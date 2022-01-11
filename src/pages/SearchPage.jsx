@@ -1,6 +1,7 @@
 import { Component } from "react/cjs/react.production.min";
 import CardListPlanning from "../components/CardListPlanning";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 class SearchPage extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class SearchPage extends Component {
       flights: [],
       hotels: [],
       attraction: []
-  }
+    }
     this.changePage = this.changePage.bind(this);
   }
 
@@ -53,14 +54,13 @@ class SearchPage extends Component {
 
   render() { 
     return (
-      <div>
+      <div className="search-page-wrapper">
         <Navbar top={0}/>
         <div className="search-page">
           <div className="search-navbar">
-            <div className="search-navbar-button"><span>Lot</span></div>
-            <div className="search-navbar-button"><span>Hotel</span></div>
+            <div className="search-navbar-button"><span>Loty</span></div>
+            <div className="search-navbar-button"><span>Hotele</span></div>
             <div className="search-navbar-button"><span>Atrakcje</span></div>
-            <div className="search-navbar-button"><span>Sfinalizuj</span></div>
           </div>
           <CardListPlanning
             currentPage={this.state.currentPage}
@@ -69,6 +69,7 @@ class SearchPage extends Component {
             flights={this.state.flights.map((value) => value)}
           />
         </div>
+        <Footer />
       </div>
     );
   }

@@ -59,6 +59,9 @@ const Card = ({display, pointer}) => {
             <div className="rating-wrapper"> {pointer.rating + '/5'}</div>
           </div>
         </div>
+        <div className="info-button" onClick={ () => {
+            displayInfoToggle(!displayInfo)
+          }}>i</div>
         {infoToggle()}
       </div>
     )

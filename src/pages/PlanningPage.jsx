@@ -153,6 +153,7 @@ class PlanningPage extends Component {
                 <button onClick={ () => {
                   carts.currentCart.setAtrakcje(carts.getCurrentPlanningPageCards());
                   carts.setCurrentPlanningPageCards([]);
+                  this.changePage('sfinalizuj');
                 }}>Sfinalizuj</button>
                 <button onClick={() => this.changePage('hotel')}>Powrót</button>
               </div>
@@ -173,16 +174,34 @@ class PlanningPage extends Component {
                   <div className="planning-navbar-button active"><span>Lot</span></div>
                   <div className="planning-navbar-button active"><span>Hotel</span></div>
                   <div className="planning-navbar-button active"><span>Atrakcje</span></div>
-                  <div className="planning-navbar-button"><span>Sfinalizuj</span></div>
+                  <div className="planning-navbar-button active"><span>Sfinalizuj</span></div>
                 </div>
-                <CardListPlanning currentPage={this.state.currentPage}/>
+                <CardListPlanning
+                  currentPage={"lot"}
+                  attraction={this.state.attraction.map((value) => value)}
+                  hotels={this.state.hotels.map((value) => value)}
+                  flights={this.state.flights.map((value) => value)}
+                />
+                <CardListPlanning
+                  currentPage={"hotel"}
+                  attraction={this.state.attraction.map((value) => value)}
+                  hotels={this.state.hotels.map((value) => value)}
+                  flights={this.state.flights.map((value) => value)}
+                />
+                <CardListPlanning
+                  currentPage={"atrakcje"}
+                  attraction={this.state.attraction.map((value) => value)}
+                  hotels={this.state.hotels.map((value) => value)}
+                  flights={this.state.flights.map((value) => value)}
+                />
               </div>
               <div className="content-bottom-right">
                 <PlanningCart currentCart={carts.currentCart} />
                 <button onClick={ () => {
-                  carts.currentCart.setAtrakcje(carts.getCurrentPlanningPageCards());
-                  carts.setCurrentPlanningPageCards([]);
-                }}>Gotowe!</button>
+                  // carts.currentCart.setAtrakcje(carts.getCurrentPlanningPageCards());
+                  // carts.setCurrentPlanningPageCards([]);
+                  // this.changePage('sfinalizuj');
+                }}>Sfinalizuj</button>
                 <button onClick={() => this.changePage('hotel')}>Powrót</button>
               </div>
             </div>

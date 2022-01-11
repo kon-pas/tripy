@@ -21,6 +21,22 @@
       text-align: center;
       margin: 5px 0;
     }
-
+    .contact {
+      position: absolute;
+      font-size: 2rem;
+      background-color: $light;
+      right: 180px;
+      bottom: 5px;
+      width: 800px;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      height: 65px;
+      border-radius: 10px;
+      .bold {
+        font-weight: 600;
+        margin-left: 10px;
+      }
+    }
   }
 }

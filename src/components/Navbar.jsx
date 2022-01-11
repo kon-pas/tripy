@@ -10,12 +10,12 @@ const Navbar = (props) => {
       {block()}
       <div className="navbar">
         <Link to={'/'} style={{ textDecoration: 'none' }}><div className="navbar-item"><span>tripy</span></div></Link>
-        <div className="navbar-item"><span>Lecimy!</span></div>
-        <div className="navbar-item"><span>Wyszukaj</span></div>
-        <div className="navbar-item"><span>Loty</span></div>
+        <Link to={'/planning'} style={{ textDecoration: 'none' }}><div className="navbar-item"><span>Lecimy!</span></div></Link>
+        <Link to={'/search'} style={{ textDecoration: 'none' }}><div className="navbar-item"><span>Wyszukaj</span></div></Link>
+        {/* <div className="navbar-item"><span>Loty</span></div>
         <div className="navbar-item"><span>Hotele</span></div>
-        <div className="navbar-item"><span>Atrakcje</span></div>
-        <Link to={'/login'} style={{ textDecoration: 'none' }}><div className="navbar-item"><span>Login</span></div></Link>
+        <div className="navbar-item"><span>Atrakcje</span></div> */}
+        <Link to={'/login'} style={{ textDecoration: 'none' }}><div className="navbar-item"><span>Konto</span></div></Link>
       </div>
     </div>
    );
