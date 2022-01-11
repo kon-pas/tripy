@@ -4,7 +4,7 @@
   background-color: $dark;
   background-image: $noise;
   width: $content-width;
-  height: 400px;
+  height: 200px;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   color: $white;
@@ -16,5 +16,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    * {
+      font-size: 1.2rem;
+      color: $light-grey;
+      text-align: center;
+      margin: 20px 0;
+    }
   }
 }

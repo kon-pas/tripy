@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
+import * as section from "../scripts/section.js";
 
 const Navbar = (props) => {
   const block = () => {
     if(props.top === 0) return null;
     return <div style={{height: props.top}} />;
   }
+
   return (
     <div>
       {block()}

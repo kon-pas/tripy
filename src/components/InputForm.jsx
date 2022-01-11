@@ -58,7 +58,7 @@ class InputForm extends Component {
               value={this.state.powrot}
               onChange={this.handleChange}
               name="powrot"
-              placeholder="Adres e-mail"
+              placeholder="Powrót"
             />
             <input className="miejscowosc"
               type="text"
@@ -100,49 +100,51 @@ class InputForm extends Component {
       return ( 
         <div>
           <form onSubmit={this.handleSubmit} className="input-form-home">
-            <input
-              className="wylot"
-              type="text"
-              value={this.state.wylot}
-              onChange={this.handleChange}
-              name="wylot"
-              placeholder="Wylot"
-            />
-            <input className="powrot"
-              type="text"
-              value={this.state.powrot}
-              onChange={this.handleChange}
-              name="powrot"
-              placeholder="Adres e-mail"
-            />
-            <input className="miejscowosc"
-              type="text"
-              value={this.state.miejscowosc}
-              onChange={this.handleChange}
-              name="miejscowosc"
-              placeholder="Miejscowość"
-            />
-            <input className="liczba-osob"
-              type="text"
-              value={this.state.liczba_osob}
-              onChange={this.handleChange}
-              name="liczbaOsob"
-              placeholder="Liczba osób"
-            />
-            <input className="budzet-minimalny"
-              type="text"
-              value={this.state.budzet_minimalny}
-              onChange={this.handleChange}
-              name="budzetMinimalny"
-              placeholder="Budżet minimalny"
-            />
-            <input className="budzet-maksymalny"
-              type="text"
-              value={this.state.budzet_maksymalny}
-              onChange={this.handleChange}
-              name="budzetMaksymalny"
-              placeholder="Budżet maksymalny"
-            />
+            <div className="input-container">
+              <input
+                className="wylot"
+                type="text"
+                value={this.state.wylot}
+                onChange={this.handleChange}
+                name="wylot"
+                placeholder="Wylot"
+              />
+              <input className="powrot"
+                type="text"
+                value={this.state.powrot}
+                onChange={this.handleChange}
+                name="powrot"
+                placeholder="Powrót"
+              />
+              <input className="miejscowosc"
+                type="text"
+                value={this.state.miejscowosc}
+                onChange={this.handleChange}
+                name="miejscowosc"
+                placeholder="Miejscowość"
+              />
+              <input className="liczba-osob"
+                type="text"
+                value={this.state.liczba_osob}
+                onChange={this.handleChange}
+                name="liczbaOsob"
+                placeholder="Liczba osób"
+              />
+              <input className="budzet-minimalny"
+                type="text"
+                value={this.state.budzet_minimalny}
+                onChange={this.handleChange}
+                name="budzetMinimalny"
+                placeholder="Budżet minimalny"
+              />
+              <input className="budzet-maksymalny"
+                type="text"
+                value={this.state.budzet_maksymalny}
+                onChange={this.handleChange}
+                name="budzetMaksymalny"
+                placeholder="Budżet maksymalny"
+              />
+            </div>
             <input className="submit-button"
               type="submit"
               value="Lecimy!"

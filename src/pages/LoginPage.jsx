@@ -1,5 +1,6 @@
 import { Component } from "react/cjs/react.production.min";
 import { Link } from "react-router-dom";
+import * as section from "../scripts/section.js";
 
 class LoginPage extends Component {
   constructor(props) {
@@ -23,7 +24,7 @@ class LoginPage extends Component {
     event.preventDefault();
   }
 
-  render() { 
+  render() {
     return ( 
       <div className="login-page">
         <div className="panel">
