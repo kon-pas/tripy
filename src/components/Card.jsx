@@ -21,16 +21,16 @@ const Card = ({display, pointer}) => {
             <div className="left-wrapper">
               <img className="image" src={pointer.image}/>
               <div className="left-bottom-wrapper">
-                { pointer.price + " PLN/os."}
-                <span> Kontakt: </span>
-                { pointer.link }
+                { pointer.price + " PLN/os."} <br /> <br />
+                <span> Kontakt: </span> <br />
+                { pointer.link } <br />
                 { pointer.contact }
-                <div className="planel">
+                {/* <div className="planel">
                   <span>Zgłoś</span>
                   <span>Like</span>
                   { pointer.rating }
                   <span>Dislike</span>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="right-wrapper"> {pointer.desc} </div>

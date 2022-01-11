@@ -13,7 +13,7 @@ const Navbar = (props) => {
       <div className="navbar">
         <Link to={'/'} style={{ textDecoration: 'none' }}><div className="navbar-item"><span>tripy</span></div></Link>
         <Link to={'/planning'} style={{ textDecoration: 'none' }}><div className="navbar-item"><span>Lecimy!</span></div></Link>
-        <Link to={'/search'} style={{ textDecoration: 'none' }}><div className="navbar-item"><span>Wyszukaj</span></div></Link>
+        {/* <Link to={'/search'} style={{ textDecoration: 'none' }}><div className="navbar-item"><span>Wyszukaj</span></div></Link> */}
         {/* <div className="navbar-item"><span>Loty</span></div>
         <div className="navbar-item"><span>Hotele</span></div>
         <div className="navbar-item"><span>Atrakcje</span></div> */}

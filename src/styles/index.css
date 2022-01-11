@@ -261,7 +261,7 @@ body {
 .navbar {
   background-color: #2d3436;
   display: grid;
-  grid-template-columns: repeat(4, 350px);
+  grid-template-columns: repeat(3, 467px);
   height: 50px;
   border-radius: 15px;
   position: sticky !important;
@@ -395,7 +395,11 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  font-size: 2.5rem; }
+  font-size: 3.5rem;
+  font-family: 'Bebas Neue', cursive;
+  background-color: #fff;
+  padding: 0 10px;
+  border-radius: 10px; }
 
 .card-list-planning {
   background-color: #dfe6e9;
@@ -427,7 +431,11 @@ body {
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 8px 8px 15px 0px #b2bec3;
-  position: relative; }
+  position: relative;
+  font-size: 1.1rem;
+  font-family: "Fira Mono", monospace;
+  font-weight: 500;
+  letter-spacing: -0.1em; }
 
 .card .image-wrapper {
   width: 380px;
@@ -441,11 +449,14 @@ body {
   padding: 0 10px; }
 
 .card .info-wrapper .title-wrapper {
-  font-size: 2rem;
-  height: 38px; }
+  font-size: 1.7rem;
+  height: 38px;
+  margin-top: 5px; }
 
 .card .info-wrapper .subtitle-wrapper {
-  font-size: 1.5rem;
+  font-family: 'Source Code Pro', monospace;
+  line-height: 0.8;
+  font-size: 1.3rem;
   display: grid;
   grid-template-columns: auto auto; }
 
@@ -532,6 +543,12 @@ body {
 .card .card-info-wrapper .card-info .mid-wrapper .left-wrapper .image {
   width: 600px;
   margin-right: 10px; }
+
+.card .card-info-wrapper .card-info .mid-wrapper .left-wrapper .left-bottom-wrapper {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0;
+  font-size: 1.4rem;
+  line-height: 0.9; }
 
 .card .card-info-wrapper .card-info .mid-wrapper .right-wrapper {
   text-align: justify;
@@ -661,7 +678,11 @@ body {
   color: #fff;
   position: relative;
   bottom: 0;
-  margin-top: 50px; }
+  margin-top: 50px;
+  font-size: 0.9rem;
+  font-family: "Fira Mono", monospace;
+  font-weight: 500;
+  letter-spacing: -0.05em; }
 
 .footer .footer-wrapper {
   position: absolute;
@@ -670,7 +691,6 @@ body {
   transform: translate(-50%, -50%); }
 
 .footer .footer-wrapper * {
-  font-size: 1.2rem;
   color: #b2bec3;
   text-align: center;
   margin: 20px 0; }
