@@ -70,7 +70,7 @@ class RegisterPage extends Component {
               <input className="email" type="text" value={this.state.email} onChange={this.handleChange} name="email" placeholder="Adres e-mail"/>
               <input className="password" type="text" value={this.state.password} onChange={this.handleChange} name="password" placeholder="Hasło"/>
               <input className="password_2" type="text" value={this.state.password_2} onChange={this.handleChange} name="password_2" placeholder="Powtórz hasło"/>
-              <input type="submit" value="Stwórz konto" />
+              <input className="register" type="submit" value="Stwórz konto" />
             </form>
           </div>
           <span className="item-3"> Masz konto?</span>

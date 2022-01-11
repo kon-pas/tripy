@@ -1,9 +1,15 @@
 @import "../variables";
 
 .user-page {
-  padding-top: 20px;
+  margin-top: 20px;
+  background-image: $noise;
+  padding: 15px;
+  border-radius: 15px;
+
   .title-1 {
-    font-size: 3rem;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 4rem;
+    line-height: 0.9;
   }
   .panel {
     position: absolute;
