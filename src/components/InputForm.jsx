@@ -1,16 +1,17 @@
 import { Component } from "react/cjs/react.production.min";
 import { Navigate } from "react-router-dom";
+import { currentSearch as search, getWylot } from "../scripts/search";
 
 class InputForm extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      wylot: '',
-      powrot: '',
-      miejscowosc: '',
-      liczbaOsob: '',
-      budzetMinimalny: '',
-      budzetMaksymalny: '',
+      wylot:  getWylot(),
+      powrot:  search.powrot,
+      miejscowosc:  search.miejscowosc,
+      liczbaOsob: search.liczbaOsob,
+      budzetMinimalny:  search.budzetMinimalny,
+      budzetMaksymalny:  search.budzetMaksymalny,
       submitSuccess: false
     }
     this.handleChange = this.handleChange.bind(this);
@@ -26,13 +27,14 @@ class InputForm extends Component {
 
   handleSubmit(event) {
     this.setState({
-      submitSuccess: true
+      submitSuccess: true,
+      wylot: search.wylot
     });
     event.preventDefault();
   }
 
   handleSearch(event) {
-    console.log("Poszukanexd");
+    console.log(this.state.wylot);
   }
 
   render() {
