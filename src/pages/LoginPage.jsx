@@ -1,7 +1,7 @@
 import { Component } from "react/cjs/react.production.min";
 import { Link } from "react-router-dom";
-import {User} from "../scripts/User";
 import { Navigate } from "react-router-dom";
+import {LoginUser} from "../scripts/Database";
 
 class LoginPage extends Component {
   constructor(props) {
@@ -25,31 +25,24 @@ class LoginPage extends Component {
   getGIY = async (e) =>{
     e.preventDefault();
     try {
-      let headers = new Headers();
-
-      headers.append('Content-Type', 'application/json');
-      headers.append('Accept', 'application/json');
-      headers.append('Origin', 'http://localhost:3000');
-      
-      const response = await fetch(`http://51.83.185.162:4000/auth/login`, {
-        method: 'POST',
-        body:JSON.stringify({ email: this.state.username,password:this.state.password }),
-        headers: headers
-      });
-
-      const data = await response.json();
-      if(data.data === undefined){
-        alert('Nie poprawne dane')
+      if(this.state.username === '' || this.state.password === ''){
+        alert('Puste pole, uzupełnij dane aby się zalogować')
+        return;
       }
-      this.setState({
-        success: data.data,
-        isLogged: true,
-      });
-      let user = new User(data.data.id,data.data.attributes.email,'default',data.data.attributes.name,data.data.attributes.surname)
-
+      LoginUser(this.state.username,this.state.password).then(response =>{
+        if(response !== undefined){
+          alert('Udało się!')
+          this.setState({
+            isLogged: true,
+          });
+        }
+        else{
+          alert('Nieprawidłowe dane')
+        }
+      })
+      //let user = new User(data.data.id,data.data.attributes.email,'default',data.data.attributes.name,data.data.attributes.surname)
       //Save to localStorage
-      localStorage.setItem('user', JSON.stringify(user));
-
+      //localStorage.setItem('user', JSON.stringify(user));
 
     } catch (error) {
       console.log(error);
