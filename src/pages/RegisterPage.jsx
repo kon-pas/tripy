@@ -25,16 +25,16 @@ class RegisterPage extends Component {
   getReg = async (e) =>{
     e.preventDefault();
     try {
-      let headers = new Headers();
+      // Sprawdz czy imie i nazwisko nie są numeryczne
 
-      headers.append('Content-Type', 'application/json');
-      headers.append('Accept', 'application/json');
-      headers.append('Origin', 'http://localhost:3000');
       let usrfullyName = this.state.username.split(" ");
-      console.log(usrfullyName[0], usrfullyName[1])
       if(usrfullyName[0] === undefined || usrfullyName[1] === undefined){
         alert("Niepoprawna nazwa użytkownika")
+        return;
       }
+      // Hasla musza byc identyczne
+
+
       await RegisterUser(this.state.email,usrfullyName[0],usrfullyName[1],this.state.password).then(response =>{
         console.log(response)
         if(response === 1){
@@ -68,6 +68,8 @@ class RegisterPage extends Component {
     if (this.state.is_success === true) {
       return <Navigate to="/"></Navigate>
     }else{
+      // Zmien na imie i nazwisko
+      // I haslo zeby bylo w gwiazdkach
       return (
           <div className="login-page">
             <div className="panel">
