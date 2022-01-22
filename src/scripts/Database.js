@@ -25,6 +25,8 @@ export const fetchUsers = () => {
     });
 }
 
+export const logoutUser = () => localStorage.removeItem("user")
+
 export const LoginUser = (email,password) => {
     return new Promise(async(resolve, reject)=>{
         try{
@@ -41,8 +43,8 @@ export const LoginUser = (email,password) => {
                 .then(data => {
                     try{
                         const usr = new User(data.data.id,data.data.attributes.email,'',data.data.attributes.name,data.data.attributes.surname)
-                        resolve(usr)
                         localStorage.setItem('user', JSON.stringify(usr));
+                        resolve(usr)
                     }catch(e){
                         resolve(undefined);
                     }

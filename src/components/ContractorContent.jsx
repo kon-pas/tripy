@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import useUserData from "../hooks/useUserData";
 import AddNewAttraction from "./AddNewAttraction";
 import EditAttraction from "./EditAttraction";
+import {User} from "../scripts/User";
 
 const ContractorContent = () => {
   const { userId } = useUserData();
@@ -10,13 +11,14 @@ const ContractorContent = () => {
   const [currentAttractions, setCurrentAttractions] = useState([]);
 
   const reload = useCallback(() => {
+    const content = JSON.parse(localStorage.getItem('user')) || {};
+    const usr = new User(content.id,content.email,'',content.name,content.surname);
     fetch('http://51.83.185.162:4000/attraction/all')
       .then(response => response.json())
       .then(data => {
-        return data.filter(attraction => attraction.userId === userId);
+        return data.filter(attraction => attraction.email === usr.email);
       })
       .then(data => {
-        console.log(data);
         setCurrentAttractions(data);
       })
   }, [userId]);
