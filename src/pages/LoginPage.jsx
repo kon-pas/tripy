@@ -36,7 +36,6 @@ class LoginPage extends Component {
         body:JSON.stringify({ email: this.state.username,password:this.state.password }),
         headers: headers
       });
-
       const data = await response.json();
       if(data.data === undefined){
         alert('Nie poprawne dane')
@@ -46,9 +45,8 @@ class LoginPage extends Component {
         isLogged: true,
       });
       let user = new User(data.data.id,data.data.attributes.email,'default',data.data.attributes.name,data.data.attributes.surname)
-
       //Save to localStorage
-      localStorage.setItem('user', JSON.stringify(user));
+      localStorage.setItem('user', JSON.stringify({...user})); // todo add jwt here and send as bearer in auth header or save in cookies with js-cookie lib (https://www.npmjs.com/package/js-cookie)
 
 
     } catch (error) {

@@ -142,6 +142,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Amita:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Suranna&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playball&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amita:wght@400;700&display=swap");
 body {
   margin: 0 auto;
   background-color: #fff; }
@@ -149,6 +161,57 @@ body {
 .content {
   margin: 0 auto;
   width: 1400px; }
+
+.contractor-page button, .form button {
+  background-color: #1a80ff;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 5px;
+  width: auto;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  margin: 5px 0; }
+
+.contractor-page button + button, .form button + button {
+  margin-left: 10px; }
+
+.contractor-page label, .form label {
+  font-size: 1.1rem;
+  width: 200px;
+  display: inline-block; }
+
+.contractor-page input, .form input {
+  background-color: #dfe6e9;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  height: 40px;
+  font-size: 1rem;
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+.contractor-page .header, .form .header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; }
+
+.contractor-page .attractions, .form .attractions {
+  gap: 15px;
+  display: flex;
+  flex-wrap: wrap; }
+
+.contractor-page .attractions .attraction, .form .attractions .attraction {
+  position: relative;
+  width: 200px;
+  height: 330px; }
+
+.contractor-page .attractions .attraction button, .form .attractions .attraction button {
+  height: 30px; }
 
 .login-page {
   background-color: rgba(178, 190, 195, 0.9);

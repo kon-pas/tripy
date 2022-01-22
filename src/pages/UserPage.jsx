@@ -4,8 +4,10 @@ import { Card as CardClass } from "../scripts/Card";
 import { Cart as CartClass } from "../scripts/Cart"; 
 import { useState } from "react";
 import * as carts from "../scripts/carts";
+import useLogout from "../hooks/useLogout";
 
 const UserPage = () => {
+  const logout = useLogout();
   const Koszyk = new CartClass(
     [new CardClass(), new CardClass(), new CardClass()],
     [new CardClass(), new CardClass(), new CardClass()],
@@ -36,7 +38,7 @@ const UserPage = () => {
           <div className="support" onClick={ () => {
             toggleContact(!contactVisible)
           }}>Potrzebujesz pomocy?</div>
-          <div className="logout">Wyloguj (W.I.P.)</div>
+          <div className="logout" onClick={logout}>Wyloguj</div>
         </div>
       </div>
     </div>
