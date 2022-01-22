@@ -6,6 +6,7 @@ import PlanningCart from "../components/PlanningCart";
 import Cart from "../components/Cart";
 import * as section from "../scripts/section.js";
 import { Link } from "react-router-dom";
+import filter from "../scripts/filter.js";
 // import { Navigate } from "react-router-dom";
 
 import * as carts from "../scripts/carts";
@@ -41,6 +42,7 @@ class PlanningPage extends Component {
         headers: headers
     }).then(response => response.json())
         .then(data => {
+            filter(data);
             this.setState({flights: data})
         })
 
