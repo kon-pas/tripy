@@ -1,12 +1,12 @@
 import { Component } from "react/cjs/react.production.min";
 import { Navigate } from "react-router-dom";
-import { currentSearch as search, getWylot } from "../scripts/search";
+import { searchSettings as search } from "../scripts/search";
 
 class InputForm extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      wylot:  getWylot(),
+      wylot:  search.getWylot(),
       powrot:  search.powrot,
       miejscowosc:  search.miejscowosc,
       liczbaOsob: search.liczbaOsob,
@@ -28,7 +28,7 @@ class InputForm extends Component {
   handleSubmit(event) {
     this.setState({
       submitSuccess: true,
-      wylot: search.wylot
+      wylot: search.getWylot()
     });
     event.preventDefault();
   }
