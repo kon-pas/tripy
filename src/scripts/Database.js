@@ -27,6 +27,11 @@ export const fetchUsers = () => {
 
 export const logoutUser = () => localStorage.removeItem("user")
 
+export const isLoggedIn = () => {
+    return localStorage.getItem("user") !== null;
+
+}
+
 export const LoginUser = (email,password) => {
     return new Promise(async(resolve, reject)=>{
         try{
