@@ -1,7 +1,7 @@
 import { Component } from "react/cjs/react.production.min";
 import { Link } from "react-router-dom";
-import {User} from "../scripts/User";
 import { Navigate } from "react-router-dom";
+import {LoginUser} from "../scripts/Database";
 
 class LoginPage extends Component {
   constructor(props) {
@@ -25,6 +25,7 @@ class LoginPage extends Component {
   getGIY = async (e) =>{
     e.preventDefault();
     try {
+<<<<<<< HEAD
       let headers = new Headers();
 
       headers.append('Content-Type', 'application/json');
@@ -48,6 +49,26 @@ class LoginPage extends Component {
       //Save to localStorage
       localStorage.setItem('user', JSON.stringify({...user})); // todo add jwt here and send as bearer in auth header or save in cookies with js-cookie lib (https://www.npmjs.com/package/js-cookie)
 
+=======
+      if(this.state.username === '' || this.state.password === ''){
+        alert('Puste pole, uzupełnij dane aby się zalogować')
+        return;
+      }
+      LoginUser(this.state.username,this.state.password).then(response =>{
+        if(response !== undefined){
+          alert('Udało się!')
+          this.setState({
+            isLogged: true,
+          });
+        }
+        else{
+          alert('Nieprawidłowe dane')
+        }
+      })
+      //let user = new User(data.data.id,data.data.attributes.email,'default',data.data.attributes.name,data.data.attributes.surname)
+      //Save to localStorage
+      //localStorage.setItem('user', JSON.stringify(user));
+>>>>>>> 9bc5c06b50b5bdc5968b73390ebbd74dc01a5448
 
     } catch (error) {
       console.log(error);
