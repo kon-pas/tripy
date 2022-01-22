@@ -16,8 +16,6 @@ class RegisterPage extends Component {
       password_2: '',
       is_success: false
     }
-
-
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -26,7 +24,6 @@ class RegisterPage extends Component {
     e.preventDefault();
     try {
       // Sprawdz czy imie i nazwisko nie są numeryczne
-
       let usrfullyName = this.state.username.split(" ");
       if(usrfullyName[0] === undefined || usrfullyName[1] === undefined){
         alert("Niepoprawna nazwa użytkownika")
