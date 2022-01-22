@@ -7,7 +7,7 @@
 -zamienić interfejs dla zalogowanego użytkownika
 -footer scss
 -planning page klikalny navbar
--planning page + home page  -> search + filter
+-planning page + home page -> search + filter
 
 12
 
@@ -22,5 +22,8 @@
 -filtry
 -search page
 
-15
+20
 
+filtry
+sfinalizuj
+merge contractor + user

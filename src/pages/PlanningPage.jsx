@@ -42,8 +42,7 @@ class PlanningPage extends Component {
         headers: headers
     }).then(response => response.json())
         .then(data => {
-            filter(data);
-            this.setState({flights: data})
+            this.setState({flights: filter(data)})
         })
 
     fetch(`http://51.83.185.162:4000/hotels`, {
@@ -51,7 +50,7 @@ class PlanningPage extends Component {
         headers: headers
     }).then(response => response.json())
         .then(data => {
-            this.setState({hotels: data})
+            this.setState({hotels: filter(data)})
         })
         
     fetch(`http://51.83.185.162:4000/attraction/all`, {
@@ -59,7 +58,7 @@ class PlanningPage extends Component {
         headers: headers
     }).then(response => response.json())
         .then(data => {
-            this.setState({attraction: data})
+            this.setState({attraction: filter(data)})
         })
   }
 

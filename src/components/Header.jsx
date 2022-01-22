@@ -11,9 +11,9 @@ const Header = (props) => {
         </div>
       </Link>
       <Link to={section.handleAccLogin()}>
-        <div className="login">
+        {/* <div className="login">
           <img src={require('../assets/icons/user.png')}/>
-        </div>
+        </div> */}
       </Link>
       <Navbar top={props.top} closePath="/"/>
     </div>
