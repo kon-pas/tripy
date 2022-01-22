@@ -25,31 +25,6 @@ class LoginPage extends Component {
   getGIY = async (e) =>{
     e.preventDefault();
     try {
-<<<<<<< HEAD
-      let headers = new Headers();
-
-      headers.append('Content-Type', 'application/json');
-      headers.append('Accept', 'application/json');
-      headers.append('Origin', 'http://localhost:3000');
-      
-      const response = await fetch(`http://51.83.185.162:4000/auth/login`, {
-        method: 'POST',
-        body:JSON.stringify({ email: this.state.username,password:this.state.password }),
-        headers: headers
-      });
-      const data = await response.json();
-      if(data.data === undefined){
-        alert('Nie poprawne dane')
-      }
-      this.setState({
-        success: data.data,
-        isLogged: true,
-      });
-      let user = new User(data.data.id,data.data.attributes.email,'default',data.data.attributes.name,data.data.attributes.surname)
-      //Save to localStorage
-      localStorage.setItem('user', JSON.stringify({...user})); // todo add jwt here and send as bearer in auth header or save in cookies with js-cookie lib (https://www.npmjs.com/package/js-cookie)
-
-=======
       if(this.state.username === '' || this.state.password === ''){
         alert('Puste pole, uzupełnij dane aby się zalogować')
         return;
@@ -68,12 +43,9 @@ class LoginPage extends Component {
       //let user = new User(data.data.id,data.data.attributes.email,'default',data.data.attributes.name,data.data.attributes.surname)
       //Save to localStorage
       //localStorage.setItem('user', JSON.stringify(user));
->>>>>>> 9bc5c06b50b5bdc5968b73390ebbd74dc01a5448
-
     } catch (error) {
       console.log(error);
     }
-
   }
 
   render() {
