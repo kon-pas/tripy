@@ -25,6 +25,11 @@ class LoginPage extends Component {
   getGIY = async (e) =>{
     e.preventDefault();
     try {
+<<<<<<< HEAD
+=======
+
+      // czy email jest w poprawnej pstaci
+>>>>>>> 653505a04c3e4d8ffa599d2bdb851551d009eb36
       if(this.state.username === '' || this.state.password === ''){
         alert('Puste pole, uzupełnij dane aby się zalogować')
         return;
@@ -43,6 +48,10 @@ class LoginPage extends Component {
       //let user = new User(data.data.id,data.data.attributes.email,'default',data.data.attributes.name,data.data.attributes.surname)
       //Save to localStorage
       //localStorage.setItem('user', JSON.stringify(user));
+<<<<<<< HEAD
+=======
+
+>>>>>>> 653505a04c3e4d8ffa599d2bdb851551d009eb36
     } catch (error) {
       console.log(error);
     }
@@ -53,6 +62,7 @@ class LoginPage extends Component {
       return <Navigate to="/"></Navigate>
     }
     else return (
+        // Haslo jako giwazdki
         <div className="login-page">
           <div className="panel">
             <span className="item-1">Zaloguj się</span>
