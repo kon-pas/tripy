@@ -1,17 +1,17 @@
 import { Component } from "react/cjs/react.production.min";
 import { Navigate } from "react-router-dom";
-import { currentSearch as search, getWylot } from "../scripts/search";
+import { searchSettings as search} from "../scripts/search";
 
 class InputForm extends Component {
   constructor(props) {
     super(props);
     this.state = { 
-      wylot:  getWylot(),
-      powrot:  search.powrot,
-      miejscowosc:  search.miejscowosc,
-      liczbaOsob: search.liczbaOsob,
-      budzetMinimalny:  search.budzetMinimalny,
-      budzetMaksymalny:  search.budzetMaksymalny,
+      wylot:  search.getWylot(),
+      powrot:  search.getPowrot(),
+      miejscowosc:  search.getMiejscowosc(),
+      liczbaOsob: search.getLiczbaOsob(),
+      budzetMinimalny:  search.getBudzetMinimalny(),
+      budzetMaksymalny:  search.getBudzetMaksymalny(),
       submitSuccess: false
     }
     this.handleChange = this.handleChange.bind(this);
@@ -28,13 +28,19 @@ class InputForm extends Component {
   handleSubmit(event) {
     this.setState({
       submitSuccess: true,
-      wylot: search.wylot
+      wylot: search.getWylot()
     });
     event.preventDefault();
   }
 
   handleSearch(event) {
-    console.log(this.state.wylot);
+    search.setWylot(this.state.wylot);
+    search.setPowrot(this.state.powrot);
+    search.setMiejscowosc(this.state.miejscowosc);
+    search.setLiczbaOsob(this.state.liczbaOsob);
+    search.setBudzetMinimalny(this.state.budzetMinimalny);
+    search.setBudzetMaksymalny(this.state.budzetMaksymalny);
+    event.preventDefault();
   }
 
   render() {
@@ -51,35 +57,35 @@ class InputForm extends Component {
               value={this.state.wylot}
               onChange={this.handleChange}
               name="wylot"
-              placeholder="Wylot (W.I.P)"
+              placeholder="Wylot"
             />
             <input className="powrot"
               type="text"
               value={this.state.powrot}
               onChange={this.handleChange}
               name="powrot"
-              placeholder="Powrót (W.I.P)"
+              placeholder="Powrót"
             />
             <input className="miejscowosc"
               type="text"
               value={this.state.miejscowosc}
               onChange={this.handleChange}
               name="miejscowosc"
-              placeholder="Miejscowość (W.I.P)"
+              placeholder="Miejscowość"
             />
             <input className="liczba-osob"
               type="text"
               value={this.state.liczba_osob}
               onChange={this.handleChange}
               name="liczbaOsob"
-              placeholder="Liczba osób (W.I.P)"
+              placeholder="Liczba osób"
             />
             <input className="budzet-minimalny"
               type="text"
               value={this.state.budzet_minimalny}
               onChange={this.handleChange}
               name="budzetMinimalny"
-              placeholder="Budżet minimalny (W.I.P)"
+              placeholder="Budżet minimalny"
             />
             <input className="budzet-maksymalny"
               type="text"

@@ -51,6 +51,7 @@ class PlanningPage extends Component {
         .then(data => {
             this.setState({hotels: data})
         })
+        
     fetch(`http://51.83.185.162:4000/attraction/all`, {
         method: 'GET',
         headers: headers
