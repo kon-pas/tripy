@@ -111,6 +111,32 @@ export const fetchTripyUser = (id) => {
     });
 }
 
+export const registerTripyUser = (idUser,idFlight,idHotel,idAttraction) => {
+    return new Promise(async(resolve, reject)=>{
+        try{
+            let headers = new Headers();
+            headers.append('Content-Type', 'application/json');
+            headers.append('Accept', 'application/json');
+            headers.append('Origin', 'http://localhost:3000');
+
+            fetch(`http://51.83.185.162:4000/tripy/register`, {
+                method: 'POST',
+                headers: headers,
+                body:JSON.stringify({idUser:idUser,idFlight:idFlight,idHotel:idHotel,idAttraction:idAttraction})
+            }).then(response => {
+                if(response.status === 201 || response.status === 200){
+                    resolve(1);
+                }
+                else{
+                    resolve(0);
+                }
+            });
+        }catch(e){
+            reject(e);
+        }
+    });
+}
+
 // Attractions
 
 export const fetchAttractions = () => {
