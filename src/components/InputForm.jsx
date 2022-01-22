@@ -1,29 +1,17 @@
 import { Component } from "react/cjs/react.production.min";
 import { Navigate } from "react-router-dom";
-<<<<<<< HEAD
-import { searchSettings as search } from "../scripts/search";
-=======
 import { searchSettings as search} from "../scripts/search";
->>>>>>> 69130cf79f1150daae9c4a2d135d1462308696c0
 
 class InputForm extends Component {
   constructor(props) {
     super(props);
     this.state = { 
       wylot:  search.getWylot(),
-<<<<<<< HEAD
-      powrot:  search.powrot,
-      miejscowosc:  search.miejscowosc,
-      liczbaOsob: search.liczbaOsob,
-      budzetMinimalny:  search.budzetMinimalny,
-      budzetMaksymalny:  search.budzetMaksymalny,
-=======
       powrot:  search.getPowrot(),
       miejscowosc:  search.getMiejscowosc(),
       liczbaOsob: search.getLiczbaOsob(),
       budzetMinimalny:  search.getBudzetMinimalny(),
       budzetMaksymalny:  search.getBudzetMaksymalny(),
->>>>>>> 69130cf79f1150daae9c4a2d135d1462308696c0
       submitSuccess: false
     }
     this.handleChange = this.handleChange.bind(this);
