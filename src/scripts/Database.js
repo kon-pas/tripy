@@ -236,7 +236,7 @@ export const fetchHotel = () => {
                 headers: headers
             }).then(response => response.json())
                 .then(data => {
-                    resolve(data.map((value) => new Hotel(value.id,value.header,value.description,value.startDate,value.endDate,value.image,value.region,value.price)))
+                    resolve(data.map((value) => new Hotel(value.id,value.header,value.description,value.startDate,value.endDate,value.image,value.region,value.price,value.contact)))
                 })
         }catch(e){
             reject(e);
