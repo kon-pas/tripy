@@ -4,13 +4,15 @@ export class Attraction {
         header,
         description,
         image,
-        price
+        price,
+        region
     ){
         this.id = id;
         this.header = header;
         this.description = description;
         this.image = image;
         this.price = price;
+        this.region = region;
 
     }
     getHeader() { return this.header };
@@ -18,5 +20,6 @@ export class Attraction {
     getImage() {return this.image}
     getId() {return this.id}
     getPrice() { return this.price };
+    getMiejscowosc() { return this.region };
 
 }

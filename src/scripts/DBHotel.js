@@ -25,7 +25,7 @@ export class Hotel {
     getId() {return this.id}
     getStartDate() { return this.startDate };
     getEndDate() {return this.endDate}
-    getRegion() { return this.region };
+    getMiejscowosc() { return this.region };
     getPrice() {return this.price};
     getImage() {return this.image};
 }

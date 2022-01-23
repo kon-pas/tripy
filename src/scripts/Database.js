@@ -138,7 +138,7 @@ export const fetchAttractions = () => {
                 headers: headers
             }).then(response => response.json())
                 .then(data => {
-                    resolve({attraction: data.map((value) => new Attraction(value.id,value.header,value.description,value.image,value.price))})
+                    resolve({attraction: data.map((value) => new Attraction(value.id,value.header,value.description,value.image,value.price,value.region))})
                 })
         }catch(e){
             reject(e);

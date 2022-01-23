@@ -26,8 +26,8 @@ export class Flight {
     getId() {return this.id}
     getStartDate() { return this.startDate };
     getEndDate() {return this.endDate}
-    getFromCountry() { return this.fromCountry };
-    getToCountry() {return this.toCountry};
+    getFromMiejscowosc() { return this.fromCountry };
+    getToMiejscowosc() {return this.toCountry};
     getPrice() {return this.price};
     getImage() {return this.image};
 }
