@@ -32,13 +32,13 @@ class LoginPage extends Component {
       }
       LoginUser(this.state.username,this.state.password).then(response =>{
         if(response !== undefined){
-          alert('Udało się!')
+          alert('Udało się zalogować!')
           this.setState({
             isLogged: true,
           });
         }
         else{
-          alert('Nieprawidłowe dane')
+          alert('Niepoprawna nazwa użytkownika lub hasło')
         }
       })
       //let user = new User(data.data.id,data.data.attributes.email,'default',data.data.attributes.name,data.data.attributes.surname)
@@ -54,14 +54,14 @@ class LoginPage extends Component {
       return <Navigate to="/"></Navigate>
     }
     else return (
-        // Haslo jako giwazdki
+        // Haslo jako gwiazdki
         <div className="login-page">
           <div className="panel">
             <span className="item-1">Zaloguj się</span>
             <div className="item-2">
               <form onSubmit={this.getGIY}>
-                <input className="username" type="text" value={this.state.username} onChange={this.handleChange} name="username" placeholder="E-mail (edward@gmail.com)"/>
-                <input className="password" type="text" value={this.state.password} onChange={this.handleChange} name="password" placeholder="Hasło (12345678)"/>
+                <input className="username" type="text" value={this.state.username} onChange={this.handleChange} name="username" placeholder="E-mail"/>
+                <input className="password" type="password" value={this.state.password} onChange={this.handleChange} name="password" placeholder="Hasło"/>
                 <input className="login" type="submit" value="Zaloguj się" onClick={ () => {
                   this.setState({
                     isLogged2: true,

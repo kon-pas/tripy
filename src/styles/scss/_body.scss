@@ -3,9 +3,10 @@
 body {
   margin: 0 auto;
   background-color: $white;
+  overflow-x: hidden;
 }
 
 .content {
   margin: 0 auto;
-  width: $content-width;
+  width: 100vw;
 }

@@ -19,18 +19,40 @@ class RegisterPage extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
+  
   getReg = async (e) =>{
     e.preventDefault();
     try {
-      // Sprawdz czy imie i nazwisko nie są numeryczne
+      let isError = false;
       let usrfullyName = this.state.username.split(" ");
-      if(usrfullyName[0] === undefined || usrfullyName[1] === undefined){
-        alert("Niepoprawna nazwa użytkownika")
-        return;
+      if (this.state.username === ""){
+        document.getElementById("usernameError").innerHTML = "Puste pole, uzupełnij dane";
+        isError = true;
+      } else if(usrfullyName[0] === undefined || usrfullyName[1] === undefined){
+        document.getElementById("usernameError").innerHTML = "Wpisz swoje imię i nazwisko";
+        isError = true;
+      } else if(this.state.username.match(/\d/)){
+        document.getElementById("usernameError").innerHTML = "Imię i nazwisko nie mogą zawierać liczb";
+        isError = true;
+      } else {
+        document.getElementById("usernameError").innerHTML = "";
       }
-      // Hasla musza byc identyczne
-
+      
+      if (this.state.email === ""){
+        document.getElementById("emailError").innerHTML = "Puste pole, uzupełnij dane";
+        isError = true;
+      } else if(! this.state.email.match(/.+@.+/)){
+        document.getElementById("emailError").innerHTML = "Niepoprawny e-mail";
+        isError = true;
+      } else {
+        document.getElementById("emailError").innerHTML = "";
+      } 
+      
+      if(this.state.password != this.state.password_2){
+        document.getElementById("passwordError").innerHTML = "Hasla musza byc identyczne";
+        isError = true;
+      }
+      if(isError) return;
 
       await RegisterUser(this.state.email,usrfullyName[0],usrfullyName[1],this.state.password).then(response =>{
         console.log(response)
@@ -41,7 +63,7 @@ class RegisterPage extends Component {
           });
         }
         if(response === 0){
-          alert('Niepowodzenie')
+          alert('Rejestracja się niepowiodła')
         }
       })
 
@@ -65,7 +87,7 @@ class RegisterPage extends Component {
     if (this.state.is_success === true) {
       return <Navigate to="/"></Navigate>
     }else{
-      // Zmien na imie i nazwisko
+      
       // I haslo zeby bylo w gwiazdkach
       return (
           <div className="login-page">
@@ -73,10 +95,19 @@ class RegisterPage extends Component {
               <span className="item-1">Zarejestruj się</span>
               <div className="item-2">
                 <form onSubmit={this.getReg}>
-                  <input className="username" type="text" value={this.state.username} onChange={this.handleChange} name="username" placeholder="Nazwa użytkownika"/>
+                  <p></p>
+                  <span id="usernameError" className="error"></span>
+                  <p></p>
+                  <input className="username" type="text" value={this.state.username} onChange={this.handleChange} name="username" placeholder="Imie i Nazwisko"/>
+                  <p></p>
+                  <span id="emailError" className="error"></span>
+                  <p></p>
                   <input className="email" type="text" value={this.state.email} onChange={this.handleChange} name="email" placeholder="Adres e-mail"/>
-                  <input className="password" type="text" value={this.state.password} onChange={this.handleChange} name="password" placeholder="Hasło"/>
-                  <input className="password_2" type="text" value={this.state.password_2} onChange={this.handleChange} name="password_2" placeholder="Powtórz hasło"/>
+                  <p></p>
+                  <span id="passwordError" className="error"></span>
+                  <p></p>
+                  <input className="password" type="password" value={this.state.password} onChange={this.handleChange} name="password" placeholder="Hasło"/>
+                  <input className="password_2" type="password" value={this.state.password_2} onChange={this.handleChange} name="password_2" placeholder="Powtórz hasło"/>
                   <input className="register" type="submit" value="Stwórz konto" />
                 </form>
               </div>
