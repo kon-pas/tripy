@@ -6,22 +6,29 @@
     position: relative;
     .input-form-home {
       position: absolute;
-      top: 25%;
-      left: 40%;
+      top: 35%;
+      left: 30%;
       transform: translate(-50%, -50%);
       .input-container {
         background-color: $baby-blue;
         border-radius: 20px;
         padding: 10px 20px;
+        height: 500px;
         z-index: 1;
+      }
+      item-1 {
+        margin: 20px;
       }
       input {
         display: block;
-        width: 450px;
-        height: 40px;
+        width: 850px;
+        height: 20px;
         margin: 10px 0;
         border: none;
         z-index: 2;
+        @include font-simple;
+        font-size: 2rem;
+        color: $new-navy;
       }
       .submit-button {
         width: 150px;

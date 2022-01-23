@@ -37,11 +37,6 @@ class RegisterPage extends Component {
       } else {
         document.getElementById("usernameError").innerHTML = "";
       }
-<<<<<<< HEAD
-      
-=======
-
->>>>>>> f8ce82189e77d93ac2fb65fd963e0e1b81c7adff
       if (this.state.email === ""){
         document.getElementById("emailError").innerHTML = "Puste pole, uzupełnij dane";
         isError = true;
@@ -50,15 +45,9 @@ class RegisterPage extends Component {
         isError = true;
       } else {
         document.getElementById("emailError").innerHTML = "";
-<<<<<<< HEAD
-      } 
-      
-      if(this.state.password != this.state.password_2){
-=======
       }
 
       if(this.state.password !== this.state.password_2){
->>>>>>> f8ce82189e77d93ac2fb65fd963e0e1b81c7adff
         document.getElementById("passwordError").innerHTML = "Hasla musza byc identyczne";
         isError = true;
       }
@@ -97,11 +86,6 @@ class RegisterPage extends Component {
     if (this.state.is_success === true) {
       return <Navigate to="/"></Navigate>
     }else{
-<<<<<<< HEAD
-      
-=======
-
->>>>>>> f8ce82189e77d93ac2fb65fd963e0e1b81c7adff
       // I haslo zeby bylo w gwiazdkach
       return (
           <div className="login-page">

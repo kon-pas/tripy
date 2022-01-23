@@ -688,23 +688,33 @@ body {
 
 .home-page section.input-section .input-form-home {
   position: absolute;
-  top: 25%;
-  left: 40%;
+  top: 35%;
+  left: 30%;
   transform: translate(-50%, -50%); }
 
 .home-page section.input-section .input-form-home .input-container {
   background-color: #cae8ff;
   border-radius: 20px;
   padding: 10px 20px;
+  height: 500px;
   z-index: 1; }
+
+.home-page section.input-section .input-form-home item-1 {
+  margin: 20px; }
 
 .home-page section.input-section .input-form-home input {
   display: block;
-  width: 450px;
-  height: 40px;
+  width: 850px;
+  height: 20px;
   margin: 10px 0;
   border: none;
-  z-index: 2; }
+  z-index: 2;
+  font-family: "Sora", sans-serif;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  font-size: 2rem;
+  color: #1a4b74; }
 
 .home-page section.input-section .input-form-home .submit-button {
   width: 150px;
