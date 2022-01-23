@@ -22,10 +22,11 @@ class LoginPage extends Component {
       [event.target.name]: event.target.value
     });
   }
-  getGIY = async (e) =>{
+  runLogin = async (e) =>{
     e.preventDefault();
     try {
-      // czy email jest w poprawnej pstaci
+      // czy email jest w poprawnej postaci
+      
       if(this.state.username === '' || this.state.password === ''){
         alert('Puste pole, uzupełnij dane aby się zalogować')
         return;
@@ -59,7 +60,7 @@ class LoginPage extends Component {
           <div className="panel">
             <span className="item-1">Zaloguj się</span>
             <div className="item-2">
-              <form onSubmit={this.getGIY}>
+              <form onSubmit={this.runLogin}>
                 <input className="username" type="text" value={this.state.username} onChange={this.handleChange} name="username" placeholder="E-mail"/>
                 <input className="password" type="password" value={this.state.password} onChange={this.handleChange} name="password" placeholder="Hasło"/>
                 <input className="login" type="submit" value="Zaloguj się" onClick={ () => {
