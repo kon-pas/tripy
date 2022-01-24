@@ -2,51 +2,146 @@
 
 .home-page {
   section.input-section {
-    height: 1000px;
+    height: 970px;
     position: relative;
+    background-color: $new-creamy;
+    background-image: linear-gradient(to bottom, $new-creamy, $new-white);
     .input-form-home {
       position: absolute;
-      top: 25%;
-      left: 40%;
+      top: 35%;
+      left: 30%;
       transform: translate(-50%, -50%);
+      background-color: rgba($new-white, 0.95);
+      padding: 0 5px 20px 5px;
+      border-radius: 10px;
+      border: 1px solid rgba($new-grey, 0.3);
       .input-container {
-        background-color: $baby-blue;
+        // background-color: $baby-blue;
         border-radius: 20px;
         padding: 10px 20px;
+        height: 450px;
         z-index: 1;
+      }
+      .item-1 {
+        margin: 20px 0;
+        label {
+          @include font-simple;
+          color: $black;
+        }
+      }
+      .item-2 {
+        margin: 20px 0;
+        label {
+          @include font-simple;
+          color: $black;
+        }
+      }
+      .item-3 {
+        margin: 20px 0;
+        // background-color: rgba($new-grey, 0.2);
+        * {
+          width: 895px;
+        }
+        label {
+          @include font-simple;
+          color: $black;
+        }
+      }
+      .item-4 {
+        margin: 20px 0;
+        margin-left: 5px;
+        width: 905px;
+        p {
+          @include font-simple;
+          color: $black;
+          font-size: 1.5rem;
+        }
+        input {
+          @include font-simple;
+          color: $black;
+          font-size: 1.5rem;
+          margin-left: 15px;
+        }
+      }
+      .item-5 {
+        margin: 20px 0;
+        margin-left: 5px;
+        width: 905px;
+        p {
+          @include font-simple;
+          color: $black;
+          font-size: 1.5rem;
+        }
+        input {
+          @include font-simple;
+          color: $black;
+          font-size: 1.5rem;
+          margin-left: 15px;
+        }
+        div {
+          width: 120px;
+        }
       }
       input {
         display: block;
-        width: 450px;
-        height: 40px;
+        width: 850px;
+        height: 20px;
         margin: 10px 0;
         border: none;
         z-index: 2;
+        @include font-simple;
+        font-size: 2rem;
+        color: $new-navy;
       }
       .submit-button {
         width: 150px;
+        height: 50px;
         display: flex;
         float: right;
         z-index: 2;
         justify-content: center;
-        background-image: linear-gradient(to right, $yellow, $orange);
+        background-color: $new-orange;
         color: $black;
         font-size: 1.5rem;
-        border-radius: 10px;
+        border-radius: 50px;
+        cursor: pointer;
+        border: none;
+        align-items: center;
+        margin-top: 55px;
+        margin-right: 20px;
       }
     }
     img {
       position: absolute;
-      right: -100px;
+      top: 300px;
+      right: 50px;
+      width: 1450px;
+    }
+    .scroll-down {
+      position: absolute;
+      bottom: 50px;
+      padding: 15px 25px 0 165px;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      background-color: $new-google-blue;
+      cursor: pointer;
+      span {
+        display: block;
+        @include font-simple;
+        color: $white;
+      }
+      .icon {
+        width: 90px;
+      }
     }
   }
 
   section.home-register-container {
     background-color: $white;
-    background-image: $noise;
+    // background-image: $noise;
     height: 1000px;
     position: relative;
-    border-radius: 50px;
+    // border-radius: 50px;
     .home-register-card {
       background-color: $white;
       width: 67%;
@@ -100,7 +195,10 @@
     }
   }
 
-  section.promotional-section {
-    margin: 250px 0;
-  }
+  // section.promotional-section {
+  //   padding: 0 0 250px 0;
+  // }
+}
+div[class^="MuiPaper"] {
+  margin-left: 645px;
 }

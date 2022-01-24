@@ -1,3 +1,6 @@
+function randomIntFromInterval(min, max) { // min and max included
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
 export class Flight {
     constructor(
         id,
@@ -21,14 +24,18 @@ export class Flight {
         this.price = price;
 
     }
-    getHeader() { return this.header };
+    getName() { return this.header };
     getDescription() {return this.description};
     getId() {return this.id}
-    getStartDate() { return this.startDate };
-    getEndDate() {return this.endDate}
-    getFromCountry() { return this.fromCountry };
-    getToCountry() {return this.toCountry};
+    getStartDate() { return this.startDate.split("T")[0] };
+    getEndDate() {return this.endDate.split("T")[0]}
+    getDate() { return this.endDate.split("T")[0] };
+    getRating() {randomIntFromInterval(0,5)};
+    //getFromMiejscowosc() { return this.fromCountry };
+    getMiejscowosc() {return this.toCountry};
     getPrice() {return this.price};
-    getImage() {return this.image};
+    getURLImage() {return this.image};
+    getLink() {return "https://www.skyscanner.pl/"}
+
 }
 

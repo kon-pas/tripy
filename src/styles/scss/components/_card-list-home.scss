@@ -1,30 +1,38 @@
 @import "../variables";
 
 .card-list-home {
-  background-color: $white;
-  background-image: $noise;
+  // background-color: $white;
   border-radius: 25px;
-  padding-bottom: 25px;
+  // padding-bottom: 125px;
+  background-image: linear-gradient(to bottom, $new-white, $new-creamy);
   .container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 20px;
+    gap: 40px;
+    width: $content-width;
+    margin: 0 auto;
+    padding-bottom: 50px;
   }
-  .title-wrapper {
+  .title-wrapper-list {
     position: relative;
-    height: 100px;
+    height: 90px;
+    margin: 0 0 25px 0;
+    // background-color: $white;
+    border-top: 1px solid $new-creamy;
+    box-shadow: 0px -30px 40px -20px $new-creamy;
     .title {
       position: absolute;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      font-size: 3.5rem;
-      font-family: 'Bebas Neue', cursive;
-      background-color: $white;
       padding: 0 10px;
-      border-radius: 10px;
+      // border-radius: 10px;
+      @include font-1;
+      border-bottom: 4px solid $new-orange;
+      padding-bottom: 5px;
+      // font-weight: 800;
     }
   }
 }

@@ -2,10 +2,35 @@ import { useState } from 'react';
 import * as carts from "../scripts/carts";
 // import PlanningCart from "./PlanningCart";
 import { Card as CardClass } from "../scripts/Card";
+import { Link } from "react-router-dom";
+import { ExternalLink } from 'react-external-link';
+
+import Button from '@mui/material/Button';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
+import InfoIcon from '@mui/icons-material/Info';
+
+// import {Card as CardMui} from '@mui/material';
+// import CardActions from '@mui/material/CardActions';
+// import CardContent from '@mui/material/CardContent';
+// import CardMedia from '@mui/material/CardMedia';
+// import Button from '@mui/material/Button';
+// import Typography from '@mui/material/Typography';
+// import { CardActionArea } from '@mui/material';
 
 const Card = ({display, pointer}) => {
   const [highlighted, setHighlight] = useState(false);
   const [displayInfo, displayInfoToggle] = useState(false);
+
+  const getRating = (rating) => {
+    if(rating > 0) {
+      return <span style={{color: "green"}}> +{pointer.rating} </span>
+    } else if (rating < 0) {
+      return <span style={{color: "red"}}> -{pointer.rating} </span>
+    } else {
+      return <span> {pointer.rating} </span>
+    }
+  }
 
   const infoToggle = () => {
     if (displayInfo) {
@@ -19,13 +44,15 @@ const Card = ({display, pointer}) => {
           </div>
           <div className="mid-wrapper">
             <div className="left-wrapper">
-              <img className="image" src={pointer.image}/>
+              <img className="image" src={pointer.image} />
               <div className="left-bottom-wrapper">
-                { pointer.price + " PLN/os."} <br /> <br />
-                <span> Kontakt: </span> <br />
-                { pointer.link } <br />
-                { pointer.contact }
-                {/* <div className="planel">
+                <span> { pointer.price + " PLN/os."} </span>
+                <span style={{marginLeft: 420}} /> 
+                <span> Ocena: { getRating(pointer.rating) } </span> <br />
+                {/* <span style={{color: "grey"}}> Kontakt: </span> <br /> */}
+                <span> { pointer.contact } </span> <br />
+                <span> { pointer.link } </span>
+                {/* <div className="panel">
                   <span>Zgłoś</span>
                   <span>Like</span>
                   { pointer.rating }
@@ -61,7 +88,7 @@ const Card = ({display, pointer}) => {
         </div>
         <div className="info-button" onClick={ () => {
             displayInfoToggle(!displayInfo)
-          }}>i</div>
+          }}>dowiedz się więcej</div>
         {infoToggle()}
       </div>
     )
@@ -81,14 +108,18 @@ const Card = ({display, pointer}) => {
             </div>
           </div>
 
-          <div className="info-button orange" onClick={ () => {
-            displayInfoToggle(!displayInfo)
-          }}>i</div>
+          <div className="hover">
+            <div className="hover-bg orange">
+            </div>
+            <Button variant="contained" endIcon={<InfoIcon/>} className="info-button-planning orange" onClick={ () => {
+              displayInfoToggle(!displayInfo)
+            }}>Szczegóły</Button>
 
-          <div className="add-button orange" onClick={() => {
-            carts.currentPlanningPageCards.splice(carts.currentPlanningPageCards.indexOf(pointer), 1);
-            setHighlight(false);
-          }}>-</div>
+            <Button variant="contained" endIcon={<RemoveShoppingCartIcon/>} className="add-button-planning orange" onClick={() => {
+              carts.currentPlanningPageCards.splice(carts.currentPlanningPageCards.indexOf(pointer), 1);
+              setHighlight(false);
+            }}>Usuń z</Button>
+          </div>
 
           {infoToggle()}
         </div>
@@ -108,14 +139,18 @@ const Card = ({display, pointer}) => {
             </div>
           </div>
 
-          <div className="info-button" onClick={ () => {
-            displayInfoToggle(!displayInfo)
-          }}>i</div>
+          <div className="hover">
+            <div className="hover-bg">
+            </div>
+            <Button variant="contained" endIcon={<InfoIcon/>} className="info-button-planning" onClick={ () => {
+              displayInfoToggle(!displayInfo)
+            }}>Szczegóły</Button>
 
-          <div className="add-button" onClick={() => {
-            carts.currentPlanningPageCards.push(pointer);
-            setHighlight(true);
-          }}>+</div>
+            <Button variant="contained" endIcon={<ShoppingCartIcon/>} className="add-button-planning" onClick={() => {
+              carts.currentPlanningPageCards.push(pointer);
+              setHighlight(true);
+            }}>Dodaj do </Button>
+          </div>
 
           {infoToggle()}
         </div>

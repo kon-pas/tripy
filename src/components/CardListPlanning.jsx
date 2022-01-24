@@ -1,7 +1,6 @@
 import Card from "../components/Card";
 import componentDidMount from 'react';
 import { Card as CardV } from "../scripts/Card";
-
 import * as cards from "../scripts/cards";
 import * as search from "../scripts/search";
 
