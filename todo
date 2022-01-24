@@ -34,13 +34,18 @@ w register rozdzielic "imie i nazwisko" na "imie" i "nazwisko"
 card list home: fetchowanie atrakcji
 card: rating
 planning-page: sfinalizuj
+szukam i lecimy
 
-kontrahent+user
+merge contractor + user
 filtry
 
+planning cart: usuwanie z koszyka
 loty, hotele, atrakcje - strony
+planning-page: sfinalizuj?
+powrót z login page i register page
 
 card info: external link
 card info: like, dislike
 home page: upewnic sie ze scroll down dziala dobrze
 footer: wypełnić, np sociale
+planning page: koszyk można poprawić: wysokość, klikalne elementy listy, klikalne tytuły

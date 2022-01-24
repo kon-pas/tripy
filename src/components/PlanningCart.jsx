@@ -8,7 +8,6 @@ const PlanningCart = ({currentCart, currentPage}) => {
   const size = loty.length + hotele.length + atrakcje.length;
 
   const getTitleLoty = () => {
-    console.log(currentPage)
     if(currentPage === "lot") return <div className="title-active"> Loty </div>
     else return <div className="title"> Loty </div>
   }

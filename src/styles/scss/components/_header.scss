@@ -58,6 +58,12 @@
     }
     .konto {
       @include font-simple;
+      background-color: $new-blue;
+      color: $new-white;
+      height: auto;
+      padding: 10px 20px;
+      border-radius: 50px;
+      line-height: 30px;
     }
     .login {
       @include font-simple;

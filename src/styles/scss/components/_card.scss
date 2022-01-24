@@ -163,6 +163,55 @@
       }
     }
   }
+  .hover {
+    position: absolute;
+    top: 0;
+    width: 360px;
+    height: 335px;
+    border-radius: 5px;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+    .hover-bg {
+      position: absolute;
+      top: 0;
+      width: 360px;
+      height: 335px;
+      background-color: $new-white;
+      border-radius: 5px;
+      opacity: 1;
+      transition-property: opacity;
+      transition-duration: 0.2s;
+    }
+    .info-button-planning {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $new-white;
+      color: $new-black;
+      width: 250px;
+      @include font-simple;
+      font-size: 1.3rem;
+    }
+    .add-button-planning {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: $new-white;
+      color: $new-black;
+      width: 250px;
+      @include font-simple;
+      font-size: 1.3rem;
+    }
+  }
+  .hover:hover {
+    opacity: 1;
+    .hover-bg {
+      opacity: 0.75;
+    }
+  }
 }
 
 .card:hover {
@@ -172,7 +221,7 @@
 }
 
 .highlighted {
-  background-image: linear-gradient(to top, $yellow, $orange) !important;
+  background-color: $new-orange !important;
 }
 
 .orange {

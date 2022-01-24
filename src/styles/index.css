@@ -412,7 +412,13 @@ body {
   font-family: "Sora", sans-serif;
   color: #606469;
   font-size: 1.15rem;
-  letter-spacing: -0.035em; }
+  letter-spacing: -0.035em;
+  background-color: #3b94fc;
+  color: #feffff;
+  height: auto;
+  padding: 10px 20px;
+  border-radius: 50px;
+  line-height: 30px; }
 
 .header-wrapper .header .login {
   font-family: "Sora", sans-serif;
@@ -468,7 +474,7 @@ body {
   min-height: 500px;
   height: 100%;
   position: absolute;
-  border-left: 1px solid #c2c5c6; }
+  border-left: 7px solid #ffbe55; }
 
 .planning-page .content .content-bottom .cart-container .cart {
   position: sticky;
@@ -478,16 +484,22 @@ body {
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: #091e3f;
   padding-top: 10px;
   height: auto; }
+
+.planning-page .content .content-bottom .cart-container .cart .title {
+  padding: 5px 0;
+  margin: 5px 0; }
 
 .planning-page .content .content-bottom .cart-container .cart .title-active {
   padding: 5px 0;
   margin: 10px 0;
   color: #091e3f;
-  background-color: #c2c5c6; }
+  background-color: #ffbe55;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px; }
 
 .planning-page .content .content-bottom .cart-container .cart .planning-cart-item {
   display: block;
@@ -736,11 +748,66 @@ body {
 .card .card-info-wrapper .card-info .bottom-wrapper .add-button-info {
   background-color: red; }
 
+.card .hover {
+  position: absolute;
+  top: 0;
+  width: 360px;
+  height: 335px;
+  border-radius: 5px;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.2s; }
+
+.card .hover .hover-bg {
+  position: absolute;
+  top: 0;
+  width: 360px;
+  height: 335px;
+  background-color: #feffff;
+  border-radius: 5px;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 0.2s; }
+
+.card .hover .info-button-planning {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #feffff;
+  color: #091e3f;
+  width: 250px;
+  font-family: "Sora", sans-serif;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  font-size: 1.3rem; }
+
+.card .hover .add-button-planning {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #feffff;
+  color: #091e3f;
+  width: 250px;
+  font-family: "Sora", sans-serif;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  font-size: 1.3rem; }
+
+.card .hover:hover {
+  opacity: 1; }
+
+.card .hover:hover .hover-bg {
+  opacity: 0.75; }
+
 .card:hover .info-button {
   opacity: 0.75; }
 
 .highlighted {
-  background-image: linear-gradient(to top, #f5df4d, #ffbe55) !important; }
+  background-color: #ffbe55 !important; }
 
 .orange {
   background-color: #ffbe55 !important; }

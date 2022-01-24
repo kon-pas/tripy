@@ -27,24 +27,31 @@
         min-height: 500px;
         height: 100%;
         position: absolute;
-        border-left: 1px solid rgba($new-grey, 1);
+        border-left: 7px solid rgba($new-orange, 1);
         .cart {
           position: sticky;
           top: 90px;
           text-align: center;
           @include font-simple;
-          font-size: 2rem;
+          font-size: 1.7rem;
           color: $new-black;
           padding-top: 10px;
           height: auto;
           // min-height: 200px;
+          .title {
+            padding: 5px 0;
+            margin: 5px 0;
+          }
           .title-active {
             padding: 5px 0;
             margin: 10px 0;
             // font-weight: 600;
             color: $new-black;
-            background-color: $new-grey;
+            background-color: $new-orange;
             // border-bottom: 1px solid $orange;
+            // border: 1px solid $new-orange;
+            border-top-right-radius: 25px;
+            border-bottom-right-radius: 25px;
           }
           .planning-cart-item {
             display: block;

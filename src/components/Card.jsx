@@ -5,6 +5,11 @@ import { Card as CardClass } from "../scripts/Card";
 import { Link } from "react-router-dom";
 import { ExternalLink } from 'react-external-link';
 
+import Button from '@mui/material/Button';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import RemoveShoppingCartIcon from '@mui/icons-material/RemoveShoppingCart';
+import InfoIcon from '@mui/icons-material/Info';
+
 // import {Card as CardMui} from '@mui/material';
 // import CardActions from '@mui/material/CardActions';
 // import CardContent from '@mui/material/CardContent';
@@ -103,14 +108,18 @@ const Card = ({display, pointer}) => {
             </div>
           </div>
 
-          <div className="info-button orange" onClick={ () => {
-            displayInfoToggle(!displayInfo)
-          }}>i</div>
+          <div className="hover">
+            <div className="hover-bg orange">
+            </div>
+            <Button variant="contained" endIcon={<InfoIcon/>} className="info-button-planning orange" onClick={ () => {
+              displayInfoToggle(!displayInfo)
+            }}>Szczegóły</Button>
 
-          <div className="add-button orange" onClick={() => {
-            carts.currentPlanningPageCards.splice(carts.currentPlanningPageCards.indexOf(pointer), 1);
-            setHighlight(false);
-          }}>-</div>
+            <Button variant="contained" endIcon={<RemoveShoppingCartIcon/>} className="add-button-planning orange" onClick={() => {
+              carts.currentPlanningPageCards.splice(carts.currentPlanningPageCards.indexOf(pointer), 1);
+              setHighlight(false);
+            }}>Usuń z</Button>
+          </div>
 
           {infoToggle()}
         </div>
@@ -130,14 +139,18 @@ const Card = ({display, pointer}) => {
             </div>
           </div>
 
-          <div className="info-button" onClick={ () => {
-            displayInfoToggle(!displayInfo)
-          }}>i</div>
+          <div className="hover">
+            <div className="hover-bg">
+            </div>
+            <Button variant="contained" endIcon={<InfoIcon/>} className="info-button-planning" onClick={ () => {
+              displayInfoToggle(!displayInfo)
+            }}>Szczegóły</Button>
 
-          <div className="add-button" onClick={() => {
-            carts.currentPlanningPageCards.push(pointer);
-            setHighlight(true);
-          }}>+</div>
+            <Button variant="contained" endIcon={<ShoppingCartIcon/>} className="add-button-planning" onClick={() => {
+              carts.currentPlanningPageCards.push(pointer);
+              setHighlight(true);
+            }}>Dodaj do </Button>
+          </div>
 
           {infoToggle()}
         </div>
