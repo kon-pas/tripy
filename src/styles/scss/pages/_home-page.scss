@@ -120,13 +120,14 @@
     .scroll-down {
       position: absolute;
       bottom: 50px;
-      padding: 10px 25px 10px 150px;
+      padding: 15px 25px 0 165px;
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
-      background-color: $new-navy;
+      background-color: $new-google-blue;
+      cursor: pointer;
       span {
         display: block;
-        @include font-4;
+        @include font-simple;
         color: $white;
       }
       .icon {

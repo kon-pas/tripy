@@ -426,7 +426,8 @@ body {
 
 .planning-page .content {
   margin-top: 20px;
-  width: 1620px; }
+  width: 1620px;
+  min-height: 1000px; }
 
 .planning-page .content .input-form-planning {
   display: grid;
@@ -481,7 +482,8 @@ body {
   display: inline-block;
   vertical-align: top; }
 
-.planning-page .content .content-bottom .content-bottom-right button, .planning-page .content .content-bottom .content-bottom-right .button {
+.planning-page .content .content-bottom .content-bottom-right button,
+.planning-page .content .content-bottom .content-bottom-right .button {
   display: block;
   width: 90%;
   height: 50px;
@@ -890,15 +892,18 @@ body {
 .home-page section.input-section .scroll-down {
   position: absolute;
   bottom: 50px;
-  padding: 10px 25px 10px 150px;
+  padding: 15px 25px 0 165px;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  background-color: #1a4b74; }
+  background-color: #1876d2;
+  cursor: pointer; }
 
 .home-page section.input-section .scroll-down span {
   display: block;
-  font-size: 1.2rem;
-  font-family: "Playfair Display", serif;
+  font-family: "Sora", sans-serif;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
   color: #fff; }
 
 .home-page section.input-section .scroll-down .icon {

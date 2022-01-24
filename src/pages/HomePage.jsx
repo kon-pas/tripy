@@ -19,9 +19,9 @@ const HomePage = () => {
         <section className="input-section">
           <img src={require("../assets/images/plane.png")} />
           <InputForm type="home-page"/>
-          <div className="scroll-down">
+          <div className="scroll-down" onClick={() => { window.scrollTo({ top: 980, behavior: 'smooth',})}}>
             <span>Odkryj więcej</span>
-            <IconButton onClick={() => { window.scrollTo({ top: 1010, behavior: 'smooth',})}} color="primary" aria-label="upload picture" component="span">
+            <IconButton color="primary" aria-label="upload picture" component="span">
               <ArrowDownwardIcon className="icon"/>
             </IconButton>
           </div>
