@@ -12,6 +12,11 @@ import filter from "../scripts/filter.js";
 import * as carts from "../scripts/carts";
 import * as search from "../scripts/search";
 
+import Button from '@mui/material/Button';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import IconButton from '@mui/material/IconButton';
+
 class PlanningPage extends Component {
   constructor(props) {
     super(props);
@@ -83,12 +88,12 @@ class PlanningPage extends Component {
                 </div>
                 <div className="cart-container">
                   <div className="cart">
-                    <PlanningCart currentCart={carts.currentCart} />
-                    <button onClick={() => {
+                    <PlanningCart currentCart={carts.currentCart} currentPage={this.state.currentPage}/>
+                    <Button className="button" variant="contained" endIcon={<ArrowForwardIosIcon />} onClick={() => {
                       carts.currentCart.setLoty(carts.getCurrentPlanningPageCards());
                       carts.setCurrentPlanningPageCards([]);
                       this.changePage('hotel');
-                    }}>Dalej</button>
+                    }}>Dalej</Button>
                   </div>
                 </div>
               </div>
@@ -143,13 +148,13 @@ class PlanningPage extends Component {
                 </div>
                 <div className="cart-container">
                   <div className="cart">
-                    <PlanningCart currentCart={carts.currentCart} />
-                    <button onClick={() => {
+                    <PlanningCart currentCart={carts.currentCart} currentPage={this.state.currentPage}/>
+                    <IconButton className="button" variant="contained" onClick={() => this.changePage('lot')}><ArrowBackIosNewIcon /></IconButton>
+                    <Button className="button" variant="contained" endIcon={<ArrowForwardIosIcon />} onClick={() => {
                       carts.currentCart.setHotele(carts.getCurrentPlanningPageCards());
                       carts.setCurrentPlanningPageCards([]);
                       this.changePage('atrakcje');
-                    }}>Dalej</button>
-                    <button onClick={() => this.changePage('lot')}>Powrót</button>
+                    }}>Dalej</Button>
                   </div>
                 </div>
               </div>
@@ -215,13 +220,13 @@ class PlanningPage extends Component {
                 </div>
                 <div className="cart-container">
                   <div className="cart">
-                    <PlanningCart currentCart={carts.currentCart} />
-                    <button onClick={ () => {
+                    <PlanningCart currentCart={carts.currentCart} currentPage={this.state.currentPage}/>
+                    <IconButton className="button" variant="contained" onClick={() => this.changePage('hotel')}> <ArrowBackIosNewIcon /> </IconButton>
+                    <Button className="button" variant="contained" endIcon={<ArrowForwardIosIcon />} onClick={ () => {
                       carts.currentCart.setAtrakcje(carts.getCurrentPlanningPageCards());
                       carts.setCurrentPlanningPageCards([]);
                       this.changePage('sfinalizuj');
-                    }}>Sfinalizuj</button>
-                    <button onClick={() => this.changePage('hotel')}>Powrót</button>
+                    }}>Sfinalizuj</Button>
                   </div>
                 </div>
               </div>

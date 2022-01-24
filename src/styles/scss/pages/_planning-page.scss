@@ -33,22 +33,36 @@
           top: 90px;
           text-align: center;
           @include font-simple;
-          font-size: 1.5rem;
+          font-size: 2rem;
           color: $new-black;
           padding-top: 10px;
           height: auto;
-          min-height: 400px;
-          .title {
-            font-weight: 600;
+          // min-height: 200px;
+          .title-active {
+            padding: 5px 0;
+            margin: 10px 0;
+            // font-weight: 600;
+            color: $new-black;
+            background-color: $new-grey;
+            // border-bottom: 1px solid $orange;
           }
           .planning-cart-item {
             display: block;
             text-align: start;
             margin-left: 10px;
+            font-size: 1.5rem;
           }
           .button {
             @include font-simple;
-            font-size: 2rem;
+            border: none;
+            background-color: $new-blue;
+            color: $new-white;
+            padding: 5px 20px;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            height: 45px;
+            margin: 0 10px;
+            margin-top: 80px;
           }
         }
       }

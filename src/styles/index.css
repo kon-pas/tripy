@@ -478,26 +478,37 @@ body {
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #091e3f;
   padding-top: 10px;
-  height: auto;
-  min-height: 400px; }
+  height: auto; }
 
-.planning-page .content .content-bottom .cart-container .cart .title {
-  font-weight: 600; }
+.planning-page .content .content-bottom .cart-container .cart .title-active {
+  padding: 5px 0;
+  margin: 10px 0;
+  color: #091e3f;
+  background-color: #c2c5c6; }
 
 .planning-page .content .content-bottom .cart-container .cart .planning-cart-item {
   display: block;
   text-align: start;
-  margin-left: 10px; }
+  margin-left: 10px;
+  font-size: 1.5rem; }
 
 .planning-page .content .content-bottom .cart-container .cart .button {
   font-family: "Sora", sans-serif;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
-  font-size: 2rem; }
+  border: none;
+  background-color: #3b94fc;
+  color: #feffff;
+  padding: 5px 20px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  height: 45px;
+  margin: 0 10px;
+  margin-top: 80px; }
 
 .card-list-home {
   border-radius: 25px;
