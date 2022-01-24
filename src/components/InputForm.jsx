@@ -123,65 +123,184 @@ class InputForm extends Component {
     }
     if (this.props.type === "planning-page") {
       return ( 
-        <div>
-          <form onSubmit={this.handleSearch} className="input-form-planning">
-            <input
-              className="wylot"
-              type="text"
-              value={this.state.wylot}
-              onChange={this.handleChange}
-              name="wylot"
-              placeholder="Wylot"
-            />
-            <input className="powrot"
-              type="text"
-              value={this.state.powrot}
-              onChange={this.handleChange}
-              name="powrot"
-              placeholder="Powrót"
-            />
-            <input className="miejscowosc"
-              type="text"
-              value={this.state.miejscowosc}
-              onChange={this.handleChange}
-              name="miejscowosc"
-              placeholder="Miejscowość"
-            />
-            <input className="liczba-osob"
-              type="text"
-              value={this.state.liczba_osob}
-              onChange={this.handleChange}
-              name="liczbaOsob"
-              placeholder="Liczba osób"
-            />
-            <input className="budzet-minimalny"
-              type="text"
-              value={this.state.budzet_minimalny}
-              onChange={this.handleChange}
-              name="budzetMinimalny"
-              placeholder="Budżet minimalny"
-            />
-            <input className="budzet-maksymalny"
-              type="text"
-              value={this.state.budzet_maksymalny}
-              onChange={this.handleChange}
-              name="budzetMaksymalny"
-              placeholder="Budżet maksymalny"
-            />
-            <input className="submit-button"
-              type="submit"
-              value="Szukaj"
-            />
-          </form>
+        <div className="input-form-planning">
+          <div 
+          // onSubmit={this.handleSubmit} 
+          className="input-form">
+            <div className="input-container">
+              {/* WYLOT */}
+              <div className="item-1">
+                <LocalizationProvider dateAdapter={AdapterDateFns} locale={pl}>
+                  <DatePicker
+                    // views={['day', 'month', 'year']}
+                    label="Wylot"
+                    minDate={new Date('2022-01-01')}
+                    maxDate={new Date('2024-01-01')}
+                    value={this.state.wylot}
+                    onChange={this.handleWylotChange}
+                    renderInput={(params) => <TextField {...params} helperText={null} />}
+                  />
+                </LocalizationProvider>
+              </div>
+              {/* POWRÓT */}
+              <div className="item-2">
+                <LocalizationProvider dateAdapter={AdapterDateFns} locale={pl}>
+                  <DatePicker
+                    // views={['day', 'month', 'year']}
+                    label="Powrót"
+                    minDate={new Date('2022-01-01')}
+                    maxDate={new Date('2024-01-01')}
+                    value={this.state.powrot}
+                    onChange={this.handlePowrotChange}
+                    renderInput={(params) => <TextField {...params} helperText={null} />}
+                  />
+                </LocalizationProvider>
+              </div>
+              {/* MIEJSCOWOŚĆ */}
+              <div className="item-3">
+                <TextField className="miejscowosc"
+                  type="text"
+                  value={this.state.miejscowosc}
+                  onChange={this.handleChange}
+                  name="miejscowosc"
+                  label="Miejscowość"
+                  id="outlined-basic" label="Miejscowość" variant="outlined" 
+                />
+              </div>
+              {/* LICZBA OSÓB */}
+              <div className="item-4">
+                <Typography id="input-slider" gutterBottom>Liczba osób: 
+                  <Input
+                    value={this.state.liczbaOsob}
+                    size="small"
+                    onChange={this.handleLiczbaOsobChange}
+                    onBlur={this.handleBlur}
+                    inputProps={{
+                      step: 1,
+                      min: 0,
+                      max: 10,
+                     //  type: 'number',
+                     //  'aria-labelledby': 'input-slider',
+                    }}
+                  />
+                </Typography>
+                <Slider
+                  value={this.state.liczbaOsob}
+                  onChange={this.handleLiczbaOsobChange}
+                  defaultValue={2}
+                  valueLabelDisplay="auto"
+                  step={1}
+                  marks
+                  min={1}
+                  max={10}
+                />
+              </div>
+              {/* BUDŻET */}
+              <div className="item-5">
+                <Typography id="input-slider" gutterBottom>Budżet: 
+                  <Input
+                    value={this.state.budzet[0]}
+                    size="small"
+                    onChange={this.handleBudzetChange0}
+                    onBlur={this.handleBlur}
+                    inputProps={{
+                      step: 1,
+                      min: 0,
+                      max: 10,
+                     //  type: 'number',
+                     //  'aria-labelledby': 'input-slider',
+                    }}
+                  /> 
+                  - 
+                  <Input
+                    value={this.state.budzet[1]}
+                    size="small"
+                    onChange={this.handleBudzetChange1}
+                    onBlur={this.handleBlur}
+                    inputProps={{
+                      step: 1,
+                      min: 0,
+                      max: 10,
+                     //  type: 'number',
+                     //  'aria-labelledby': 'input-slider',
+                    }}
+                  /> PLN
+                </Typography>
+                <Slider
+                  value={this.state.budzet}
+                  onChange={this.handleBudzetChange}
+                  valueLabelDisplay="auto"
+                  defaultValue={[0, 20000]}
+                  min={0}
+                  max={20000}
+                  step={100}
+                />
+              </div>
+            </div>
+            <button className="submit-button" onClick={this.handleSubmit}>Szukam!</button> 
+          </div>
         </div>
       );
+      // return ( 
+      //   <div>
+      //     <form onSubmit={this.handleSearch} className="input-form-planning">
+      //       <input
+      //         className="wylot"
+      //         type="text"
+      //         value={this.state.wylot}
+      //         onChange={this.handleChange}
+      //         name="wylot"
+      //         placeholder="Wylot"
+      //       />
+      //       <input className="powrot"
+      //         type="text"
+      //         value={this.state.powrot}
+      //         onChange={this.handleChange}
+      //         name="powrot"
+      //         placeholder="Powrót"
+      //       />
+      //       <input className="miejscowosc"
+      //         type="text"
+      //         value={this.state.miejscowosc}
+      //         onChange={this.handleChange}
+      //         name="miejscowosc"
+      //         placeholder="Miejscowość"
+      //       />
+      //       <input className="liczba-osob"
+      //         type="text"
+      //         value={this.state.liczba_osob}
+      //         onChange={this.handleChange}
+      //         name="liczbaOsob"
+      //         placeholder="Liczba osób"
+      //       />
+      //       <input className="budzet-minimalny"
+      //         type="text"
+      //         value={this.state.budzet_minimalny}
+      //         onChange={this.handleChange}
+      //         name="budzetMinimalny"
+      //         placeholder="Budżet minimalny"
+      //       />
+      //       <input className="budzet-maksymalny"
+      //         type="text"
+      //         value={this.state.budzet_maksymalny}
+      //         onChange={this.handleChange}
+      //         name="budzetMaksymalny"
+      //         placeholder="Budżet maksymalny"
+      //       />
+      //       <input className="submit-button"
+      //         type="submit"
+      //         value="Szukaj"
+      //       />
+      //     </form>
+      //   </div>
+      // );
     }
     else if (this.props.type === "home-page") {
       return ( 
-        <div>
+        <div className="input-form-home">
           <div 
           // onSubmit={this.handleSubmit} 
-          className="input-form-home">
+          className="input-form">
             <div className="input-container">
               {/* WYLOT */}
               <div className="item-1">

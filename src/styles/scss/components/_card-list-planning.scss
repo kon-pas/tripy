@@ -1,7 +1,7 @@
 @import "../variables";
 
 .card-list-planning {
-  background-color: $light;
+  // background-color: $light;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   .container {
@@ -9,7 +9,7 @@
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 15px;
+    gap: 50px;
     padding: 15px 0;
   }
   .title-wrapper {

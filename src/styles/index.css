@@ -190,6 +190,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Suranna&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playball&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amita:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hahmlet:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 body {
   margin: 0 auto;
   background-color: #fff;
@@ -331,7 +347,7 @@ body {
   top: 0px;
   width: 100vw;
   background-color: #feffff;
-  z-index: 1;
+  z-index: 10;
   box-shadow: 0px 40px 30px -35px #c2c5c6;
   border-bottom: 1px solid rgba(194, 197, 198, 0.45); }
 
@@ -425,94 +441,63 @@ body {
   justify-content: center; }
 
 .planning-page .content {
-  margin-top: 20px;
-  width: 1620px;
-  min-height: 1000px; }
+  min-height: 1000px;
+  background-image: linear-gradient(to top, #edeceb, #fff); }
 
-.planning-page .content .input-form-planning {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
+.planning-page .content .menu {
+  border-bottom: 1px solid #c2c5c6;
+  padding: 45px 0 20px 0;
+  margin: 0 auto;
   width: 1620px; }
 
-.planning-page .content .input-form-planning input {
-  background-color: #dfe6e9;
-  margin: 0;
-  padding: 0;
-  border: none;
-  color: #000;
-  height: 70px;
-  font-size: 1rem; }
+.planning-page .content .content-bottom {
+  padding-top: 15px;
+  margin: 0 auto;
+  width: 1620px;
+  height: 1500px; }
 
-.planning-page .content .input-form-planning .submit-button {
-  background-image: linear-gradient(to left, #f5df4d, #ffbe55);
-  font-size: 1.3rem;
-  height: 50px;
-  margin: 10px; }
-
-.planning-page .content .content-bottom .content-bottom-left {
+.planning-page .content .content-bottom .list {
   display: inline-block;
   width: 1200px; }
 
-.planning-page .content .content-bottom .content-bottom-left .planning-navbar {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  height: 60px;
-  background-color: #fff; }
-
-.planning-page .content .content-bottom .content-bottom-left .planning-navbar .planning-navbar-button {
-  display: flex;
-  align-self: center;
-  justify-self: center;
-  width: 300px;
-  height: 50px;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  margin-bottom: 10px; }
-
-.planning-page .content .content-bottom .content-bottom-left .planning-navbar .planning-navbar-button * {
-  padding-top: 10px; }
-
-.planning-page .content .content-bottom .content-bottom-left .planning-navbar .active {
-  border-bottom: 10px solid #ffbe55;
-  margin-bottom: 0 !important; }
-
-.planning-page .content .content-bottom .content-bottom-right {
-  width: 200px;
+.planning-page .content .content-bottom .cart-container {
   display: inline-block;
-  vertical-align: top; }
+  width: 350px;
+  right: 150px;
+  margin-top: 15px;
+  min-height: 500px;
+  height: 100%;
+  position: absolute;
+  border-left: 1px solid #c2c5c6; }
 
-.planning-page .content .content-bottom .content-bottom-right button,
-.planning-page .content .content-bottom .content-bottom-right .button {
-  display: block;
-  width: 90%;
-  height: 50px;
-  border: none;
-  background-image: linear-gradient(to left, #f5df4d, #ffbe55);
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 10px 0;
-  font-size: 1.5rem;
-  color: #000; }
-
-.planning-page .content .content-bottom .content-bottom-right .planning-cart {
+.planning-page .content .content-bottom .cart-container .cart {
+  position: sticky;
+  top: 90px;
   text-align: center;
+  font-family: "Sora", sans-serif;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
   font-size: 1.5rem;
+  color: #091e3f;
   padding-top: 10px;
-  background-color: #dfe6e9;
   height: auto;
-  min-height: 400px;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px; }
+  min-height: 400px; }
 
-.planning-page .content .content-bottom .content-bottom-right .planning-cart .title {
+.planning-page .content .content-bottom .cart-container .cart .title {
   font-weight: 600; }
 
-.planning-page .content .content-bottom .content-bottom-right .planning-cart .planning-cart-item {
+.planning-page .content .content-bottom .cart-container .cart .planning-cart-item {
   display: block;
   text-align: start;
   margin-left: 10px; }
+
+.planning-page .content .content-bottom .cart-container .cart .button {
+  font-family: "Sora", sans-serif;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  font-size: 2rem; }
 
 .card-list-home {
   border-radius: 25px;
@@ -549,7 +534,6 @@ body {
   padding-bottom: 5px; }
 
 .card-list-planning {
-  background-color: #dfe6e9;
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px; }
 
@@ -558,7 +542,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 15px;
+  gap: 50px;
   padding: 15px 0; }
 
 .card-list-planning .title-wrapper {
@@ -1130,3 +1114,263 @@ div[class^="MuiPaper"] {
   align-items: center;
   justify-content: center;
   padding: 5px 0; }
+
+.input-form-home .input-form {
+  position: absolute;
+  top: 35%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(254, 255, 255, 0.95);
+  padding: 0 5px 20px 5px;
+  border-radius: 10px;
+  border: 1px solid rgba(194, 197, 198, 0.3); }
+
+.input-form-home .input-form .input-container {
+  border-radius: 20px;
+  padding: 10px 20px;
+  height: 450px;
+  z-index: 1; }
+
+.input-form-home .input-form .item-1 {
+  margin: 20px 0; }
+
+.input-form-home .input-form .item-1 label {
+  font-family: "Sora", sans-serif;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  color: #091e3f; }
+
+.input-form-home .input-form .item-2 {
+  margin: 20px 0; }
+
+.input-form-home .input-form .item-2 label {
+  font-family: "Sora", sans-serif;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  color: #091e3f; }
+
+.input-form-home .input-form .item-3 {
+  margin: 20px 0; }
+
+.input-form-home .input-form .item-3 * {
+  width: 895px; }
+
+.input-form-home .input-form .item-3 label {
+  font-family: "Sora", sans-serif;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  color: #091e3f; }
+
+.input-form-home .input-form .item-4 {
+  margin: 20px 0;
+  margin-left: 5px;
+  width: 905px; }
+
+.input-form-home .input-form .item-4 p {
+  font-family: "Sora", sans-serif;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  color: #091e3f;
+  font-size: 1.5rem; }
+
+.input-form-home .input-form .item-4 input {
+  font-family: "Sora", sans-serif;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  color: #091e3f;
+  font-size: 1.5rem;
+  margin-left: 15px; }
+
+.input-form-home .input-form .item-5 {
+  margin: 20px 0;
+  margin-left: 5px;
+  width: 905px; }
+
+.input-form-home .input-form .item-5 p {
+  font-family: "Sora", sans-serif;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  color: #091e3f;
+  font-size: 1.5rem; }
+
+.input-form-home .input-form .item-5 input {
+  font-family: "Sora", sans-serif;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  color: #091e3f;
+  font-size: 1.5rem;
+  margin-left: 15px; }
+
+.input-form-home .input-form .item-5 div {
+  width: 120px; }
+
+.input-form-home .input-form input {
+  display: block;
+  width: 850px;
+  height: 20px;
+  margin: 10px 0;
+  border: none;
+  z-index: 2;
+  font-family: "Sora", sans-serif;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  font-size: 2rem;
+  color: #091e3f; }
+
+.input-form-home .input-form .submit-button {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  float: right;
+  z-index: 2;
+  justify-content: center;
+  background-color: #ffbe55;
+  color: #091e3f;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  align-items: center;
+  margin-top: 55px;
+  margin-right: 20px; }
+
+.input-form-planning .input-form {
+  position: relative;
+  padding: 0 5px 0 5px;
+  display: flex;
+  height: 260px;
+  width: 1620px; }
+
+.input-form-planning .input-form .input-container {
+  border-radius: 20px;
+  padding: 10px 20px;
+  height: 250px;
+  width: 100%;
+  z-index: 1; }
+
+.input-form-planning .input-form .item-1 {
+  display: inline;
+  margin: 20px 0;
+  margin-right: 25px; }
+
+.input-form-planning .input-form .item-1 label {
+  font-family: "Sora", sans-serif;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  color: #091e3f; }
+
+.input-form-planning .input-form .item-2 {
+  display: inline;
+  margin: 20px 0;
+  margin-right: 25px; }
+
+.input-form-planning .input-form .item-2 label {
+  font-family: "Sora", sans-serif;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  color: #091e3f; }
+
+.input-form-planning .input-form .item-3 {
+  display: inline;
+  margin: 20px 0; }
+
+.input-form-planning .input-form .item-3 * {
+  width: 495px; }
+
+.input-form-planning .input-form .item-3 label {
+  font-family: "Sora", sans-serif;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  color: #091e3f; }
+
+.input-form-planning .input-form .item-4 {
+  display: inline;
+  margin: 30px 0;
+  margin-left: 5px;
+  width: 905px; }
+
+.input-form-planning .input-form .item-4 p {
+  font-family: "Sora", sans-serif;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  color: #091e3f;
+  font-size: 1.5rem; }
+
+.input-form-planning .input-form .item-4 input {
+  font-family: "Sora", sans-serif;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  color: #091e3f;
+  font-size: 1.5rem;
+  margin-left: 15px; }
+
+.input-form-planning .input-form .item-5 {
+  display: inline;
+  margin: 20px 0;
+  margin-left: 5px;
+  width: 905px; }
+
+.input-form-planning .input-form .item-5 p {
+  font-family: "Sora", sans-serif;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  color: #091e3f;
+  font-size: 1.5rem; }
+
+.input-form-planning .input-form .item-5 input {
+  font-family: "Sora", sans-serif;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  color: #091e3f;
+  font-size: 1.5rem;
+  margin-left: 15px; }
+
+.input-form-planning .input-form .item-5 div {
+  width: 120px; }
+
+.input-form-planning .input-form input {
+  display: block;
+  width: 450px;
+  height: 20px;
+  margin: 10px 0;
+  border: none;
+  z-index: 2;
+  font-family: "Sora", sans-serif;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  font-size: 2rem;
+  color: #091e3f; }
+
+.input-form-planning .input-form .submit-button {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  float: right;
+  z-index: 2;
+  justify-content: center;
+  background-color: #ffbe55;
+  color: #091e3f;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  align-items: center;
+  margin-top: 55px;
+  margin-right: 20px;
+  display: none; }
