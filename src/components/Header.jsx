@@ -6,7 +6,7 @@ import * as Database from "../scripts/Database.js";
 const Header = () => {
   const isLogged = () => {
     if(Database.isLoggedIn()) {
-      return <Link to={'/user'} style={{ textDecoration: 'none' }}><div className="konto"><span>Konto</span></div></Link>
+      return <Link to={'/user'} style={{ textDecoration: 'none' }}><div className="konto"><span>Moje konto</span></div></Link>
     } else {
       return <div>
         <Link to={'/login'} style={{ textDecoration: 'none' }}><div className="login"><span>Zaloguj się</span></div></Link>

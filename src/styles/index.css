@@ -354,7 +354,7 @@ body {
 .header-wrapper .header {
   height: 80px;
   display: grid;
-  grid-template-columns: 110px 200px auto auto;
+  grid-template-columns: 110px 200px 800px auto;
   width: 1620px;
   margin: 0 auto; }
 

@@ -1,16 +1,33 @@
-10
+commit: 25
+planning-page: sfinalizuj
+szukam i lecimy dodać onclick event
+card list home: fetchowanie atrakcji
+card: rating
 
--position: sticky nie działa w navbarze z jakiegoś powodu, overflow musiał się gdzieś w którymś rodzicu wkraść
--"baza" tymczasowa jest teraz taka, nie tykać
--powrót z login i register krzyzykiem w odpowiednia strone (closePath zrobic)
--navbar zrobić funkcjonalność
--zamienić interfejs dla zalogowanego użytkownika
--footer scss
--planning page klikalny navbar
--planning page + home page -> search + filter
+merge contractor + user
+filtry
 
-12
+planning cart: usuwanie z koszyka
+loty, hotele, atrakcje - strony w nagłówku
+powrót z login page i register page
 
+card info: external link
+card info: like, dislike
+home page: upewnic sie ze scroll down dziala dobrze
+footer: wypełnić, np sociale
+planning page: koszyk można poprawić: wysokość, klikalne elementy listy, klikalne tytuły
+
+---
+
+commit: 20
+filtry
+sfinalizuj
+merge contractor + user
+w register rozdzielic "imie i nazwisko" na "imie" i "nazwisko"
+
+---
+
+commit: 12
 -sfinalizuj
 -navbar
 -wyglad
@@ -22,30 +39,14 @@
 -filtry
 -search page
 
-20
+---
 
-filtry
-sfinalizuj
-merge contractor + user
-w register rozdzielic "imie i nazwisko" na "imie" i "nazwisko"
-
-25
-
-card list home: fetchowanie atrakcji
-card: rating
-planning-page: sfinalizuj
-szukam i lecimy
-
-merge contractor + user
-filtry
-
-planning cart: usuwanie z koszyka
-loty, hotele, atrakcje - strony
-planning-page: sfinalizuj?
-powrót z login page i register page
-
-card info: external link
-card info: like, dislike
-home page: upewnic sie ze scroll down dziala dobrze
-footer: wypełnić, np sociale
-planning page: koszyk można poprawić: wysokość, klikalne elementy listy, klikalne tytuły
+commit: 10
+-position: sticky nie działa w navbarze z jakiegoś powodu, overflow musiał się gdzieś w którymś rodzicu wkraść
+-"baza" tymczasowa jest teraz taka, nie tykać
+-powrót z login i register krzyzykiem w odpowiednia strone (closePath zrobic)
+-navbar zrobić funkcjonalność
+-zamienić interfejs dla zalogowanego użytkownika
+-footer scss
+-planning page klikalny navbar
+-planning page + home page -> search + filter
