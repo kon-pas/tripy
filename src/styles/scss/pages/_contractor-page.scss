@@ -1,6 +1,7 @@
 @import "../variables";
 
-.contractor-page, .form {
+.contractor-page,
+.form {
   button {
     background-color: $dark-blue;
     color: $white;
@@ -39,16 +40,16 @@
   }
 
   .header {
-    display: flex; 
+    display: flex;
     justify-content: space-between;
     width: 100%;
   }
-  .attractions {
+  .items {
     gap: 15px;
     display: flex;
     flex-wrap: wrap;
-  
-    .attraction {
+
+    .item {
       position: relative;
       width: 200px;
       height: 330px;
@@ -58,7 +59,7 @@
     }
   }
 
-  .box {
+  // .box {
 
-  }
+  // }
 }
