@@ -1,21 +1,24 @@
 commit: 25
-planning-page: sfinalizuj
-szukam i lecimy dodać onclick event
-card list home: fetchowanie atrakcji
-card: rating
+*LOGIN PAGE i REGISTER PAGE - weryfikacja inputu + styl (użyć @mui z mui.com) (wszystkie style są w \_login-page.scss, te od register page też, przed pisaniem w scss trzeba w terminalu wykonać skrypt $npm run scss)
+*login page i register page - api przegladarki chce caly czas zapisywac dane logowania/rejestracji, nawet jesli logowanie/rejestracja sie nie powiedzie
+*planning-page: sfinalizuj -> tworzy nowy koszyk dla usera (w bazie albo locale, whatever) i przenosi na /user
+*button "szukam" na stronie glownej i "lecimy" w menu - dodać onclick event, ktory zapisze wprowadzone dane w search.js
+*card list home: fetchowanie atrakcji (chyba baza pusta? albo metoda nie dziala?)
+*card: rating, niech rating to po prostu losowa liczba calkowita z przedziału -100 do 100 - trzeba to w bazie zrobic
 
-merge contractor + user
-filtry
+*merge contractor + user - polaczyc jako jeden widok i dać mu adres /user, Jakub to powiniene zrobić
+*filtry - no to wiadomo, pisalem i mowilem 10 razy o tym, metoda filter w filter.js, jako argument przyjmuje tablice atrakcjami, ma zwracac tablice z atrakcjami ale przefiltrowana wedlug zmiennych z search.js
+*planning cart: usuwanie z koszyka - mały koszyk po prawej stronie ekranu, dodać ikonke ktora usuwa dany element z ów koszyka
+*loty, hotele, atrakcje - strony w menu, nowy widok? skopiowac planning page (usunac koszyk po prostu)
+*powrót z login page i register page - tym ja się zajmę
+*home page: upewnic sie ze scroll down dziala dobrze - to tez ja zrobie
+\*planning page - wysokosc koszyka upewnic sie ze dobrze jest - tez ja
 
-planning cart: usuwanie z koszyka
-loty, hotele, atrakcje - strony w nagłówku
-powrót z login page i register page
-
-card info: external link
-card info: like, dislike
-home page: upewnic sie ze scroll down dziala dobrze
-footer: wypełnić, np sociale
-planning page: koszyk można poprawić: wysokość, klikalne elementy listy, klikalne tytuły
+pierdoły jakby starczyło czasu (nie starczy):
+*card info: external link
+*card info: like, dislike
+*footer: wypełnić, np sociale
+*planning page: koszyk można poprawić: wysokość, klikalne elementy listy, klikalne tytuły
 
 ---
 

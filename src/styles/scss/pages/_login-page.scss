@@ -7,13 +7,12 @@
   position: absolute;
   top: 0;
   left: 0;
-  font-family: 'Lobster', cursive;
-  font-size: 2rem;
+  @include font-simple;
   .panel {
     background-color: $white;
     width: 1400px;
     height: 90vh;
-    border-radius: 50px;
+    border-radius: 25px;
     position: relative;
     top: 50%;
     left: 50%;
@@ -27,24 +26,26 @@
     }
     .item-1 {
       top: 10%;
+      font-size: 2rem;
     }
     .item-2 {
       top: 15%;
       * {
         position: relative;
         margin: 10px 0;
-        width: 300px;
+        width: 500px;
         padding: 0;
       }
-      .login, .register {
-        background-image: linear-gradient(to right, $yellow, $orange);
+      .login,
+      .register {
+        background-color: $new-blue;
+        color: $new-white;
         border: none;
-        font-family: 'Bebas Neue', cursive;
-        font-size: 1.5rem;
       }
     }
     .item-3 {
       top: 60%;
+      font-size: 2rem;
       .block {
         position: relative;
         width: 10px;
@@ -53,27 +54,35 @@
     }
     .item-4 {
       top: 66%;
-      background-image: linear-gradient(to right, $yellow, $orange);
-      width: 150px;
-      font-family: 'Bebas Neue', cursive;
-      font-size: 1.5rem;
+      background-color: $new-blue;
+      color: $new-white;
+      width: 500px;
+      height: 50px;
       display: flex;
       justify-content: center;
-      color: $black;
-      padding: 5px 2px;
+      // padding: 5px 2px;
       border: none;
+      font-size: 1.5rem;
     }
     input {
       width: 250px;
-      height: 50px;
+      height: 80px;
     }
 
     .close {
-      top: 35px;
+      top: 22px;
       left: 96.5%;
+      background-color: rgba($new-white, 0.7);
+      padding: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
       img {
         width: 25px;
       }
+    }
+    .close:hover {
+      background-color: rgba($new-grey, 0.5);
     }
   }
 }
