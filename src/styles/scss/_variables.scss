@@ -80,7 +80,8 @@ $new-pink: #fad9d5;
 
 @mixin font-1 {
   font-size: 3.5rem;
-  font-family: "Playfair Display", serif;
+  font-family: "Sora", sans-serif;
+  letter-spacing: -0.035em;
   color: $new-black;
 }
 @mixin font-2 {
@@ -89,6 +90,10 @@ $new-pink: #fad9d5;
 }
 @mixin font-3 {
   font-size: 1.5rem;
+  font-family: "Playfair Display", serif;
+}
+@mixin font-4 {
+  font-size: 1.2rem;
   font-family: "Playfair Display", serif;
 }
 

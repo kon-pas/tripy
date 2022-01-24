@@ -344,7 +344,8 @@ body {
 
 .header-wrapper .header .logo {
   font-size: 3.5rem;
-  font-family: "Playfair Display", serif;
+  font-family: "Sora", sans-serif;
+  letter-spacing: -0.035em;
   color: #091e3f;
   color: #000;
   height: 40px; }
@@ -512,24 +513,24 @@ body {
   margin-left: 10px; }
 
 .card-list-home {
-  background-image: linear-gradient(to bottom, #feffff, #edeceb);
   border-radius: 25px;
-  padding-bottom: 125px; }
+  background-image: linear-gradient(to bottom, #feffff, #edeceb); }
 
 .card-list-home .container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: row;
-  gap: 20px;
+  gap: 40px;
   width: 1620px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding-bottom: 50px; }
 
 .card-list-home .title-wrapper-list {
   position: relative;
   height: 90px;
-  margin: 35px 0;
-  border-top: 3px solid #edeceb;
+  margin: 0 0 25px 0;
+  border-top: 1px solid #edeceb;
   box-shadow: 0px -30px 40px -20px #edeceb; }
 
 .card-list-home .title-wrapper-list .title {
@@ -538,11 +539,12 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   padding: 0 10px;
-  border-radius: 10px;
   font-size: 3.5rem;
-  font-family: "Playfair Display", serif;
+  font-family: "Sora", sans-serif;
+  letter-spacing: -0.035em;
   color: #091e3f;
-  font-weight: 800; }
+  border-bottom: 4px solid #ffbe55;
+  padding-bottom: 5px; }
 
 .card-list-planning {
   background-color: #dfe6e9;
@@ -569,8 +571,8 @@ body {
   font-size: 2.5rem; }
 
 .card {
-  width: 380px;
-  height: 340px;
+  width: 360px;
+  height: 335px;
   background-color: #fff;
   border-radius: 5px;
   box-shadow: 8px 8px 15px 0px #b2bec3;
@@ -581,57 +583,64 @@ body {
   letter-spacing: -0.1em; }
 
 .card .image-wrapper {
-  width: 380px;
-  height: 270px; }
+  width: 360px; }
 
 .card .image-wrapper img {
-  padding: 10px 10px 0 10px; }
+  width: 360px;
+  height: 260px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px; }
 
 .card .info-wrapper {
   height: 80px;
-  padding: 0 10px; }
+  padding: 0 10px;
+  font-family: "Sora", sans-serif;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  color: #091e3f; }
 
 .card .info-wrapper .title-wrapper {
   font-size: 1.7rem;
-  height: 38px;
-  margin-top: 5px; }
+  height: 38px; }
 
 .card .info-wrapper .subtitle-wrapper {
-  font-family: 'Source Code Pro', monospace;
-  line-height: 0.8;
-  font-size: 1.3rem;
   display: grid;
   grid-template-columns: auto auto; }
 
 .card .info-wrapper .subtitle-wrapper .price-wrapper {
   display: flex;
-  margin-right: auto; }
+  margin-right: auto;
+  color: #606469; }
 
 .card .info-wrapper .subtitle-wrapper .rating-wrapper {
   display: flex;
   margin-left: auto;
-  font-weight: 600; }
+  font-weight: 600;
+  color: #606469; }
 
 .card .info-button {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 1.7rem;
-  font-weight: 600;
+  width: 360px;
+  height: 335px;
+  border-radius: 5px;
   background-color: #fff;
-  border-radius: 40%;
-  width: 40px;
-  height: 40px;
+  opacity: 0;
+  transition-property: opacity;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-out;
+  font-size: 1.75rem;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  cursor: pointer; }
 
 .card .add-button {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 2.5rem;
-  font-weight: 600;
   background-color: #fff;
   border-radius: 40%;
   width: 40px;
@@ -641,7 +650,7 @@ body {
   align-items: center; }
 
 .card .card-info-wrapper {
-  background-color: rgba(178, 190, 195, 0.5);
+  background-color: rgba(178, 190, 195, 0.6);
   z-index: 1;
   position: fixed;
   top: 0;
@@ -650,15 +659,19 @@ body {
   height: 100vh; }
 
 .card .card-info-wrapper .card-info {
+  font-family: "Sora", sans-serif;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
   background-color: #fff;
   z-index: 2;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 1200px;
-  height: 700px;
-  border-radius: 5%; }
+  width: 1400px;
+  height: 720px;
+  border-radius: 15px; }
 
 .card .card-info-wrapper .card-info .top-wrapper {
   position: relative; }
@@ -668,36 +681,56 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 5px; }
+  top: 5px;
+  color: #091e3f;
+  border-bottom: 5px solid #ffbe55; }
 
 .card .card-info-wrapper .card-info .top-wrapper .close-icon {
-  width: 20px;
+  width: 25px;
   position: absolute;
-  right: 30px;
-  top: 25px; }
+  right: 10px;
+  top: 5px;
+  cursor: pointer;
+  padding: 15px;
+  background-color: #feffff;
+  transition-property: backgroud-color;
+  border-radius: 50%; }
+
+.card .card-info-wrapper .card-info .top-wrapper .close-icon:hover {
+  background-color: #edeceb; }
 
 .card .card-info-wrapper .card-info .mid-wrapper {
   position: relative;
-  top: 70px;
+  top: 80px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-left: 10px; }
+  grid-template-columns: 1fr 1fr; }
+
+.card .card-info-wrapper .card-info .mid-wrapper .left-wrapper {
+  width: 700px; }
 
 .card .card-info-wrapper .card-info .mid-wrapper .left-wrapper .image {
-  width: 600px;
+  width: 700px;
+  height: 530px;
   margin-right: 10px; }
 
 .card .card-info-wrapper .card-info .mid-wrapper .left-wrapper .left-bottom-wrapper {
-  font-family: 'Oswald', sans-serif;
-  letter-spacing: 0;
-  font-size: 1.4rem;
-  line-height: 0.9;
-  margin-top: 15px; }
+  border-right: 1px solid rgba(178, 190, 195, 0.9);
+  color: #091e3f;
+  margin-left: 10px;
+  margin-top: 5px;
+  position: relative;
+  font-size: 1.35rem; }
+
+.card .card-info-wrapper .card-info .mid-wrapper .left-wrapper .left-bottom-wrapper .panel {
+  position: absolute;
+  top: 100px;
+  background-color: #000; }
 
 .card .card-info-wrapper .card-info .mid-wrapper .right-wrapper {
   text-align: justify;
   font-size: 1.5rem;
-  margin-right: 10px; }
+  margin: 0 10px;
+  font-size: 1.25rem; }
 
 .card .card-info-wrapper .card-info .bottom-wrapper {
   position: relative;
@@ -705,6 +738,9 @@ body {
 
 .card .card-info-wrapper .card-info .bottom-wrapper .add-button-info {
   background-color: red; }
+
+.card:hover .info-button {
+  opacity: 0.75; }
 
 .highlighted {
   background-image: linear-gradient(to top, #f5df4d, #ffbe55) !important; }
@@ -850,6 +886,23 @@ body {
   top: 300px;
   right: 50px;
   width: 1450px; }
+
+.home-page section.input-section .scroll-down {
+  position: absolute;
+  bottom: 50px;
+  padding: 10px 25px 10px 150px;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  background-color: #1a4b74; }
+
+.home-page section.input-section .scroll-down span {
+  display: block;
+  font-size: 1.2rem;
+  font-family: "Playfair Display", serif;
+  color: #fff; }
+
+.home-page section.input-section .scroll-down .icon {
+  width: 90px; }
 
 .home-page section.home-register-container {
   background-color: #fff;

@@ -2,10 +2,30 @@ import { useState } from 'react';
 import * as carts from "../scripts/carts";
 // import PlanningCart from "./PlanningCart";
 import { Card as CardClass } from "../scripts/Card";
+import { Link } from "react-router-dom";
+import { ExternalLink } from 'react-external-link';
+
+// import {Card as CardMui} from '@mui/material';
+// import CardActions from '@mui/material/CardActions';
+// import CardContent from '@mui/material/CardContent';
+// import CardMedia from '@mui/material/CardMedia';
+// import Button from '@mui/material/Button';
+// import Typography from '@mui/material/Typography';
+// import { CardActionArea } from '@mui/material';
 
 const Card = ({display, pointer}) => {
   const [highlighted, setHighlight] = useState(false);
   const [displayInfo, displayInfoToggle] = useState(false);
+
+  const getRating = (rating) => {
+    if(rating > 0) {
+      return <span style={{color: "green"}}> +{pointer.rating} </span>
+    } else if (rating < 0) {
+      return <span style={{color: "red"}}> -{pointer.rating} </span>
+    } else {
+      return <span> {pointer.rating} </span>
+    }
+  }
 
   const infoToggle = () => {
     if (displayInfo) {
@@ -19,13 +39,15 @@ const Card = ({display, pointer}) => {
           </div>
           <div className="mid-wrapper">
             <div className="left-wrapper">
-              <img className="image" src={pointer.image}/>
+              <img className="image" src={pointer.image} />
               <div className="left-bottom-wrapper">
-                { pointer.price + " PLN/os."} <br /> <br />
-                <span> Kontakt: </span> <br />
-                { pointer.link } <br />
-                { pointer.contact }
-                {/* <div className="planel">
+                <span> { pointer.price + " PLN/os."} </span>
+                <span style={{marginLeft: 420}} /> 
+                <span> Ocena: { getRating(pointer.rating) } </span> <br />
+                {/* <span style={{color: "grey"}}> Kontakt: </span> <br /> */}
+                <span> { pointer.contact } </span> <br />
+                <span> { pointer.link } </span>
+                {/* <div className="panel">
                   <span>Zgłoś</span>
                   <span>Like</span>
                   { pointer.rating }
@@ -61,7 +83,7 @@ const Card = ({display, pointer}) => {
         </div>
         <div className="info-button" onClick={ () => {
             displayInfoToggle(!displayInfo)
-          }}>i</div>
+          }}>dowiedz się więcej</div>
         {infoToggle()}
       </div>
     )

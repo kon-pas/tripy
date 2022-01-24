@@ -4,7 +4,13 @@ import Header from "../components/Header";
 import CardListHome from "../components/CardListHome";
 import Footer from "../components/Footer";
 
+import IconButton from '@mui/material/IconButton';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+
+import { scroller } from "react-scroll";
+
 const HomePage = () => {
+
   return ( 
     <div>
       <Header/>
@@ -13,6 +19,12 @@ const HomePage = () => {
         <section className="input-section">
           <img src={require("../assets/images/plane.png")} />
           <InputForm type="home-page"/>
+          <div className="scroll-down">
+            <span>Odkryj więcej</span>
+            <IconButton onClick={() => { window.scrollTo({ top: 1010, behavior: 'smooth',})}} color="primary" aria-label="upload picture" component="span">
+              <ArrowDownwardIcon className="icon"/>
+            </IconButton>
+          </div>
         </section>
 
         {/* <section className="home-register-container">
