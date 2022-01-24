@@ -1,8 +1,8 @@
 commit: 25
-*LOGIN PAGE i REGISTER PAGE - weryfikacja inputu + styl (użyć @mui z mui.com) (wszystkie style są w \_login-page.scss, te od register page też, przed pisaniem w scss trzeba w terminalu wykonać skrypt $npm run scss)
+*LOGIN PAGE i REGISTER PAGE - weryfikacja inputu + styl (użyć @mui z mui.com) (wszystkie style są w login-page.scss, te od register page też, przed pisaniem w scss trzeba w terminalu wykonać skrypt $npm run scss)
 *login page i register page - api przegladarki chce caly czas zapisywac dane logowania/rejestracji, nawet jesli logowanie/rejestracja sie nie powiedzie
 *planning-page: sfinalizuj -> tworzy nowy koszyk dla usera (w bazie albo locale, whatever) i przenosi na /user
-*button "szukam" na stronie glownej i "lecimy" w menu - dodać onclick event, ktory zapisze wprowadzone dane w search.js
+*button "szukam" na stronie glownej i button "lecimy" w menu - dodać onclick event, ktory zapisze wprowadzone dane w search.js
 *card list home: fetchowanie atrakcji (chyba baza pusta? albo metoda nie dziala?)
 *card: rating, niech rating to po prostu losowa liczba calkowita z przedziału -100 do 100 - trzeba to w bazie zrobic
 
@@ -12,7 +12,8 @@ commit: 25
 *loty, hotele, atrakcje - strony w menu, nowy widok? skopiowac planning page (usunac koszyk po prostu)
 *powrót z login page i register page - tym ja się zajmę
 *home page: upewnic sie ze scroll down dziala dobrze - to tez ja zrobie
-\*planning page - wysokosc koszyka upewnic sie ze dobrze jest - tez ja
+*planning page - wysokosc koszyka upewnic sie ze dobrze jest - tez ja
+*home page: hover na atrakcje poprawic na ładniejszy
 
 pierdoły jakby starczyło czasu (nie starczy):
 *card info: external link
