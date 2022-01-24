@@ -13,6 +13,17 @@ import MobileDatePicker from '@mui/lab/MobileDatePicker';
 import DesktopDatePicker from '@mui/lab/DesktopDatePicker';
 import Stack from '@mui/material/Stack';
 
+import DateFnsUtils from "@date-io/date-fns";
+import { pl } from "date-fns/locale";
+
+import MuiInput from '@mui/material/Input';
+import { styled } from '@mui/material/styles';
+
+const Input = styled(MuiInput)`
+  width: 42px;
+`;
+
+
 class InputForm extends Component {
   constructor(props) {
     super(props);
@@ -31,6 +42,9 @@ class InputForm extends Component {
     this.handleLiczbaOsobChange = this.handleLiczbaOsobChange.bind(this);
     this.handleWylotChange = this.handleWylotChange.bind(this);
     this.handlePowrotChange = this.handlePowrotChange.bind(this);
+    this.handleBlur = this.handleBlur.bind(this);
+    this.handleBudzetChange0 = this.handleBudzetChange0.bind(this);
+    this.handleBudzetChange1 = this.handleBudzetChange1.bind(this);
   }
 
   handleChange(event) {
@@ -48,6 +62,16 @@ class InputForm extends Component {
   handleBudzetChange(event) {
     this.setState({
       budzet: event.target.value
+    })
+  }
+  handleBudzetChange0(event) {
+    this.setState({
+      budzet: [event.target.value, this.state.budzet[1]]
+    })
+  }
+  handleBudzetChange1(event) {
+    this.setState({
+      budzet: [this.state.budzet[0], event.target.value]
     })
   }
 
@@ -70,6 +94,18 @@ class InputForm extends Component {
     });
     event.preventDefault();
   }
+
+  handleBlur() {
+    if (this.state.liczbaOsob < 0) {
+      this.setState({
+        liczbaOsob: 0
+      });
+    } else if (this.state.liczbaOsob > 100) {
+      this.setState({
+        liczbaOsob: 100
+      });
+    }
+  };
 
   handleSearch(event) {
     search.setWylot(this.state.wylot);
@@ -143,11 +179,13 @@ class InputForm extends Component {
     else if (this.props.type === "home-page") {
       return ( 
         <div>
-          <form onSubmit={this.handleSubmit} className="input-form-home">
+          <div 
+          // onSubmit={this.handleSubmit} 
+          className="input-form-home">
             <div className="input-container">
               {/* WYLOT */}
               <div className="item-1">
-                <LocalizationProvider dateAdapter={AdapterDateFns}>
+                <LocalizationProvider dateAdapter={AdapterDateFns} locale={pl}>
                   <DatePicker
                     // views={['day', 'month', 'year']}
                     label="Wylot"
@@ -161,7 +199,7 @@ class InputForm extends Component {
               </div>
               {/* POWRÓT */}
               <div className="item-2">
-                <LocalizationProvider dateAdapter={AdapterDateFns}>
+                <LocalizationProvider dateAdapter={AdapterDateFns} locale={pl}>
                   <DatePicker
                     // views={['day', 'month', 'year']}
                     label="Powrót"
@@ -181,12 +219,26 @@ class InputForm extends Component {
                   onChange={this.handleChange}
                   name="miejscowosc"
                   label="Miejscowość"
-                  id="filled-basic" variant="filled"
+                  id="outlined-basic" label="Miejscowość" variant="outlined" 
                 />
               </div>
               {/* LICZBA OSÓB */}
               <div className="item-4">
-                <Typography id="input-slider" gutterBottom>Liczba osób: {this.state.liczbaOsob}</Typography>
+                <Typography id="input-slider" gutterBottom>Liczba osób: 
+                  <Input
+                    value={this.state.liczbaOsob}
+                    size="small"
+                    onChange={this.handleLiczbaOsobChange}
+                    onBlur={this.handleBlur}
+                    inputProps={{
+                      step: 1,
+                      min: 0,
+                      max: 10,
+                     //  type: 'number',
+                     //  'aria-labelledby': 'input-slider',
+                    }}
+                  />
+                </Typography>
                 <Slider
                   value={this.state.liczbaOsob}
                   onChange={this.handleLiczbaOsobChange}
@@ -200,7 +252,35 @@ class InputForm extends Component {
               </div>
               {/* BUDŻET */}
               <div className="item-5">
-                <Typography id="input-slider" gutterBottom>Budżet: {this.state.budzet[0]} - {this.state.budzet[1]}</Typography>
+                <Typography id="input-slider" gutterBottom>Budżet: 
+                  <Input
+                    value={this.state.budzet[0]}
+                    size="small"
+                    onChange={this.handleBudzetChange0}
+                    onBlur={this.handleBlur}
+                    inputProps={{
+                      step: 1,
+                      min: 0,
+                      max: 10,
+                     //  type: 'number',
+                     //  'aria-labelledby': 'input-slider',
+                    }}
+                  /> 
+                  - 
+                  <Input
+                    value={this.state.budzet[1]}
+                    size="small"
+                    onChange={this.handleBudzetChange1}
+                    onBlur={this.handleBlur}
+                    inputProps={{
+                      step: 1,
+                      min: 0,
+                      max: 10,
+                     //  type: 'number',
+                     //  'aria-labelledby': 'input-slider',
+                    }}
+                  /> PLN
+                </Typography>
                 <Slider
                   value={this.state.budzet}
                   onChange={this.handleBudzetChange}
@@ -212,11 +292,8 @@ class InputForm extends Component {
                 />
               </div>
             </div>
-            <input className="submit-button"
-              type="submit"
-              value="Lecimy!"
-            />
-          </form>
+            <button className="submit-button" onClick={this.handleSubmit}>Szukam!</button> 
+          </div>
         </div>
       );
     }
