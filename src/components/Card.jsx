@@ -33,6 +33,7 @@ const Card = ({display, pointer}) => {
   }
   
   const displayName = (name) => {
+    if(name === undefined) return;
     if(name.length > 20) return name.slice(0, 20) + "...";
     else return name;
   }
