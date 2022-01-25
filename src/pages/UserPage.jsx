@@ -47,7 +47,7 @@ const UserPage = () => {
           <div className="support" onClick={() => {
             toggleContact(!contactVisible)
           }}>Potrzebujesz pomocy?</div>
-          <div className="logout" onClick={logout}>Wyloguj</div>
+          <Link to="/"> <div className="logout" onClick={logout}>Wyloguj</div> </Link>
         </div>
       </div>
       <Footer/>

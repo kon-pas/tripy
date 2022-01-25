@@ -4,7 +4,7 @@ const useLogout = () => {
     const logout = useCallback(() => {
         localStorage.removeItem('user');
         localStorage.removeItem('cards');
-        window.location.reload();
+        // window.location.reload();
     }, []);
 
     return logout;
