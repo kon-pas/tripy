@@ -99,7 +99,7 @@ $new-pink: #fad9d5;
 }
 
 @mixin font-simple {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: $new-grey-dark;
   font-size: 1.15rem;
   letter-spacing: -0.035em;

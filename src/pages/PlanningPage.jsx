@@ -10,7 +10,9 @@ import { Link } from "react-router-dom";
 import filter from "../scripts/filter.js";
 // import { Navigate } from "react-router-dom";
 import * as carts from "../scripts/carts";
-import * as search from "../scripts/search";
+import { searchSettings } from "../scripts/search";
+// import { useNavigate } from 'react-router-dom';
+import { Navigate } from "react-router-dom";
 
 import Button from '@mui/material/Button';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
@@ -27,6 +29,42 @@ class PlanningPage extends Component {
       attraction: []
   }
     this.changePage = this.changePage.bind(this);
+    this.handleSearch = this.handleSearch.bind(this);
+  }
+
+  handleSearch() {
+    let headers = new Headers();
+
+    headers.append('Content-Type', 'application/json');
+    headers.append('Accept', 'application/json');
+    headers.append('Origin', 'http://localhost:3000');
+
+    fetch(`http://51.83.185.162:4000/flights`, {
+        method: 'GET',
+        headers: headers
+    }).then(response => response.json())
+    .then(data => {
+          // console.log(data);
+          // console.log(searchSettings);
+          // console.log(filter(data));
+            this.setState({flights: filter(data)})
+        })
+
+    fetch(`http://51.83.185.162:4000/hotels`, {
+        method: 'GET',
+        headers: headers
+    }).then(response => response.json())
+        .then(data => {
+            this.setState({hotels: filter(data)})
+        })
+        
+    fetch(`http://51.83.185.162:4000/attraction/all`, {
+        method: 'GET',
+        headers: headers
+    }).then(response => response.json())
+        .then(data => {
+            this.setState({attraction: filter(data)})
+        })
   }
 
   changePage(pageName){
@@ -46,7 +84,10 @@ class PlanningPage extends Component {
         method: 'GET',
         headers: headers
     }).then(response => response.json())
-        .then(data => {
+    .then(data => {
+          // console.log(data);
+          // console.log(searchSettings);
+          // console.log(filter(data));
             this.setState({flights: filter(data)})
         })
 
@@ -68,6 +109,9 @@ class PlanningPage extends Component {
   }
 
   render() {
+    if (this.state.currentPage === "sfinalizuj") {
+      return <Navigate to="/user"></Navigate>
+    }
     if (this.state.currentPage === "lot") {
       return ( 
         <div>
@@ -76,6 +120,7 @@ class PlanningPage extends Component {
             <div className="content">
               <div className="menu">
                 <InputForm type="planning-page"/>
+                <Button className="submit" variant="contained" onClick={this.handleSearch}>Szukaj</Button>
               </div>
               <div className="content-bottom">
                 <div className="list">
@@ -136,6 +181,7 @@ class PlanningPage extends Component {
             <div className="content">
               <div className="menu">
                 <InputForm type="planning-page"/>
+                <Button className="submit" variant="contained" onClick={this.handleSearch}>Szukaj</Button>
               </div>
               <div className="content-bottom">
                 <div className="list">
@@ -208,6 +254,7 @@ class PlanningPage extends Component {
             <div className="content">
               <div className="menu">
                 <InputForm type="planning-page"/>
+                <Button className="submit" variant="contained" onClick={this.handleSearch}>Szukaj</Button>
               </div>
               <div className="content-bottom">
                 <div className="list">

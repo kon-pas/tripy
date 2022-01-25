@@ -224,3 +224,13 @@
     }
   }
 }
+
+.submit {
+  float: right;
+  padding: 7px 15px !important;
+  border-radius: 25px !important;
+  background-color: $new-blue !important;
+  margin-right: 20px !important;
+  @include font-simple;
+  font-size: 1.15rem !important;
+}

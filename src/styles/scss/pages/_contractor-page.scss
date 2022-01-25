@@ -1,21 +1,48 @@
 @import "../variables";
 
+form.contractor-page-form {
+  // align-items: center;
+  // justify-content: center;
+  // display: flex;
+  label {
+    margin-left: 750px !important;
+  }
+  button {
+    margin-left: 900px !important;
+  }
+}
 .contractor-page,
 .form {
+  @include font-simple;
+  color: $new-black;
+  font-weight: 400 !important;
+  .buttons {
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
   button {
-    background-color: $dark-blue;
+    background-color: $new-blue;
     color: $white;
     font-size: 1.1rem;
-    padding: 5px;
+    padding: 10px 15px;
+    border-radius: 25px;
     width: auto;
     height: 40px;
-    border-radius: 5px;
+    display: flex;
+    align-items: center;
+
     border: none;
     cursor: pointer;
     text-align: center;
     margin: 5px 0;
   }
-
+  h2 {
+    width: 100vw;
+    text-align: center;
+  }
   button + button {
     margin-left: 10px;
   }
@@ -48,14 +75,21 @@
     gap: 15px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 
+    // button {
+    //   top: 100px;
+    // }
     .item {
       position: relative;
-      width: 200px;
-      height: 330px;
-      button {
-        height: 30px;
-      }
+      // display: flex;
+      // justify-content: center;
+      // position: relative;
+      // width: 200px;
+      // height: 330px;
+      // // button {
+      // //   height: 30px;
+      // // }
     }
   }
 

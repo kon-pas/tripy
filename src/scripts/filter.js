@@ -1,9 +1,9 @@
 import { searchSettings } from "../scripts/search.js";
 
-export default function filter(data) {
+export default function   (data) {
   if (data === undefined) return data;
-  console.log('lol');
-  console.log(data, searchSettings);
+  // console.log('lol');
+  // console.log(data, searchSettings);
   return data.filter(item => {
     const min = searchSettings.getBudzetMinimalny();
     if (min && item.price < min) {

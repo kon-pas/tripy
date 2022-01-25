@@ -3,6 +3,8 @@ import useUserData from "../hooks/useUserData";
 import AddNewAttraction from "../components/AddNewAttraction";
 import EditAttraction from "../components/EditAttraction";
 
+import Card from "../components/Card";
+
 const ContractorContent = () => {
   const { email } = useUserData();
   const [type, setType] = useState('');
@@ -58,50 +60,53 @@ const ContractorContent = () => {
 
   return (
     <div>
-      <div>
-        <button onClick={() => setType('attraction')}>Dodaj atrakcję +</button>
-        <button onClick={() => setType('flight')}>Dodaj lot +</button>
-        <button onClick={() => setType('hotel')}>Dodaj hotel +</button>
+      <div className="buttons">
+        <button onClick={() => setType('attraction')}>Dodaj atrakcję</button>
+        <button onClick={() => setType('flight')}>Dodaj lot</button>
+        <button onClick={() => setType('hotel')}>Dodaj hotel</button>
       </div>
       <div className="content">
         <div className="items">
-          <h2>Atrakcje</h2>
+          <h2>Atrakcje</h2> <br />
           {currentAttractions.map(attraction => (
             <div key={attraction.id} className={'item'}>
               <button onClick={() => { setType('attraction'); setEdit(attraction) }}>Uaktualnij</button>
               <div className="box">
-                <div className="box-header">
+                <Card display="vanilla" pointer={attraction}></Card>
+                {/* <div className="box-header">
                   <h3>{attraction.header}</h3>
                 </div>
-                <img src={attraction.image} alt='attraction' width="100%" height="100%" />
+                <img src={attraction.image} alt='attraction' width="100%" height="100%" /> */}
               </div>
             </div>
           ))}
         </div>
         <div className="items">
-          <h2>Loty</h2>
+          <h2>Loty</h2> <br />
           {currentFlights.map(flight => (
             <div key={flight.id} className={'item'}>
               <button onClick={() => { setType('flight'); setEdit(flight) }}>Uaktualnij</button>
               <div className="box">
-                <div className="box-header">
+                <Card display="vanilla" pointer={flight}></Card>
+                {/* <div className="box-header">
                   <h3>{flight.header}</h3>
                 </div>
-                <img src={flight.image} alt='flight' width="100%" height="100%" />
+                <img src={flight.image} alt='flight' width="100%" height="100%" /> */}
               </div>
             </div>
           ))}
         </div>
         <div className="items">
-          <h2>Hotele</h2>
+          <h2>Hotele</h2> <br />
           {currentHotels.map(hotel => (
             <div key={hotel.id} className={'item'}>
               <button onClick={() => { setType('hotel'); setEdit(hotel) }}>Uaktualnij</button>
               <div className="box">
-                <div className="box-header">
+                <Card display="vanilla" pointer={hotel}></Card>
+                {/* <div className="box-header">
                   <h3>{hotel.header}</h3>
                 </div>
-                <img src={hotel.image} alt='hotel' width="100%" height="100%" />
+                <img src={hotel.image} alt='hotel' width="100%" height="100%" /> */}
               </div>
             </div>
           ))}

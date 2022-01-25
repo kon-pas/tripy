@@ -215,19 +215,49 @@ body {
   margin: 0 auto;
   width: 100vw; }
 
+form.contractor-page-form label {
+  margin-left: 750px !important; }
+
+form.contractor-page-form button {
+  margin-left: 900px !important; }
+
+.contractor-page,
+.form {
+  font-family: "Sora", sans-serif !important;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  color: #091e3f;
+  font-weight: 400 !important; }
+
+.contractor-page .buttons,
+.form .buttons {
+  width: 400px;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; }
+
 .contractor-page button,
 .form button {
-  background-color: #1a80ff;
+  background-color: #3b94fc;
   color: #fff;
   font-size: 1.1rem;
-  padding: 5px;
+  padding: 10px 15px;
+  border-radius: 25px;
   width: auto;
   height: 40px;
-  border-radius: 5px;
+  display: flex;
+  align-items: center;
   border: none;
   cursor: pointer;
   text-align: center;
   margin: 5px 0; }
+
+.contractor-page h2,
+.form h2 {
+  width: 100vw;
+  text-align: center; }
 
 .contractor-page button + button,
 .form button + button {
@@ -262,17 +292,12 @@ body {
 .form .items {
   gap: 15px;
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  justify-content: center; }
 
 .contractor-page .items .item,
 .form .items .item {
-  position: relative;
-  width: 200px;
-  height: 330px; }
-
-.contractor-page .items .item button,
-.form .items .item button {
-  height: 30px; }
+  position: relative; }
 
 .login-page {
   background-color: rgba(178, 190, 195, 0.9);
@@ -281,7 +306,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em; }
@@ -323,7 +348,7 @@ body {
   border: none; }
 
 .login-page .panel .item-3 {
-  top: 70%;
+  top: 74%;
   font-size: 2rem; }
 
 .login-page .panel .item-3 .block {
@@ -332,7 +357,7 @@ body {
   height: 100px; }
 
 .login-page .panel .item-4 {
-  top: 76%;
+  top: 80%;
   background-color: #3b94fc;
   color: #feffff;
   width: 500px;
@@ -395,7 +420,7 @@ body {
   width: 50px; }
 
 .header-wrapper .header .lecimy .lecimy-text {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -415,7 +440,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -428,7 +453,7 @@ body {
   margin-left: 20px; }
 
 .header-wrapper .header .konto {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -440,7 +465,7 @@ body {
   line-height: 30px; }
 
 .header-wrapper .header .login {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -448,7 +473,7 @@ body {
   color: #000; }
 
 .header-wrapper .header .register {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -499,7 +524,7 @@ body {
   position: sticky;
   top: 90px;
   text-align: center;
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -527,7 +552,7 @@ body {
   font-size: 1.5rem; }
 
 .planning-page .content .content-bottom .cart-container .cart .button {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -622,7 +647,7 @@ body {
 .card .info-wrapper {
   height: 80px;
   padding: 0 10px;
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -687,7 +712,7 @@ body {
   height: 100vh; }
 
 .card .card-info-wrapper .card-info {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -796,7 +821,7 @@ body {
   background-color: #feffff;
   color: #091e3f;
   width: 250px;
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -810,7 +835,7 @@ body {
   background-color: #feffff;
   color: #091e3f;
   width: 250px;
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -857,7 +882,7 @@ body {
   margin: 20px 0; }
 
 .home-page section.input-section .input-form-home .item-1 label {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -867,7 +892,7 @@ body {
   margin: 20px 0; }
 
 .home-page section.input-section .input-form-home .item-2 label {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -880,7 +905,7 @@ body {
   width: 895px; }
 
 .home-page section.input-section .input-form-home .item-3 label {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -892,7 +917,7 @@ body {
   width: 905px; }
 
 .home-page section.input-section .input-form-home .item-4 p {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -900,7 +925,7 @@ body {
   font-size: 1.5rem; }
 
 .home-page section.input-section .input-form-home .item-4 input {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -914,7 +939,7 @@ body {
   width: 905px; }
 
 .home-page section.input-section .input-form-home .item-5 p {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -922,7 +947,7 @@ body {
   font-size: 1.5rem; }
 
 .home-page section.input-section .input-form-home .item-5 input {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -940,7 +965,7 @@ body {
   margin: 10px 0;
   border: none;
   z-index: 2;
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -981,7 +1006,7 @@ body {
 
 .home-page section.input-section .scroll-down span {
   display: block;
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -1058,7 +1083,7 @@ div[class^="MuiPaper"] {
   left: 0;
   border-top: 1px solid rgba(194, 197, 198, 0.5);
   box-shadow: 0px -30px 40px -40px #c2c5c6;
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em; }
@@ -1081,7 +1106,11 @@ div[class^="MuiPaper"] {
   left: 0;
   width: 100vw;
   height: 100vh;
-  font-family: 'Nanum Gothic Coding', monospace; }
+  font-family: "Sora", sans-serif !important;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  color: #091e3f; }
 
 .cart-wrapper .cart {
   background-color: #fff;
@@ -1097,14 +1126,12 @@ div[class^="MuiPaper"] {
 .cart-wrapper .cart .cart-title {
   font-size: 3rem;
   text-align: center;
-  padding-top: 5px;
-  font-family: 'Bebas Neue', cursive; }
+  padding-top: 5px; }
 
 .cart-wrapper .cart .cart-card-list-container .cart-label {
   text-align: center;
   font-size: 1.5rem;
   margin: 5px 0;
-  font-family: 'Bebas Neue', cursive;
   letter-spacing: 0.05em;
   font-size: 2rem; }
 
@@ -1144,18 +1171,26 @@ div[class^="MuiPaper"] {
 
 .cart-on-list {
   margin: 10px 0;
-  font-size: 1.5rem;
-  font-family: 'Fira Mono', monospace; }
+  font-size: 1.5rem; }
 
 .user-page {
   margin-top: 20px;
   background-image: url(data:image/png;base64,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);
   padding: 15px;
-  border-radius: 15px; }
+  border-radius: 15px;
+  min-height: 1200px;
+  font-family: "Sora", sans-serif !important;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em; }
 
 .user-page .title-1 {
-  font-family: 'Bebas Neue', cursive;
-  font-size: 4rem;
+  font-family: "Sora", sans-serif !important;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  font-size: 2rem;
+  color: #091e3f;
   line-height: 0.9; }
 
 .user-page .panel {
@@ -1163,7 +1198,8 @@ div[class^="MuiPaper"] {
   right: 70px;
   bottom: 10px; }
 
-.user-page .panel .logout, .user-page .panel .support {
+.user-page .panel .logout,
+.user-page .panel .support {
   background-color: #1a80ff;
   background-image: url(data:image/png;base64,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);
   color: #fff;
@@ -1232,7 +1268,7 @@ div[class^="MuiPaper"] {
   margin: 20px 0; }
 
 .input-form-home .input-form .item-1 label {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -1242,7 +1278,7 @@ div[class^="MuiPaper"] {
   margin: 20px 0; }
 
 .input-form-home .input-form .item-2 label {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -1255,7 +1291,7 @@ div[class^="MuiPaper"] {
   width: 895px; }
 
 .input-form-home .input-form .item-3 label {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -1267,7 +1303,7 @@ div[class^="MuiPaper"] {
   width: 905px; }
 
 .input-form-home .input-form .item-4 p {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -1275,7 +1311,7 @@ div[class^="MuiPaper"] {
   font-size: 1.5rem; }
 
 .input-form-home .input-form .item-4 input {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -1289,7 +1325,7 @@ div[class^="MuiPaper"] {
   width: 905px; }
 
 .input-form-home .input-form .item-5 p {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -1297,7 +1333,7 @@ div[class^="MuiPaper"] {
   font-size: 1.5rem; }
 
 .input-form-home .input-form .item-5 input {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -1315,7 +1351,7 @@ div[class^="MuiPaper"] {
   margin: 10px 0;
   border: none;
   z-index: 2;
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -1359,7 +1395,7 @@ div[class^="MuiPaper"] {
   margin-right: 25px; }
 
 .input-form-planning .input-form .item-1 label {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -1371,7 +1407,7 @@ div[class^="MuiPaper"] {
   margin-right: 25px; }
 
 .input-form-planning .input-form .item-2 label {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -1385,7 +1421,7 @@ div[class^="MuiPaper"] {
   width: 495px; }
 
 .input-form-planning .input-form .item-3 label {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -1398,7 +1434,7 @@ div[class^="MuiPaper"] {
   width: 905px; }
 
 .input-form-planning .input-form .item-4 p {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -1406,7 +1442,7 @@ div[class^="MuiPaper"] {
   font-size: 1.5rem; }
 
 .input-form-planning .input-form .item-4 input {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -1421,7 +1457,7 @@ div[class^="MuiPaper"] {
   width: 905px; }
 
 .input-form-planning .input-form .item-5 p {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -1429,7 +1465,7 @@ div[class^="MuiPaper"] {
   font-size: 1.5rem; }
 
 .input-form-planning .input-form .item-5 input {
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -1447,7 +1483,7 @@ div[class^="MuiPaper"] {
   margin: 10px 0;
   border: none;
   z-index: 2;
-  font-family: "Sora", sans-serif;
+  font-family: "Sora", sans-serif !important;
   color: #606469;
   font-size: 1.15rem;
   letter-spacing: -0.035em;
@@ -1471,3 +1507,15 @@ div[class^="MuiPaper"] {
   margin-top: 55px;
   margin-right: 20px;
   display: none; }
+
+.submit {
+  float: right;
+  padding: 7px 15px !important;
+  border-radius: 25px !important;
+  background-color: #3b94fc !important;
+  margin-right: 20px !important;
+  font-family: "Sora", sans-serif !important;
+  color: #606469;
+  font-size: 1.15rem;
+  letter-spacing: -0.035em;
+  font-size: 1.15rem !important; }

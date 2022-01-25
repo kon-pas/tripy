@@ -8,7 +8,8 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  font-family: 'Nanum Gothic Coding', monospace;
+  @include font-simple;
+  color: $new-black;
   .cart {
     background-color: $white;
     position: relative;
@@ -23,14 +24,12 @@
       font-size: 3rem;
       text-align: center;
       padding-top: 5px;
-      font-family: 'Bebas Neue', cursive;
     }
     .cart-card-list-container {
       .cart-label {
         text-align: center;
         font-size: 1.5rem;
         margin: 5px 0;
-        font-family: 'Bebas Neue', cursive;
         letter-spacing: 0.05em;
         font-size: 2rem;
       }
@@ -76,5 +75,4 @@
   margin: 10px 0;
   font-size: 1.5rem;
   // font-weight: 600;
-  font-family: 'Fira Mono', monospace;
 }

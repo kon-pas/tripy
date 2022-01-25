@@ -1,4 +1,5 @@
-import Navbar from "../components/Navbar";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Cart from "../components/Cart";
 import { Card as CardClass } from "../scripts/Card";
 import { Cart as CartClass } from "../scripts/Cart";
@@ -6,6 +7,7 @@ import { useState } from "react";
 import * as carts from "../scripts/carts";
 import useLogout from "../hooks/useLogout";
 import { Link } from "react-router-dom";
+import Button from '@mui/material/Button';
 
 const UserPage = () => {
   const logout = useLogout();
@@ -26,7 +28,7 @@ const UserPage = () => {
 
   return (
     <div>
-      <Navbar top={0} />
+      <Header/>
       <div className="user-page">
         <span className="title-1">Twoje wyjazdy</span>
         <div className="cart-list">
@@ -34,10 +36,10 @@ const UserPage = () => {
           <div className="cart-list-item"><Cart pointer={carts.cart2} name="Wspaniałe Krupówki" /></div>
           <div className="cart-list-item"><Cart pointer={carts.cart3} name="Miłość w Zakopanem" /></div>
         </div>
-        <span className="title-1">Kontraktor</span>
+        {/* <span className="title-1">Kontraktor</span> */}
         <div className="cart-list">
           <div className="cart-list-item">
-            <Link to={'/contractor'} style={{ textDecoration: 'none' }}><button>Dodaj nową atrakcję, hotel lub lot</button></Link><br />
+            <Link to={'/contractor'} style={{ textDecoration: 'none' }}><Button variant="contained">Dodaj nową atrakcję, hotel lub lot</Button></Link><br />
           </div>
         </div>
         <div className="panel">
@@ -48,6 +50,7 @@ const UserPage = () => {
           <div className="logout" onClick={logout}>Wyloguj</div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 }

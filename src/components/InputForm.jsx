@@ -19,6 +19,8 @@ import { pl } from "date-fns/locale";
 import MuiInput from '@mui/material/Input';
 import { styled } from '@mui/material/styles';
 
+import Button from '@mui/material/Button';
+
 const Input = styled(MuiInput)`
   width: 42px;
 `;
@@ -35,6 +37,7 @@ class InputForm extends Component {
       budzet:  [search.getBudzetMinimalny(), search.getBudzetMaksymalny()],
       submitSuccess: false
     }
+    this.setSearch = this.setSearch.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
@@ -47,51 +50,68 @@ class InputForm extends Component {
     this.handleBudzetChange1 = this.handleBudzetChange1.bind(this);
   }
 
+  setSearch() {
+    search.setWylot(this.state.wylot);
+    search.setPowrot(this.state.powrot);
+    search.setMiejscowosc(this.state.miejscowosc);
+    search.setLiczbaOsob(this.state.liczbaOsob);
+    search.setBudzetMinimalny(this.state.budzet[0]);
+    search.setBudzetMaksymalny(this.state.budzet[1]);
+  }
+
   handleChange(event) {
     this.setState({
       [event.target.name]: event.target.value
     });
+    this.setSearch()
   }
 
   handleLiczbaOsobChange(event) {
     this.setState({
       liczbaOsob: event.target.value
     })
+    this.setSearch()
   }
 
   handleBudzetChange(event) {
     this.setState({
       budzet: event.target.value
     })
+    this.setSearch()
   }
   handleBudzetChange0(event) {
     this.setState({
       budzet: [event.target.value, this.state.budzet[1]]
     })
+    this.setSearch()
   }
   handleBudzetChange1(event) {
     this.setState({
       budzet: [this.state.budzet[0], event.target.value]
     })
+    this.setSearch()
   }
 
   handleWylotChange(event) {
     this.setState({
       wylot: event
     })
+    this.setSearch()
   }
   
   handlePowrotChange(event) {
     this.setState({
       powrot: event
     })
+    this.setSearch()
   }
 
   handleSubmit(event) {
     this.setState({
       submitSuccess: true,
       wylot: search.getWylot()
-    });
+    })
+    this.setSearch()
     event.preventDefault();
   }
 
@@ -108,12 +128,7 @@ class InputForm extends Component {
   };
 
   handleSearch(event) {
-    search.setWylot(this.state.wylot);
-    search.setPowrot(this.state.powrot);
-    search.setMiejscowosc(this.state.miejscowosc);
-    search.setLiczbaOsob(this.state.liczbaOsob);
-    search.setBudzetMinimalny(this.state.budzet[0]);
-    search.setBudzetMaksymalny(this.state.budzet[1]);
+    // setSearch().then( window.location.reload() );
     event.preventDefault();
   }
 
@@ -236,6 +251,7 @@ class InputForm extends Component {
                   step={100}
                 />
               </div>
+              {/* <Button className="submit" variant="contained" onClick={this.handleSearch}>Szukaj</Button> */}
             </div>
             <button className="submit-button" onClick={this.handleSubmit}>Szukam!</button> 
           </div>

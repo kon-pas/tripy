@@ -104,7 +104,7 @@ const Card = ({display, pointer}) => {
             <div className="title-wrapper"> {pointer.name} </div>
             <div className="subtitle-wrapper">
               <div className="price-wrapper"> {pointer.price + ' PLN/os.'} </div>
-              <div className="rating-wrapper"> {pointer.rating + '/5'}</div>
+              <div className="rating-wrapper"> {getRating(pointer.rating)} </div>
             </div>
           </div>
 
@@ -135,7 +135,7 @@ const Card = ({display, pointer}) => {
             <div className="title-wrapper"> {pointer.name} </div>
             <div className="subtitle-wrapper">
               <div className="price-wrapper"> {pointer.price + ' PLN/os.'} </div>
-              <div className="rating-wrapper"> {pointer.rating + '/5'}</div>
+              <div className="rating-wrapper"> {getRating(pointer.rating)} </div>
             </div>
           </div>
 

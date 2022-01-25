@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CONTRACTOR_TYPES } from "../consts/contractor";
 import useUserData from "../hooks/useUserData";
+import { useNavigate } from 'react-router-dom';
 
 const AddNewAttraction = ({ type, onCancel, onSuccess }) => {
   const details = CONTRACTOR_TYPES[type];

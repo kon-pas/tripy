@@ -35,9 +35,9 @@ const Header = () => {
         </Link>
         
         <div className="navbar">
-          <Link to={'/'} style={{ textDecoration: 'none' }}><div className="navbar-item loty"><span>Loty</span></div></Link>
-          <Link to={'/'} style={{ textDecoration: 'none' }}><div className="navbar-item hotele"><span>Hotele</span></div></Link>
-          <Link to={'/'} style={{ textDecoration: 'none' }}><div className="navbar-item atrakcje"><span>Atrakcje</span></div></Link>
+          <Link to={'/'} style={{ textDecoration: 'none' }}><div className="navbar-item loty"><span>beta</span></div></Link>
+          {/* <Link to={'/'} style={{ textDecoration: 'none' }}><div className="navbar-item hotele"><span>Hotele</span></div></Link>
+          <Link to={'/'} style={{ textDecoration: 'none' }}><div className="navbar-item atrakcje"><span>Atrakcje</span></div></Link> */}
         </div>
         
         {isLogged()}

@@ -5,17 +5,22 @@
   background-image: $noise;
   padding: 15px;
   border-radius: 15px;
+  min-height: 1200px;
+
+  @include font-simple;
 
   .title-1 {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 4rem;
+    @include font-simple;
+    font-size: 2rem;
+    color: $new-black;
     line-height: 0.9;
   }
   .panel {
     position: absolute;
     right: 70px;
     bottom: 10px;
-    .logout, .support{
+    .logout,
+    .support {
       background-color: $dark-blue;
       background-image: $noise;
       color: $white;
