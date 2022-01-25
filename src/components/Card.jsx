@@ -31,6 +31,11 @@ const Card = ({display, pointer}) => {
       return <span> {pointer.rating} </span>
     }
   }
+  
+  const displayName = (name) => {
+    if(name.length > 20) return name.slice(0, 20) + "...";
+    else return name;
+  }
 
   const infoToggle = () => {
     if (displayInfo) {
@@ -80,7 +85,7 @@ const Card = ({display, pointer}) => {
           <img src={pointer.image} style={{width: 360, height: 260}} />
         </div>
         <div className="info-wrapper">
-          <div className="title-wrapper"> {pointer.name} </div>
+          <div className="title-wrapper"> {displayName(pointer.name)} </div>
           <div className="subtitle-wrapper">
             <div className="price-wrapper"> {pointer.price + ' PLN/os.'} </div>
             <div className="rating-wrapper"> {getRating(pointer.rating)}</div>
@@ -101,7 +106,7 @@ const Card = ({display, pointer}) => {
             <img src={pointer.image} style={{width: 360, height: 260}} />
           </div>
           <div className="info-wrapper">
-            <div className="title-wrapper"> {pointer.name} </div>
+            <div className="title-wrapper"> {displayName(pointer.name)} </div>
             <div className="subtitle-wrapper">
               <div className="price-wrapper"> {pointer.price + ' PLN/os.'} </div>
               <div className="rating-wrapper"> {getRating(pointer.rating)} </div>
@@ -132,7 +137,7 @@ const Card = ({display, pointer}) => {
             <img src={pointer.image} style={{width: 360, height: 260}} />
           </div>
           <div className="info-wrapper">
-            <div className="title-wrapper"> {pointer.name} </div>
+            <div className="title-wrapper"> {displayName(pointer.name)} </div>
             <div className="subtitle-wrapper">
               <div className="price-wrapper"> {pointer.price + ' PLN/os.'} </div>
               <div className="rating-wrapper"> {getRating(pointer.rating)} </div>
